@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：CUDA | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/cuda/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CUDA 工程配置]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/05/26/cuda-gong-cheng-pei-zhi/"/>
+    <updated>2012-05-26T10:38:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/05/26/cuda-gong-cheng-pei-zhi</id>
+    <content type="html"><![CDATA[<p>放在这里存一下：
+<a href="http://dl.vmall.com/c0gm38ktg0">CUDA工程配置.docx</a></p>
+
+<p>高亮设置：</p>
+
+<p>1.高亮在<code>SDK</code>的<code>C/doc/syntax_highlighting</code>里面，放到vs的的相应<code>Common7/IDE</code>目录下。</p>
+
+<!--more-->
+<p>2.vs添加.cu和.cuh两种vc++后缀。</p>
+
+<p>3.关闭已经打开的Visual studio，之后进入注册表编辑：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>HKEY_CURRENT_USER/Software/Whole Tomato/Visual Assist X/VANet9/</span></code></pre></td></tr></table></div></figure></notextile></div>
+找到右边的<code>ExtSource</code>项，将其值添加<code>.cu</code>;<code>.cuh</code>;之后关闭。 </p>
+
+<p>4.Visual Assist X设置中添加库目录：<br />
+<code>SDK_PATH</code>的<code>ccommoninc</code> <br />
+<code>SDK_PATH</code>的<code>sharedinc</code> <br />
+<code>CUDA_PATH</code>的<code>include</code>   </p>
+
+<p>最近有点迷茫和浮躁，空闲的时候听听歌，挺好：</p>
+
+<p><p id="audioplayerCalifornia ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayerCalifornia ", {soundFile: "http://cfs.tistory.com/attach/1643/1353372158.mp3",titles:"California ",artists:"Phantom Planet-TheOC"});</script></p>
+
+<p><blockquote><p>California 加利福尼亚 </p></p><p><p>We’ve been on the run 我们奔波忙碌 <br/>Driving in the sun 行驶在阳光下 <br/>Looking out for number 1 永远追寻着第一 <br/>California here we come 加州我们回来了 <br/>Right back where we started from 回到出发的地方 <br/>Hustlers grab your guns 喧嚣迷失了方向 <br/>Your shadow weighs a ton 你的身影值千金 <br/>Driving down the 101 驱车来到101 <br/>California here we come 加州我们回来了 <br/>Right back where we started from 回到出发的地方 <br/>California! 加利福尼亚！ <br/>Here we come! 我们回来啦！ <br/>On the stereo 立体声环绕 <br/>Listen as we go 开着车听歌 <br/>Nothing’s gonna stop me now 如今我归心似箭 <br/>California here we come 加州我们回来了 <br/>Right back where we started from 回到出发的地方 <br/>Pedal to the floor 踏上故乡土地 <br/>Thinkin’ of the roar 怀念往日嬉戏 <br/>Gotta get us to the show 机会不容错过 <br/>California here we come 加州我们回来了 <br/>Right back where we started from 回到出发的地方 <br/>California! 加利福尼亚！ <br/>Here we come! 我们回来啦！</p></blockquote></p>
+]]></content>
+  </entry>
+  
+</feed>

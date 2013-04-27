@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Music | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/music/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[自信的生活着]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/11/23/zi-xin-de-sheng-huo-zhao/"/>
+    <updated>2012-11-23T22:59:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/11/23/zi-xin-de-sheng-huo-zhao</id>
+    <content type="html"><![CDATA[<p><blockquote><p>“做人要自信。比如我就觉得我是世界上最帅的男人，而事实也的确是这样。”</p><footer><strong>查尔斯-巴克利</strong> <cite></cite></footer></blockquote></p>
+
+<p>呵呵，前几天看到这句话，说的真好！</p>
+
+<p>两周，学会了基本的使用nodejs、mongodb。把任务需要的服务器简单的搭起来了。做事情还是要自信的去做。就像这样一个东西，不弄它总觉得很难，不知道怎么上手，想来想去，各种编程语言，各种技术框架比较来比较去，不下手总归是不会有头绪的。但不是说前期的这些比较调研的工作没有用，而是说很多事情想上去很复杂很难的其实做起来有时候很简单，虽然做的时候可能会碰到很多问题，但是事成之后就会觉得挺容易的，而且还挺有成就感的。轮滑也是，虽然花哨还不会，不过溜起来挺流畅的了。
+<!--more--></p>
+
+<p>就像经常很老师讨论的，现在其实很多概念，像物联网，室内定位，协作下载，大家想法很多，真正动手去实现的却是不多。大家就缺乏那点自信，少了些冲劲，怕出错，怕走了歪路浪费了精力，怕尝试了失败了招人围观和嘲笑，怕那些马后炮们的指指点点，疑似挖苦。</p>
+
+<p>给自己多些自信挺好的。想继续学习捣鼓的技术还有很多，越来越觉得时间不够用了。娱乐还是不能没有。新版的《全面回忆》拍得很是不错，看过后随着导评的音轨又看了一遍，导演讲了很多，很有想法，说了很多关于成本，很多场景的布置，很多演员的表现，一些CG的合成，还有些镜头的制作，甚至讲了一些摄影的技巧来完成某些画面，整个故事的背景的设计，电影剧情发展的节奏。发现看电影的导评甚至比看电影的本身还过瘾。</p>
+
+<p>哦，nodejs说两句。很重要的一点，单线程异步！编程的时候时刻要注意这一点。还有就是对回调函数的理解。这两点注意了，差不多就能解决大部分问题了。mongodb的api我还不是很熟，不过用下来觉得很好上手，就看要怎么玩了。</p>
+
+<p>还有就是cloudfoundry是个不错的平台，app部署很容易。速度也很快，关键免费开源。“开源”，互联网的共产主义的基础。</p>
+
+<p>关键还是在经常想，以后能做些什么呢。技术，生产，管理和打交道；各方面都注意平衡的多学学吧。关键是要自信。就像《越狱》里面的麦克史高飞总记着他哥告诉他的<strong>“just have a little faith”</strong>。</p>
+
+<p>很好听的一首歌：We are young</p>
+
+<p><p id="audioplayerWe Are Young ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayerWe Are Young ", {soundFile: "http://infinitinb.net/COFFdD0xMzUzNzY2MDc5Jmk9NTguMTk2LjE2Ni42MiZ1PVNvbmdzL3YxL2ZhaW50UUMvOWEvNzY1NmYxODdjM2I5Y2MyYzM0OTIwYmIxODY4ODgwOWEubXAzJm09ZDA5ZTk2OTMxMWI5MDNkYjgxYzFjZDU5Nzc4YTBhOTQmdj1saXN0ZW4mbj1XZSUyMEFyZSUyMFlvdW5nJnM9R2xlZSUyMENhc3QmcD1l.mp3",titles:"We Are Young ",artists:"Glee"});</script></p>
+
+<p><blockquote><p>We Are Young</p></p><p><p>Give me a second I 给我点时间<br/>I need to get my story straight让我理清思绪<br/>My friends are in the bathroom死党醉倒在洗手间<br/>Getting higher than the Empire State已经悄然入天<br/>My lover she’s waiting for me<br/>Just across the bar 爱人在酒吧那头等候<br/>My seats been taken by some sunglasses墨镜女占了我的位置<br/>Asking ‘bout a scar谈起你我的情伤<br/>And I know I gave it to you months ago我知道我另你陷入情网<br/>I know you’re trying to forget我知道你难忘伤痛<br/>But between the drinks and subtle things然而在酒醉金迷间<br/>The holes in my apologies我的道歉如此蹩脚<br/>You know I’m trying hard to take it back我想努力挽回你<br/>So if by the time the bar closes当酒吧打烊<br/>And you feel like falling down你的脚步蹒跚<br/>I’ll carry you home我会带你回家<br/>Tonight今夜<br/>We are young花样年华的我们<br/>So let’s set the world on fire将世界点燃<br/>We can burn brighter　Than the sun另骄阳失色<br/>Tonight今夜<br/>We are young花样年华的我们<br/>So let’s set the world on fire将世界点燃<br/>We can burn brighter Than the sun使骄阳失色<br/>Now I know that I’m not现在 我知道我已经不是你的真命天子<br/>All that you got<br/>I guess that I 我猜我只是想找到更好的方式和你分手<br/>I just thought maybe we could find new ways to fall apart<br/>But our friends are back 但现在我的朋友们都回来了<br/>So let’s raise a cup 那我们可以放心的畅饮了<br/>Cause I found someone to carry me home 因为有人送我回家了<br/>Tonight今夜<br/>We are young花样年华的我们<br/>So let’s the set the world on fire将世界点燃<br/>We can burn brighter<br/>Than the sun另骄阳失色<br/>Tonight今夜<br/>We are young花样年华的我们<br/>So let’s set the world on fire将世界点燃<br/>We can burn brighter Than the sun令骄阳失色<br/>Carry me home tonight 今夜带我回家<br/>Just carry me home tonight请今夜带我回家<br/>Carry me home tonight 今夜带我回家<br/>Just carry me home tonight请今夜带我回家<br/>The world is on my side 世界都站在我这一边<br/>I have no reason to run 我没有理由逃脱<br/>So will someone come and carry me home tonight所以有人愿意今夜带我回家吗<br/>The angels never arrived天使并未降临<br/>But I can hear the choir但我听到天籁之声<br/>So will someone come and carry me home所以有人愿意今夜带我回家吗<br/>Tonight今夜<br/>We are young花样年华的我们<br/>So let’s set the world on fire将世界点燃<br/>We can burn brighter Than the sun令骄阳失色<br/>Tonight今夜<br/>We are young花样年华的我们<br/>So let’s set the world on fire将世界点燃<br/>We can burn brighter Than the sun令骄阳失色<br/>So if by the time the bar closes当酒吧打烊<br/>And you feel like falling down你的脚步蹒跚<br/>I’ll carry you home tonight我今夜会带你回家</p></blockquote></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[hacker~howto]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/09/19/hacker%7Ehowto/"/>
+    <updated>2012-09-19T19:11:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/09/19/hacker~howto</id>
+    <content type="html"><![CDATA[<p>下午想查一查文献，无意中看到这样一篇转载的文章：<a href="http://my.oschina.net/qichang/blog?disp=2">黑客是怎样炼成的</a>，写的很好，也很令我热血沸腾。里面说的处世态度，处事方法觉得特别有共鸣~</p>
+
+<p><blockquote><p>1. 这个世界充满了令人着迷的问题等着我们解决;<br/>2. 一个问题不应该被解决两次;<br/>3. 无聊和乏味的工作是罪恶。<br/>4. 崇尚自由;<br/>5. 态度不能替代能力。</p></blockquote>
+<!--more--></p>
+
+<p>然后看了看文章中提到的Google 公司的顶尖黑客之一Peter Novig写的那篇<a href="http://wenku.baidu.com/view/72ca14d4360cba1aa811dab8.html">&lt;Teach Yourself Programming in Ten Years&gt;</a>,确实获益匪浅。确实，要想在一门技术上有所造诣，是肯定要花费很多的精力和时间的。但是一旦是自己喜欢的事情，是一定会费心思费精力去努力专研的~</p>
+
+<p>还发现了昨天看到的学习ruby的koans竟然是一种软件测试方法<a href="http://baike.baidu.com/view/184088.htm">(TDD,Test-Driven Development)</a>。测试驱动开发(TDD)是敏捷开发中的一项核心实践和技术，也是一种设计方法论。TDD的原理是在开发功能代码之前，先编写单元测试用例代码，测试代码确定需要编写什么产品代码。确实，要学的东西还有好多。</p>
+
+<p>送老婆一首歌，争取学会~</p>
+
+<p><p id="audioplayer小情歌 ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayer小情歌 ", {soundFile: "http://people.chu.edu.tw/~b9217004/03-lovesong.mp3",titles:"小情歌 ",artists:"苏打绿"});</script></p>
+
+<p><blockquote><p>小情歌</p></p><p><p>这是一首简单的小情歌<br/>唱着人们心肠的曲折<br/>我想我很快乐<br/>当有你的温热<br/>脚边的空气转了<br/>这是一首简单的小情歌<br/>唱着我们心头的白鸽<br/>我想我很适合<br/>当一个歌颂者<br/>青春在风中飘着<br/>你知道<br/>就算大雨让这座城市颠倒<br/>我会给你怀抱<br/>受不了看见你背影来到<br/>写下我度秒如年难捱的离骚<br/>就算整个世界被寂寞绑票<br/>我也不会奔跑<br/>逃不了最后谁也都苍老<br/>写下我时间和琴声交错的城堡<br/>这是一首简单的小情歌<br/>唱着我们心头的白鸽<br/>我想我很适合<br/>当一个歌颂者<br/>青春在风中飘着<br/>你知道<br/>就算大雨让这座城市颠倒<br/>我会给你怀抱<br/>受不了看见你背影来到<br/>写下我度秒如年难捱的离骚<br/>就算整个世界被寂寞绑票<br/>我也不会奔跑<br/>逃不了最后谁也都苍老<br/>写下我时间和琴声交错的城堡<br/>你知道<br/>就算大雨让这座城市颠倒<br/>我会给你怀抱<br/>受不了看见你背影来到<br/>写下我度秒如年难捱的离骚<br/>就算整个世界被寂寞绑票<br/>我也不会奔跑<br/>最后谁也都苍老<br/>写下我时间和琴声交错的城堡</p></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA["I am always angry"]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/09/15/i-am-always-angry/"/>
+    <updated>2012-09-15T11:38:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/09/15/i-am-always-angry</id>
+    <content type="html"><![CDATA[<p>昨天看了《复仇者联盟》<the avengers="">, 现在大片特效太多了，对这些CG确实已经没什么震撼感了。但里面有一句台词，感触很深。绿巨人变身的时候，说的那句：“The secret is, I am always angry..."突然就被震住了，确实，我们一直都是愤怒的。在这样的社会压力下，各色各样的环境下，根本无法保持一颗平静的心。如果一个人说他与世无争，很平静，很平和，那他肯定是个傻子。傻子真的很幸福。我们不是傻子，所以很苦逼，很愤怒。
+<!--more--></the></p>
+
+<p>昨天team building，作为实习生，也有幸被带着去了，农家乐。确实现在大家没什么娱乐活动了，人与人之间没有了那种淳朴，纯粹的交流机会了。其实不论是做什么，只要大家从内心放松了，开心了，就挺好了。</p>
+
+<p>哦，对了，今天可以下android源码了，repo被墙了，这一步要翻墙：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo &amp;gt; ~/bin/repo
+</span><span class='line'>chmod a+x ~/bin/repo
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>主要是要登陆下<a href="https://android.googlesource.com/new-password">https://android.googlesource.com/new-password</a>，得到类似的：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>machine android.googlesource.com login git-&lt;username>.gmail.com password &lt;password>  
+</span><span class='line'>machine android-review.googlesource.com login git-&lt;username>.gmail.com password &lt;password></span></code></pre></td></tr></table></div></figure></notextile></div>
+将这段信息添加到~/.netrc下之后,就可以`repo sync`了。嗯嗯。还在下，不知道还要下多久。</password></username></password></username></p>
+
+<p>那个baidu网盘的音乐外链断了，可见还是不行，还是用酷牛网盘的吧。</p>
+
+<p>决定以后有空就在这里写两句。改成octopress挺方便的，终端里<code>rake new_post</code>,自己的编辑器里面<code>markdown</code>一下，再<code>rake deploy</code>就OK了。都在本地操作。可谓很快很放心。内心里的angry，就任由它吧。当机会来临之际，终归会像绿巨人一样爆发了，干出一番成就的。</p>
+
+<p>老婆今天考试，祝考完心情很好，考完开开心心~</p>
+
+<p><p id="audioplayerWhistle ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayerWhistle ", {soundFile: "http://img.iwreader.com/messageVoice/2012/27/84b088aaceff4b228d074a4d4258bc50.mp3",titles:"Whistle ",artists:"Flo Rida"});</script></p>
+
+<p><blockquote><p>whistle（夏日轻快口哨）　</p></p><p><p>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Let me know（让我知道）<br/>Girl I’m gonna show you how to do it（女孩我这就要去告诉你怎么做）<br/>And we start real slow（然后我们慢慢开始）<br/>You just put your lips together（你只要把双唇合拢）<br/>And you come real close（然后你就能发出类似的（声音））<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Here we go（我们一起开始吧）<br/>I’m betting you like bebop（我猜你是喜欢比波普音乐的）<br/>And i’m betting you love creep mode（而且我猜你也喜欢令人惊悚的调式）<br/>And i’m betting you like girls that give love to girls（而且我猜你会喜欢关爱同性的女孩）<br/>And stroke your little ego（轻抚你的小小自我）<br/>I bet i’m guilty your honor（我猜你的荣誉令我感到内疚）<br/>But that’s how we live in my genre（但这就是我们生活中的风格）<br/>When in hell I pay rottweiler（该死我到底该什么时候该付洛威纳犬的价钱）<br/>There’s only one flo, and one rida（这儿只有一个Flo先生，一个Rida先生）<br/>I’m a damn shame（该死我真够惭愧）<br/>Order more champagne, pull it down hellstream（再点些香槟酒，倒下去）<br/>Tryna put it on ya（试着把它放在你那里）<br/>Bet your lips spin back around corner（我猜你角落边上的你会动动嘴巴）<br/>Slow it down baby take a little longer（慢一点宝贝（我希望你再）延长些时间）<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Let me know（让我知道）<br/>Girl I’m gonna show you how to do it（女孩我这就要去告诉你怎么做）<br/>And we start real slow（然后我们慢慢开始）<br/>You just put your lips together（你只要把双唇合拢）<br/>And you come real close（然后你就能发出类似的（声音））<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Here we go（我们一起开始吧）<br/>Whistle baby, whistle baby,（口哨宝贝，口哨宝贝）<br/>Whistle baby, whistle baby（口哨宝贝，口哨宝贝）<br/>It’s like everywhere I go（就像在我去过的所有地方一样）<br/>My whistle ready to blow(我随时都准备吹口哨）<br/>Shawty don’t leave a note（这美女没留下什么便条）<br/>She can get any by the low（不过她轻易就能得到些）<br/>Permission not approved（这种允许可不被认可）<br/>It’s okay, it’s under control（这样就好，在我的控制之下）<br/>Show me soprano, cause girl you can handle（给我秀秀女高音，因为女孩你能搞定它）<br/>Baby we start snagging, you come in part clothes（宝贝我们开始消除阻碍，你让些新服饰登场）<br/>Girl i’m losing wing, my bucatti the same road（女孩我丢了翅膀，我的布拉迪跑车在同一条路上）<br/>Show me your perfect pitch,（向我展示出你最完美的音调）<br/>You got it my banjo（你已学会弹我的班卓琴）<br/>Talented with your lips, like you blew out candles（你的双唇天赋异禀就像你在吹蜡烛时一样）<br/>So amusing, now you can make a whistle with the music（太有趣啦，你现在会吹出这种乐曲啦）<br/>Hope you ain’t got no issue, you can do it（但愿你对这没有争议，你能做到的）<br/>Give me the perfect picture, never lose it（给我一幅最好的图景，我永远不会丢掉它的）<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Let me know（让我知道）<br/>Girl I’m gonna show you how to do it（女孩我这就要去告诉你怎么做）<br/>And we start real slow（然后我们慢慢开始）<br/>You just put your lips together（你只要把双唇合拢）<br/>And you come real close（然后你就能发出类似的（声音））<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Here we go（我们一起开始吧）<br/>Whistle baby, whistle baby,（口哨宝贝，口哨宝贝）<br/>Whistle baby, whistle baby（口哨宝贝，口哨宝贝）<br/>Go girl you can work it（去吧女孩你能做到的）<br/>Let me see your whistle while you work it（你吹口哨时请让我见识下）<br/>I’mma lay it back, don’t stop it（我会躺下聆听，别停下）<br/>Cause I love it how you drop it, drop it, drop it, on me（因为我爱上你，为我（一直吹到）结束，结束，结束的样子了）<br/>Now, shorty let that whistle blow（现在，这美女要吹响口哨了）<br/>Yeah, baby let that whistle blow（耶，宝贝快吹响口哨吧）<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Let me know（让我知道）<br/>Girl I’m gonna show you how to do it（女孩我这就要去告诉你怎么做）<br/>And we start real slow（然后我们慢慢开始）<br/>You just put your lips together（你只要把双唇合拢）<br/>And you come real close（然后你就能发出类似的（声音））<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Here we go（我们一起开始吧）<br/>Whistle baby, whistle baby,（口哨宝贝，口哨宝贝）<br/>Whistle baby, whistle baby（口哨宝贝，口哨宝贝）</p></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[生活心情]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/06/07/sheng-huo-xin-qing/"/>
+    <updated>2012-06-07T20:33:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/06/07/sheng-huo-xin-qing</id>
+    <content type="html"><![CDATA[<p>微软未来科技宣传片：   </p>
+
+<center><object width="600" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://player.youku.com/player.php/sid/XMzE3NDg2Mjcy/v.swf" /><param name="allowfullscreen" value="true" /><param name="quality" value="high" /><param name="allowscriptaccess" value="always" /><embed width="600" height="400" type="application/x-shockwave-flash" src="http://player.youku.com/player.php/sid/XMzE3NDg2Mjcy/v.swf" allowfullscreen="true" quality="high" allowscriptaccess="always" /></object></center>
+
+<p>生活真的就像画面上描述的那么好吗？
+<!--more-->
+真心不觉得，表面上充满科技感的生活，充满各方面便捷全面的服务。背后隐藏的是人类生活的悲哀。越来越快的生活节奏，越来越高的劳动力要求，同时也是越来越高的社会压力。人们对生活质量的追求，同时要付出劳动力和压力的代价。错综复杂的社会关系，并不是手机上各种软件就能理清的。从越来越快的背景音乐节奏就能听出时代带给每个人的危机感和压迫感。</p>
+
+<p>有很多故事讲得是一些知足者长乐的道理：什么富翁嘲笑打鱼人不工作晒太阳，殊不知自己辛苦工作却为的是能有一天闲下来晒太阳。这种傻逼道理谁都懂，可又有谁真心能像打鱼人一样放下对各种高质量生活物质上的追求，无视周围人的攀比和炫耀，不理会时代的鞭挞。不甘心啊。很委屈啊。沮丧啊。各种纠结的心情造就了这样一个烦躁、浮夸、快节奏的时代。</p>
+
+<p>每一代都有每一代的苦，每一代也都有每一代的甜。父母一代确实很难体会到我们这一代的感受与艰难。虽然有一些共同点，他们很多经验值得我们借鉴，很多道理值得和我们分享，可是毕竟压力和抉择、困难的感受都在我们自己身上。可能是我成熟的太晚了，确一直没感觉到艰辛和抉择的纠结。一直将未来描画的很美好，却没想背后怎么去实现它。正如画面中那科技感的世界，它真的看上去很美好，怎么去实现它呢？这样庞大的物联网工程，云存储，还是高吞吐量的无线传输。3G、4G、B4G还是5G？要多少科技工作者去工作、加班。如果是无线，我们生活在这其中要承受多少的无线高频辐射。好像《real steel》里面的一句台词：you work too much with a robot that you become a robot.呵呵，我们确实有时候，太像robot一样了，无法享受生活，而是被生活享受了。</p>
+
+<p>父母到现在确实很不容易，他们可以说他们是看着我长大的，我也可以说我是看着他们奋斗的。他们一代的打拼也有很多艰辛，也有很多机遇。为了我能够无忧无虑的生活给我安排了很多，为了我能少很多烦恼帮我做了很多选择。可是，忧虑和烦恼终究是会找上我们。他们的安排和选择不再适应我们这一个时代了。很多时候，我也觉得有些annoying了。他们大多时候太自以为是了。《LOST》里的Jhon Lock有句很经典的话：Don’t tell me what I can’t do. 该怎么做，不该怎么做。What do we suppose to do? 《LOST》的结局也是LOST的。生活一直都在继续，社会也是一直有着变化。他们怎么挣扎，怎么奋斗，怎么选择，怎么斗争。到后来都不重要了。重要的是，他们存在过，生活过，交涉过。世界就是这样。过去，未来，甚至现在都不重要，重要的是我们存在过，这样一切都发生过，现在的一切正发生着。</p>
+
+<p>额。意识流好像扯得有点太意识流了。</p>
+
+<p>我只是在想 ，有时候，我们把很多事情看的太在意了，这样就会很累，很难受，很委屈。虽然这些事情不能不在意，也不能不考虑；但是它只是生活的一部分，甚至是很小很小的一部分。正因为它正在眼前，所以我们把它放的很大很大，觉得它好纠结好纠结，有时候，它使我们好难受好难受。它好坏，是它把自己吹大了吓唬我们的而已。</p>
+
+<p>周围人老是看我每天乐呵呵的，其实，快乐也只是生活的一部分，甚至比压力，比痛苦，比纠结，比难受，比孤独，比沮丧，比苦闷，比旁人的炫耀，比爸妈的督嚼，比老板的催促，比工作的辛苦，比社会的挤压，比周围人的嘲讽都小，小到一根毛发一样，我们照样把它一吹，变成千万个。果果~所以要做一颗开心果。不开心的时候，就让我来调剂吧，我来给你加点“开心”。暂时就这么一年，我还不在你身边；我在你身边的以后的每天，我都会让你开心~</p>
+
+<p>还看到一篇帖子<a href="http://news.cfan.com.cn/cfan/2012-06-06/1338974259d70247.shtml">《每天工作4小时的程序员》</a>，讲得是如何有安排的高效的生活。</p>
+
+<p>生活，不用安排的太长远，只要把每一天安排好，高效的干好自己要干的活，就可以生活的很自在。  </p>
+
+<center><a target="_blank" href="http://minus.com/l53qdkDIkC3k4"><img src="http://i.minus.com/j53qdkDIkC3k4.jpg" border="0" /></a></center>
+
+<p><p id="audioplayer美丽人生 ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayer美丽人生 ", {soundFile: "http://www.300.la/filestores/2012/09/09/89a5144646d2c5f52b5dcd5d17ea9960.mp3",titles:"美丽人生 ",artists:"梁静茹"});</script>
+<blockquote><p>美丽人生</p></p><p><p>走进满山遍野的向日葵田 地中海蓝色透明的天 亮晶晶你脸上的汗水<br/>直到现在 风一吹一都闻到普罗旺斯的花草香<br/>火车颠颠跛跛的爬上了山 斑驳的光影装满车厢<br/>你晃啊晃啊睡在我的肩膀 时钟慢慢 停下来<br/>像掉进了一个魔法的时空 爱情的流动<br/>终于有一个理由 午后暖暖的风<br/>吹着发呆的我 白色纱帘在记忆中翻动<br/>西班牙的广场 快下山的太阳<br/>两个人的影子 在陌生地上像一双翅膀<br/>自由自在飞翔 像毕卡索的画像<br/>幸福是说不出 酸酸甜甜的糖<br/>你会一种魔法 让夜晚都发光<br/>123睁开眼 美丽人生在月光下跳舞<br/>都忘了有地图 只有手心的温度<br/>我们慢慢走过 花草香的小路<br/>走进满山遍野的向日葵田 地中海蓝色透明的天 亮晶晶你脸上的汗水<br/>直到现在 风一吹一都闻到普罗旺斯的花草香<br/>火车颠颠跛跛的爬上了山 斑驳的光影装满车厢<br/>你晃啊晃啊睡在我的肩膀 时钟慢慢 停下来<br/>像掉进了一个魔法的时空 爱情的流动<br/>终于有一个理由 午后暖暖的风<br/>吹着发呆的我 白色纱帘在记忆中翻动<br/>西班牙的广场 快下山的太阳<br/>两个人的影子 在陌生地上像一双翅膀<br/>自由自在飞翔 像毕卡索的画像<br/>幸福是说不出 酸酸甜甜的糖<br/>你会一种魔法 让夜晚都发光<br/>123睁开眼 美丽人生在月光下跳舞<br/>都忘了有地图 只有手心的温度<br/>我们慢慢走过 花草香的小路<br/>像掉进了一个魔法的时空 爱情的流动<br/>终于有一个理由 午后暖暖的风<br/>吹着发呆的我 白色纱帘在记忆中翻动</p></blockquote></p>
+
+<p><em>——爱果果的瓜瓜，杂记一则。</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[CUDA 工程配置]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/05/26/cuda-gong-cheng-pei-zhi/"/>
+    <updated>2012-05-26T10:38:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/05/26/cuda-gong-cheng-pei-zhi</id>
+    <content type="html"><![CDATA[<p>放在这里存一下：
+<a href="http://dl.vmall.com/c0gm38ktg0">CUDA工程配置.docx</a></p>
+
+<p>高亮设置：</p>
+
+<p>1.高亮在<code>SDK</code>的<code>C/doc/syntax_highlighting</code>里面，放到vs的的相应<code>Common7/IDE</code>目录下。</p>
+
+<!--more-->
+<p>2.vs添加.cu和.cuh两种vc++后缀。</p>
+
+<p>3.关闭已经打开的Visual studio，之后进入注册表编辑：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>HKEY_CURRENT_USER/Software/Whole Tomato/Visual Assist X/VANet9/</span></code></pre></td></tr></table></div></figure></notextile></div>
+找到右边的<code>ExtSource</code>项，将其值添加<code>.cu</code>;<code>.cuh</code>;之后关闭。 </p>
+
+<p>4.Visual Assist X设置中添加库目录：<br />
+<code>SDK_PATH</code>的<code>ccommoninc</code> <br />
+<code>SDK_PATH</code>的<code>sharedinc</code> <br />
+<code>CUDA_PATH</code>的<code>include</code>   </p>
+
+<p>最近有点迷茫和浮躁，空闲的时候听听歌，挺好：</p>
+
+<p><p id="audioplayerCalifornia ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayerCalifornia ", {soundFile: "http://cfs.tistory.com/attach/1643/1353372158.mp3",titles:"California ",artists:"Phantom Planet-TheOC"});</script></p>
+
+<p><blockquote><p>California 加利福尼亚 </p></p><p><p>We’ve been on the run 我们奔波忙碌 <br/>Driving in the sun 行驶在阳光下 <br/>Looking out for number 1 永远追寻着第一 <br/>California here we come 加州我们回来了 <br/>Right back where we started from 回到出发的地方 <br/>Hustlers grab your guns 喧嚣迷失了方向 <br/>Your shadow weighs a ton 你的身影值千金 <br/>Driving down the 101 驱车来到101 <br/>California here we come 加州我们回来了 <br/>Right back where we started from 回到出发的地方 <br/>California! 加利福尼亚！ <br/>Here we come! 我们回来啦！ <br/>On the stereo 立体声环绕 <br/>Listen as we go 开着车听歌 <br/>Nothing’s gonna stop me now 如今我归心似箭 <br/>California here we come 加州我们回来了 <br/>Right back where we started from 回到出发的地方 <br/>Pedal to the floor 踏上故乡土地 <br/>Thinkin’ of the roar 怀念往日嬉戏 <br/>Gotta get us to the show 机会不容错过 <br/>California here we come 加州我们回来了 <br/>Right back where we started from 回到出发的地方 <br/>California! 加利福尼亚！ <br/>Here we come! 我们回来啦！</p></blockquote></p>
+]]></content>
+  </entry>
+  
+</feed>

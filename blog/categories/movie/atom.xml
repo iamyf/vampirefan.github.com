@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Movie | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/movie/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA["I am always angry"]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/09/15/i-am-always-angry/"/>
+    <updated>2012-09-15T11:38:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/09/15/i-am-always-angry</id>
+    <content type="html"><![CDATA[<p>昨天看了《复仇者联盟》<the avengers="">, 现在大片特效太多了，对这些CG确实已经没什么震撼感了。但里面有一句台词，感触很深。绿巨人变身的时候，说的那句：“The secret is, I am always angry..."突然就被震住了，确实，我们一直都是愤怒的。在这样的社会压力下，各色各样的环境下，根本无法保持一颗平静的心。如果一个人说他与世无争，很平静，很平和，那他肯定是个傻子。傻子真的很幸福。我们不是傻子，所以很苦逼，很愤怒。
+<!--more--></the></p>
+
+<p>昨天team building，作为实习生，也有幸被带着去了，农家乐。确实现在大家没什么娱乐活动了，人与人之间没有了那种淳朴，纯粹的交流机会了。其实不论是做什么，只要大家从内心放松了，开心了，就挺好了。</p>
+
+<p>哦，对了，今天可以下android源码了，repo被墙了，这一步要翻墙：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo &amp;gt; ~/bin/repo
+</span><span class='line'>chmod a+x ~/bin/repo
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>主要是要登陆下<a href="https://android.googlesource.com/new-password">https://android.googlesource.com/new-password</a>，得到类似的：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>machine android.googlesource.com login git-&lt;username>.gmail.com password &lt;password>  
+</span><span class='line'>machine android-review.googlesource.com login git-&lt;username>.gmail.com password &lt;password></span></code></pre></td></tr></table></div></figure></notextile></div>
+将这段信息添加到~/.netrc下之后,就可以`repo sync`了。嗯嗯。还在下，不知道还要下多久。</password></username></password></username></p>
+
+<p>那个baidu网盘的音乐外链断了，可见还是不行，还是用酷牛网盘的吧。</p>
+
+<p>决定以后有空就在这里写两句。改成octopress挺方便的，终端里<code>rake new_post</code>,自己的编辑器里面<code>markdown</code>一下，再<code>rake deploy</code>就OK了。都在本地操作。可谓很快很放心。内心里的angry，就任由它吧。当机会来临之际，终归会像绿巨人一样爆发了，干出一番成就的。</p>
+
+<p>老婆今天考试，祝考完心情很好，考完开开心心~</p>
+
+<p><p id="audioplayerWhistle ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayerWhistle ", {soundFile: "http://img.iwreader.com/messageVoice/2012/27/84b088aaceff4b228d074a4d4258bc50.mp3",titles:"Whistle ",artists:"Flo Rida"});</script></p>
+
+<p><blockquote><p>whistle（夏日轻快口哨）　</p></p><p><p>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Let me know（让我知道）<br/>Girl I’m gonna show you how to do it（女孩我这就要去告诉你怎么做）<br/>And we start real slow（然后我们慢慢开始）<br/>You just put your lips together（你只要把双唇合拢）<br/>And you come real close（然后你就能发出类似的（声音））<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Here we go（我们一起开始吧）<br/>I’m betting you like bebop（我猜你是喜欢比波普音乐的）<br/>And i’m betting you love creep mode（而且我猜你也喜欢令人惊悚的调式）<br/>And i’m betting you like girls that give love to girls（而且我猜你会喜欢关爱同性的女孩）<br/>And stroke your little ego（轻抚你的小小自我）<br/>I bet i’m guilty your honor（我猜你的荣誉令我感到内疚）<br/>But that’s how we live in my genre（但这就是我们生活中的风格）<br/>When in hell I pay rottweiler（该死我到底该什么时候该付洛威纳犬的价钱）<br/>There’s only one flo, and one rida（这儿只有一个Flo先生，一个Rida先生）<br/>I’m a damn shame（该死我真够惭愧）<br/>Order more champagne, pull it down hellstream（再点些香槟酒，倒下去）<br/>Tryna put it on ya（试着把它放在你那里）<br/>Bet your lips spin back around corner（我猜你角落边上的你会动动嘴巴）<br/>Slow it down baby take a little longer（慢一点宝贝（我希望你再）延长些时间）<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Let me know（让我知道）<br/>Girl I’m gonna show you how to do it（女孩我这就要去告诉你怎么做）<br/>And we start real slow（然后我们慢慢开始）<br/>You just put your lips together（你只要把双唇合拢）<br/>And you come real close（然后你就能发出类似的（声音））<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Here we go（我们一起开始吧）<br/>Whistle baby, whistle baby,（口哨宝贝，口哨宝贝）<br/>Whistle baby, whistle baby（口哨宝贝，口哨宝贝）<br/>It’s like everywhere I go（就像在我去过的所有地方一样）<br/>My whistle ready to blow(我随时都准备吹口哨）<br/>Shawty don’t leave a note（这美女没留下什么便条）<br/>She can get any by the low（不过她轻易就能得到些）<br/>Permission not approved（这种允许可不被认可）<br/>It’s okay, it’s under control（这样就好，在我的控制之下）<br/>Show me soprano, cause girl you can handle（给我秀秀女高音，因为女孩你能搞定它）<br/>Baby we start snagging, you come in part clothes（宝贝我们开始消除阻碍，你让些新服饰登场）<br/>Girl i’m losing wing, my bucatti the same road（女孩我丢了翅膀，我的布拉迪跑车在同一条路上）<br/>Show me your perfect pitch,（向我展示出你最完美的音调）<br/>You got it my banjo（你已学会弹我的班卓琴）<br/>Talented with your lips, like you blew out candles（你的双唇天赋异禀就像你在吹蜡烛时一样）<br/>So amusing, now you can make a whistle with the music（太有趣啦，你现在会吹出这种乐曲啦）<br/>Hope you ain’t got no issue, you can do it（但愿你对这没有争议，你能做到的）<br/>Give me the perfect picture, never lose it（给我一幅最好的图景，我永远不会丢掉它的）<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Let me know（让我知道）<br/>Girl I’m gonna show you how to do it（女孩我这就要去告诉你怎么做）<br/>And we start real slow（然后我们慢慢开始）<br/>You just put your lips together（你只要把双唇合拢）<br/>And you come real close（然后你就能发出类似的（声音））<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Here we go（我们一起开始吧）<br/>Whistle baby, whistle baby,（口哨宝贝，口哨宝贝）<br/>Whistle baby, whistle baby（口哨宝贝，口哨宝贝）<br/>Go girl you can work it（去吧女孩你能做到的）<br/>Let me see your whistle while you work it（你吹口哨时请让我见识下）<br/>I’mma lay it back, don’t stop it（我会躺下聆听，别停下）<br/>Cause I love it how you drop it, drop it, drop it, on me（因为我爱上你，为我（一直吹到）结束，结束，结束的样子了）<br/>Now, shorty let that whistle blow（现在，这美女要吹响口哨了）<br/>Yeah, baby let that whistle blow（耶，宝贝快吹响口哨吧）<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Let me know（让我知道）<br/>Girl I’m gonna show you how to do it（女孩我这就要去告诉你怎么做）<br/>And we start real slow（然后我们慢慢开始）<br/>You just put your lips together（你只要把双唇合拢）<br/>And you come real close（然后你就能发出类似的（声音））<br/>Can you blow my whistle baby, whistle baby（你能吹出我这样的口哨吗宝贝，口哨宝贝）<br/>Here we go（我们一起开始吧）<br/>Whistle baby, whistle baby,（口哨宝贝，口哨宝贝）<br/>Whistle baby, whistle baby（口哨宝贝，口哨宝贝）</p></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[3 Idiots]]></title>
+    <link href="http://vampirefan.github.com/blog/2011/11/21/3-idiots/"/>
+    <updated>2011-11-21T15:40:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2011/11/21/3-idiots</id>
+    <content type="html"><![CDATA[<p>Who says they are idiots? 不错的电影，印度电影一直很不错啊。。</p>
+
+<embed src="http://www.tudou.com/v/ig8xIvPWfEA/&amp;resourceId=0_05_05_99&amp;bid=05/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="600" height="400" />
+
+<p>呱呱~~呱呱呱~~~</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rio]]></title>
+    <link href="http://vampirefan.github.com/blog/2011/04/19/rio/"/>
+    <updated>2011-04-19T05:58:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2011/04/19/rio</id>
+    <content type="html"><![CDATA[<p>值得纪念的一部动画~<br />
+也特别特别的好看~<br />
+小鹦鹉特别可爱~<br />
+音乐特别好听~<br />
+很炫的3D~<br />
+上视频~<br />
+音乐~<br />
+~<br />
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="600" height="400" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="align" value="middle" /><param name="src" value="http://player.youku.com/player.php/sid/XMjQ4ODU2ODM2/v.swf" /><param name="quality" value="high" /><embed type="application/x-shockwave-flash" width="600" height="400" src="http://player.youku.com/player.php/sid/XMjQ4ODU2ODM2/v.swf" quality="high" align="middle" /></object></p>
+
+<p><p id="audioplayerTake You To Rio ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayerTake You To Rio ", {soundFile: "http://cdn.concreteloop.com/wp-content/uploads/2011/04/Ester-Dean-Take-You-To-Rio.mp3",titles:"Take You To Rio ",artists:"Ester Dean"});</script></p>
+
+<p>我们，每天，都要开心~</p>
+]]></content>
+  </entry>
+  
+</feed>

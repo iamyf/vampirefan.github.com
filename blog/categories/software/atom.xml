@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Software | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/software/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[adobe reader的两个小技巧]]></title>
+    <link href="http://vampirefan.github.com/blog/2011/12/08/adobe-readerde-liang-ge-xiao-ji-qiao/"/>
+    <updated>2011-12-08T16:21:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2011/12/08/adobe-readerde-liang-ge-xiao-ji-qiao</id>
+    <content type="html"><![CDATA[<p>因为总是需要用到为了解决麻烦，记一下： </p>
+
+<ol>
+  <li>
+    <p>编译中运行时在已经打开adobe reader的情况下在调用命令<code>AcroRd32.exe</code>会报错，解决办法是在命令行后加上参数<code>n</code>，即 <code>"AcroRd32.exe" /n file.pdf</code></p>
+  </li>
+  <li>
+    <p>让adobe reader记住上次打开页数：<code>ctrl+k</code>到设置里，<code>Documents</code>文档选项，<code>Restore last view settings when reopening documents</code>.</p>
+  </li>
+</ol>
+
+<p>总有不开心的的时候，要想这些总会过去的，按部就班，心平气和，等开心的时候多抓紧时间开心嘛！加油哦果果~ <br />
+呱呱。</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：VPN | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/vpn/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[VPN远程、翻墙、nod32防火墙配置]]></title>
+    <link href="http://vampirefan.github.com/blog/2011/11/03/vpnyuan-cheng-fan-qiang-nod32fang-huo-qiang-pei-zhi/"/>
+    <updated>2011-11-03T11:28:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2011/11/03/vpnyuan-cheng-fan-qiang-nod32fang-huo-qiang-pei-zhi</id>
+    <content type="html"><![CDATA[<p>利用ipv6的校内VPN和windows自带的远程桌面，校内会快很多，比teamviewer和Gbrige好用。</p>
+
+<ul>
+  <li>配置VPN SJTU:      </li>
+</ul>
+
+<p>网络和共享中心=&gt;设置新的连接或网络=&gt;连接到工作区=&gt;使用我的internet连接(VPN)=&gt;<code>
+vpn6.net.sjtu.edu.cn</code>; <code>SJTU VPN</code>  <br />
+属性=&gt;安全=&gt;可选数据加密 <br />
+属性=&gt;选项=&gt;取消<code>包括Windows登陆域</code>
+<!--more--></p>
+
+<ul>
+  <li>配置远程登录：</li>
+</ul>
+
+<p>计算机=&gt;属性=&gt;远程设置=&gt;勾选允许  <br />
+计算机=&gt;管理=&gt;服务=&gt;勾选启动数个远程桌面的服务</p>
+
+<ul>
+  <li>配置nod32防火墙：</li>
+</ul>
+
+<p>设置=&gt;个人防火墙=&gt;交互过滤模式=&gt;配置规则和区域=&gt;规则=&gt;新建=&gt;本地添加端口3389，允许双向</p>
+
+<ul>
+  <li>BBS上看到一个懒人翻墙法，用了很是不错。</li>
+</ul>
+
+<p>详见<a href="http://www.qishansun.info/?page_id=141" title="原文连接">http://www.qishansun.info/?page_id=141</a> <br />
+还是利用了ssh，申请了一个号和ip，利用putty，添加动态端口3128，在利用google的switchy插件，端口3128，online rule list：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>

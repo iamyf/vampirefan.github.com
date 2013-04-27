@@ -1,0 +1,187 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage[bf,small,pagestyles]{titlesec}
+\usepackage[dvips]{graphicx}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{indentfirst}
+\usepackage{listings}
+\lstset{
+	escapechar=`,
+	language=Matlab, tabsize=2, keepspaces=true,
+    xleftmargin=2em, xrightmargin=2em, aboveskip=1em,
+    frame=none,   
+    basicstyle=\scriptsize,
+    showspaces=false,
+    flexiblecolumns=true,
+    breaklines=true, breakautoindent=true,breakindent=4em,
+}
+\def\pgfsysdriver{pgfsys-dvipdfmx.def}
+\usepackage{tikz}
+\pgfsetxvec{\pgfpoint{10pt}{0}}
+\pgfsetyvec{\pgfpoint{0}{10pt}}
+\tikzset{box/.style={rectangle, rounded corners=6pt,minimum width=50pt, minimum height=20pt, inner sep=6pt,draw=black,thick, fill=white}}
+\pagestyle{plain}
+
+\begin{document}
+\title{\textbf{数字语音处理实验报告：实现Burg算法}}
+\author{王帆  5070309862  F0703034}
+\date{\today}
+\maketitle
+
+\section{实验目的}
+\begin{enumerate}
+\item{理解语音信号的线性预测方法}
+\item{理解Burg算法}
+\end{enumerate}
+
+\section{实验内容}
+编写一个程序，实现Burg算法。\\
+
+由已知数据计算预测系数的方法有三：自相关法或Yule-Walker法、协方差法、Burg法。
+\begin{itemize}
+\item{自相关法} 相应的Yule-Walker方程是Toeplitz方程，可用Levinson算法高效的求解，理论上所得预测误差滤波器是稳定的。但在计算预测误差时，数据段两端都要添加零取样值，即相当于加了以数据窗，造成谱估计失真。另外，当预测系数量化时，可能造成实际系统的不稳定。
+\item{协方差法} 重新定义时间平均最小均方准则：$\varepsilon' = \frac{1}{N} \sum^{N-1}_{n=p} e^{2}_{p}(n) = min$。数据两端不需要添加零取样值。其方法计算出来的预测系数有可能造成预测误差滤波器的不稳定。
+\item{Burg法} 重新定义时间平均最小均方准则：$\varepsilon = \sum^{N-1}_{n=p}[(e^{+}_{p}(n))^{2}+(e^{-}_{p}(n))^{2}] = min$。即要求前向预测误差和后向预测误差的平方和（在$n=p$到$n=N-1$时间间隔内）最小。Burg算法保证了滤波器总是稳定的（最小相位的），即要求$|k_{p}|<1$。
+\end{itemize}
+
+Burg算法的计算步骤：
+\begin{enumerate}
+\item 初始化
+\begin{displaymath}
+e^{+}_{0}(n)=e^{-}_{0}(n)=x(n), \qquad 0\leqslant n \leqslant N-1 
+\end{displaymath}
+\begin{displaymath}
+\varepsilon_{0}=\frac{1}{N}\sum^{N-1}_{n=0} x^{2}(n)
+\end{displaymath}
+
+\item 计算下列各量：
+\begin{displaymath}
+A_{p-1}(z), \varepsilon_{p-1}, e^{+}_{p-1}(n),  e^{-}_{p-1}(n), \qquad p-1\leqslant n \leqslant N-1
+\end{displaymath}
+
+
+\item 计算反射系数
+\begin{displaymath}
+k_{p}=\frac{\displaystyle 2\sum^{N-1}_{n=p} e^{+}_{p-1}(n)e^{-}_{p-1}(n-1)}{\displaystyle \sum^{N-1}_{n=p}[(e^{+}_{p-1}(n))^{2}+(e^{-}_{p-1}(n-1))^{2}]}
+\end{displaymath}
+
+\item 计算$A_{p}(z)$
+\begin{displaymath}
+\left[ \begin{array}{c}
+1 \\
+a_{p,1} \\
+\vdots \\
+a_{p,p-1} \\
+a_{p,p} \end{array} \right]
+=
+\left[ \begin{array}{c}
+1 \\
+a_{p-1,1} \\
+\vdots \\
+a_{p-1,p-1} \\
+0 \end{array} \right]
+- k_{p}
+\left[ \begin{array}{c}
+0 \\
+a_{p-1,p-1} \\
+\vdots \\
+a_{p-1,1} \\
+1 \end{array} \right]
+\end{displaymath}
+即：$a_{p,j}=a_{p-1,j}-k_{p}a_{p-1,p-j},\qquad j\leqslant p-1$。
+
+\item 计算$e^{+}_{p}(n)$和$e^{-}_{p}(n)$
+\begin{displaymath}
+\left\{ \begin{array}{ll}
+e^{+}_{p}(n) & =e^{+}_{p-1}(n)-k_{p}e^{-}_{p-1}(n-1),\\
+e^{-}_{p}(n) & =e^{-}_{p-1}(n-1)-k_{p}e^{+}_{p-1}(n),
+\end{array}
+\qquad p \leqslant n \leqslant N-1 \right.
+\end{displaymath}
+
+\item 更新均方误差(实验中没有做处理)
+\begin{displaymath}
+\varepsilon_{p} = (1-k^{2}_{p})\varepsilon_{p-1}
+\end{displaymath}
+
+\item 返回步骤2。
+.\end{enumerate}
+
+\section{实验代码}
+\begin{lstlisting}
+X=[5 0 7 0 3 0 9 8 6 2];%`样本值`
+p=4;%`阶数`
+N=length(X);%`样本数`
+e0(1,:)=X;%`前向预测和后向预测的初始值`
+e1(1,:)=X;%`前向预测和后向预测的初始值`
+a=zeros(p+1,p+1);
+a(:,1)=1;%`预测系数矩阵初始化`
+k=[];%`反射系数矩阵初始化`
+for i=2:p+1
+    num=2*(e0(i-1,[i:N])*e1(i-1,[i-1:N-1])');
+    den=e0(i-1,[i:N])*e0(i-1,[i:N])'+e1(i-1,[i-1:N-1])*e1(i-1,[i-1:N-1])';
+    k(i)=num/den;%`计算反射系数`
+
+    for j=2:i-1
+        a(i,j)=a(i-1,j)-k(i)*a(i-1,i-j+1);
+    end
+    a(i,i)=-k(i);%`计算预测系数`
+
+    for m=2:N
+        e0(i,m)=e0(i-1,m)-k(i)*e1(i-1,m-1);
+        e1(i,m)=e1(i-1,m-1)-k(i)*e0(i-1,m);
+    end%`计算前向预测和后向预测`
+end
+k%`查看稳定性`
+This_arburg=a
+Matlab_arburg=arburg(X,p)%`对比试验结果`
+\end{lstlisting}
+
+\section{实验结果}
+计算4阶的实验结果：
+\begin{lstlisting}
+k =
+
+         0    0.5207    0.5121   -0.3052    0.6825
+
+
+This_arburg =
+
+    1.0000         0         0         0         0
+    1.0000   -0.5207         0         0         0
+    1.0000   -0.2541   -0.5121         0         0
+    1.0000   -0.4104   -0.5896    0.3052         0
+    1.0000   -0.6187   -0.1872    0.5853   -0.6825
+
+
+Matlab_arburg =
+
+    1.0000   -0.6187   -0.1872    0.5853   -0.6825
+\end{lstlisting}
+
+计算5阶的实验结果：
+\begin{lstlisting}
+k =
+
+         0    0.5207    0.5121   -0.3052    0.6825    0.1517
+
+
+This_arburg =
+
+    1.0000         0         0         0         0         0
+    1.0000   -0.5207         0         0         0         0
+    1.0000   -0.2541   -0.5121         0         0         0
+    1.0000   -0.4104   -0.5896    0.3052         0         0
+    1.0000   -0.6187   -0.1872    0.5853   -0.6825         0
+    1.0000   -0.5151   -0.2760    0.6137   -0.5887   -0.1517
+
+
+Matlab_arburg =
+
+    1.0000   -0.5151   -0.2760    0.6137   -0.5887   -0.1517
+\end{lstlisting}
+\section{心得体会}
+这次试验主要是编写一个程序，实现Burg算法。实验结果如上所示，和Matlab自带的arburg函数的计算结果吻合。同时反射系数满足$|k_{p}|<1$，即符合Burg算法的要求。实验内容难度不大，按照步骤实现程序就能完成。
+
+\end{document}

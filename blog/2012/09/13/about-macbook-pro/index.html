@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>octopress上audio插件, IOS真机调试 - { vampirefan's   Harbor }</title>
+  <meta name="author" content="vampirefan">
+
+  
+  <meta name="description" content="入手Macbook Pro一段时间了,虽然一直很忙，只有晚上回寝室后摆弄一会会。不过也整顿的差不多了，也有一些体会了。可配置性和快捷性确实是windows不能比的。有些东西趁今天比较空，赶紧的记一记。 对于一般软件的破解还是比较容易找的，一般在Macidea,加上baidu，google， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://vampirefan.github.com/blog/2012/09/13/about-macbook-pro/">
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link href="/favicon.ico" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="{ vampirefan's   Harbor }" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<!-- <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"> -->
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Cherry+Cream+Soda' rel='stylesheet' type='text/css'> -->
+<link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="/javascripts/audio-player.js"></script>    
+<script type="text/javascript">  
+    AudioPlayer.setup("http://wpaudioplayer.com/wp-content/plugins/audio-player/assets/player.swf?ver=2.0.4.1", {
+    	transparentpagebg: "yes",  
+    	initialvolume: 100 ,
+        width: 320
+    });  
+</script>  
+<script type="text/javascript" src="/javascripts/clearlink.js"></script>
+<script type="text/javascript" src="/javascripts/xttop_mini.js"></script>
+<script type="text/javascript" src="/javascripts/smoothscroll.js"></script>
+
+<meta name="google-site-verification" content="uaV6_4WIvqoYYcyUwLP5hifyZPjRYFSeGeXaBmt1pNM" />
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33010606-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><hgroup>
+  <h1><a href="/">{ vampirefan's   Harbor }</a></h1>
+  
+    <h2>Life is like a box of chocolates, you never know what you're gonna get. --Forrest Gump</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li> -->
+  
+</ul>
+  
+<form action="http://google.com/search" method="get" id="searchform">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:vampirefan.github.com" />
+    <input class="search" type="text" name="q" id="q" results="0" placeholder="Search ..."/>
+    <!-- <input type="submit" class="submit" name="submit" id="searchsubmit" value="Search"> -->
+  </fieldset>
+</form>
+  
+
+<ul class="main-navigation">
+  <li><a href="/">&hearts;&#65509;Home</a></li>
+  <li><a href="/about-here/">About</a></li>
+  <li><a href="/blog/archives/">All</a></li>
+  <li><a href="/blog/categories/share/">Share</a></li>
+  <li><a href="/blog/categories/it/">IT</a></li>
+  <li><a href="/blog/categories/life/">Life</a></li>
+  <li><a href="/blog/categories/thinking/">Thinking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+
+  <header>
+    
+      <h1 class="entry-title">Octopress上audio插件, IOS真机调试</h1>
+    
+  </header>
+
+  <footer>
+    
+      <p class="date">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-13T21:47:00+08:00" pubdate data-updated="true">2012-09-13 09:47PM</time>
+      </p>
+    
+  </footer>
+  <footer>
+    
+      <p class="meta">
+        
+  
+
+<span class="byline author vcard">@<span class="fn">vampirefan</span></span>
+
+        
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/app/'>App</a>, <a class='category' href='/blog/categories/coding/'>Coding</a>, <a class='category' href='/blog/categories/ios/'>IOS</a>, <a class='category' href='/blog/categories/it/'>IT</a>, <a class='category' href='/blog/categories/life/'>Life</a>, <a class='category' href='/blog/categories/octopress/'>Octopress</a>, <a class='category' href='/blog/categories/thinking/'>Thinking</a>, <a class='category' href='/blog/categories/webdev/'>WebDev</a>
+  
+</span>
+
+
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </footer>
+
+<div class="entry-content"><p>入手Macbook Pro一段时间了,虽然一直很忙，只有晚上回寝室后摆弄一会会。不过也整顿的差不多了，也有一些体会了。可配置性和快捷性确实是windows不能比的。有些东西趁今天比较空，赶紧的记一记。</p>
+
+<p>对于一般软件的破解还是比较容易找的，一般在<a href="http://mac.pcbeta.com/">Macidea</a>,加上baidu，google，想要的软件基本上都能找到破解。难找的就是一些比较冷门的软件了，比如novamind我还是没找到。其实如果我以后有钱了，我会考虑买正版的。</p>
+
+<p>对于现在很火的云空间，云同步，我只能说，太多了，基本上都差不多。先觉得dropbox好，又觉得cloudapp好，还有baidu网盘，googleDrive，其实都差不多。想要做图床还是mp3外链，都还是要费好些功夫找。我现在觉得图床用<a href="http://minus.com/">minus</a>还行，挺快的。mp3用<a href="300.la">酷牛网盘</a>是支持外链的，可惜太慢了，后来发现一般的网盘像baidu网盘先共享然后下载，再右键看下载链接也能找到链接地址，但是不知道链接地址稳不稳定，过一段时间再说吧。
+<!--more--></p>
+
+<p>iphone5今天出来了，晚上到处都是负面评价，这个其实也不好说，现在大多数人都是表面上说这不好那不好，自己还是买了暗地里玩的乐呵呵的。看到一个新闻说苹果出口为美国挣了好些的GDP：</p>
+<blockquote><p /><footer><strong>@Michael Feroli</strong> <cite>iPhone5的销售将拉动美国GDP增速0.25~0.5个百分点。</cite></footer></blockquote>
+<p>然后就有人评价“可见美国经济之疲软”。。。。</p>
+
+<p>Mac上搭建Octopress真的很不错。于是还是把wordpress的博客搬到octopress上来了，我想要的功能基本上octopress上面都能实现了，花时间写了一个小插件把原来wordpress上的audio-player移植过来了，正则表达式很难学，于是仿照加套用<code>video_tag.rb</code>和<code>code_block.rb</code>写了自己的<code>audio_tag.rb</code>，实现了需要的插入mp3的功能。</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>audio_tag (audio_tag.rb)</span> <a href="/downloads/code/audio_tag.rb">download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+<span class="line-number">47</span>
+<span class="line-number">48</span>
+<span class="line-number">49</span>
+<span class="line-number">50</span>
+<span class="line-number">51</span>
+<span class="line-number">52</span>
+<span class="line-number">53</span>
+<span class="line-number">54</span>
+<span class="line-number">55</span>
+<span class="line-number">56</span>
+<span class="line-number">57</span>
+<span class="line-number">58</span>
+<span class="line-number">59</span>
+<span class="line-number">60</span>
+<span class="line-number">61</span>
+<span class="line-number">62</span>
+<span class="line-number">63</span>
+<span class="line-number">64</span>
+<span class="line-number">65</span>
+<span class="line-number">66</span>
+<span class="line-number">67</span>
+<span class="line-number">68</span>
+<span class="line-number">69</span>
+<span class="line-number">70</span>
+<span class="line-number">71</span>
+</pre></td><td class="code"><pre><code class="rb"><span class="line"><span class="c1"># Title:</span>
+</span><span class="line"><span class="c1">#		Octopress audio-player Audio Tag</span>
+</span><span class="line"><span class="c1"># Author:</span>
+</span><span class="line"><span class="c1">#		vampirefan</span>
+</span><span class="line"><span class="c1"># Syntax:</span>
+</span><span class="line"><span class="c1">#		{% audio artists url/to/mp3 titles %}</span>
+</span><span class="line"><span class="c1">#		{% audio artists url/to/mp3  %}</span>
+</span><span class="line"><span class="c1">#		{% audio url/to/mp3 titles %}</span>
+</span><span class="line"><span class="c1">#		{% audio url/to/mp3 %}</span>
+</span><span class="line"><span class="c1"># Example:</span>
+</span><span class="line"><span class="c1">#		{% audio artists http://example.org/music.mp3 the song %}</span>
+</span><span class="line"><span class="c1"># Output:</span>
+</span><span class="line"><span class="c1">#		&lt;p id=&quot;audioplayertitles&quot;&gt;Alternative content&lt;/p&gt;&lt;script type=&quot;text/javascript&quot;&gt;AudioPlayer.embed(&quot;audioplayertitles&quot;, {soundFile: &quot;http://example.org/music.mp3&quot;,titles:&quot;the song&quot;});&lt;/script&gt;</span>
+</span><span class="line"><span class="c1">#########################################################################################</span>
+</span><span class="line"><span class="c1"># Important!</span>
+</span><span class="line"><span class="c1"># Please Add the following into the {root_url}/source/_includes/custom/head.html</span>
+</span><span class="line"><span class="c1">#</span>
+</span><span class="line"><span class="c1"># &lt;script type=&quot;text/javascript&quot; src=&quot;http://wpaudioplayer.com/wp-content/plugins/audio-player/assets/audio-player.js?ver=2.0.4.1&quot;&gt;&lt;/script&gt;   </span>
+</span><span class="line"><span class="c1"># &lt;script type=&quot;text/javascript&quot;&gt;  </span>
+</span><span class="line"><span class="c1">#     AudioPlayer.setup(&quot;http://wpaudioplayer.com/wp-content/plugins/audio-player/assets/player.swf?ver=2.0.4.1&quot;, {</span>
+</span><span class="line"><span class="c1">#     	transparentpagebg: &quot;yes&quot;,  </span>
+</span><span class="line"><span class="c1">#         width: 290</span>
+</span><span class="line"><span class="c1">#     });  </span>
+</span><span class="line"><span class="c1"># &lt;/script&gt;  </span>
+</span><span class="line"><span class="c1">#########################################################################################</span>
+</span><span class="line"><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class="line">	<span class="k">class</span> <span class="nc">AudioTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class="line">		<span class="vi">@audio</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class="line">		<span class="c1"># def initialize(tag_name, markup, tokens)</span>
+</span><span class="line">		<span class="c1"># 	if markup =~ /((https?:\/\/|\/)(\S+))(\s+(\d+)\s(\d+))?(\s+(https?:\/\/|\/)(\S+))?/i</span>
+</span><span class="line">		<span class="c1"># 		@file =$1</span>
+</span><span class="line">		<span class="c1"># 		@titles = $4</span>
+</span><span class="line">		<span class="c1"># 		@num = $5</span>
+</span><span class="line">		<span class="c1"># 		super</span>
+</span><span class="line">		<span class="c1"># 	end</span>
+</span><span class="line">		<span class="c1"># end</span>
+</span><span class="line">		<span class="no">ArtistsUrlTitle</span> <span class="o">=</span> <span class="sr">/(\S[\S\s]*)\s+(https?:\/\/)(\S+)\s+(.+)/i</span>
+</span><span class="line">	    <span class="no">ArtistsUrl</span> <span class="o">=</span> <span class="sr">/(\S[\S\s]*)\s+(https?:\/\/)(\S+)/i</span>
+</span><span class="line">	   	<span class="no">UrlTitle</span> <span class="o">=</span> <span class="sr">/((https?:\/\/)(\S+))\s+(.+)/i</span>
+</span><span class="line">	    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">tag_name</span><span class="p">,</span> <span class="n">markup</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span>
+</span><span class="line">			<span class="vi">@file</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class="line">			<span class="vi">@titles</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class="line">			<span class="vi">@artists</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class="line">			<span class="k">if</span> <span class="n">markup</span> <span class="o">=~</span> <span class="no">ArtistsUrlTitle</span>
+</span><span class="line">				<span class="vi">@file</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$2</span> <span class="o">+</span> <span class="vg">$3</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class="line">				<span class="vi">@titles</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$4</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class="line">				<span class="vi">@artists</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$1</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class="line">			<span class="k">elsif</span> <span class="n">markup</span> <span class="o">=~</span> <span class="no">ArtistsUrl</span>
+</span><span class="line">				<span class="vi">@file</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$2</span> <span class="o">+</span> <span class="vg">$3</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class="line">				<span class="vi">@artists</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$1</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class="line">			<span class="k">elsif</span> <span class="n">markup</span> <span class="o">=~</span> <span class="no">UrlTitle</span>
+</span><span class="line">				<span class="vi">@file</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$1</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class="line">				<span class="vi">@titles</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$4</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class="line">			<span class="k">else</span>
+</span><span class="line">				<span class="vi">@file</span> <span class="o">=</span> <span class="n">markup</span>
+</span><span class="line">				<span class="vi">@titles</span> <span class="o">=</span> <span class="s2">&quot;A nice Song&quot;</span>
+</span><span class="line">			<span class="k">end</span>	
+</span><span class="line">			<span class="k">super</span>
+</span><span class="line">	    <span class="k">end</span>
+</span><span class="line">
+</span><span class="line">		<span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class="line">			<span class="n">output</span> <span class="o">=</span> <span class="k">super</span>
+</span><span class="line">			<span class="n">audio</span> <span class="o">=</span> <span class="sx">%Q{&lt;p id=&quot;audioplayer</span><span class="si">#{</span><span class="vi">@titles</span><span class="si">}</span><span class="sx">&quot;&gt;Alternative content&lt;/p&gt;}</span>
+</span><span class="line">			<span class="n">audio</span><span class="o">+=</span> <span class="sx">%Q{&lt;script type=&quot;text/javascript&quot;&gt;}</span>
+</span><span class="line">			<span class="n">audio</span><span class="o">+=</span> <span class="sx">%Q{AudioPlayer.embed(&quot;audioplayer</span><span class="si">#{</span><span class="vi">@titles</span><span class="si">}</span><span class="sx">&quot;, }</span>
+</span><span class="line">			<span class="n">audio</span><span class="o">+=</span> <span class="sx">%Q{{soundFile: &quot;</span><span class="si">#{</span><span class="vi">@file</span><span class="si">}</span><span class="sx">&quot;,titles:&quot;</span><span class="si">#{</span><span class="vi">@titles</span><span class="si">}</span><span class="sx">&quot;,artists:&quot;</span><span class="si">#{</span><span class="vi">@artists</span><span class="si">}</span><span class="sx">&quot;});&lt;/script&gt;}</span>
+</span><span class="line">		<span class="k">end</span>
+</span><span class="line">	<span class="k">end</span>
+</span><span class="line"><span class="k">end</span>
+</span><span class="line">
+</span><span class="line"><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;audio&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">AudioTag</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>小小的在这里开心一下。哦，对了，旁边的这个日历是第三方的，挺赞，可惜不能把当天圈出来，主要是自己不会<code>javascript</code>,找时间学一学，把这个功能实现了。整个主题配色和纹理花了我不少精力，不过总体上挺满意的。~找老婆要奖励~。哦对了，还修了个网站的logo，实在不大会美工，能修成这样，已经很不错了。Mac上浏览器的两端对齐对得非常之整齐。如图：</p>
+
+<p><img src="http://i.minus.com/ibgCxvyFvrJIxJ.png" width="400" height="211" title="mac下的两端对齐" /></p>
+
+<p>可惜windows上对齐效果太差了，花了不少功夫，还是不对，<code>justify</code>一点用都没有。</p>
+
+<p>对了，试了一下写iphone上的程序。还在真机上调试了，这里有个很好的教程<a href="http://blog.csdn.net/vrix/article/details/7851377">图文并茂 在ML OS X 10.8 + XCode4.4/4.4.1下实现无证书真机调试IOS5.1.1(亲测，附调试截图)</a>。这里是在工程中需要加入的脚本：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>真机调试ios_app (ios_dev_hack.sh)</span> <a href="/downloads/code/ios_dev_hack.sh">download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+</pre></td><td class="code"><pre><code class="sh"><span class="line"><span class="c">#shell  /bin/sh</span>
+</span><span class="line">
+</span><span class="line"><span class="nb">export </span><span class="nv">CODESIGN_ALLOCATE</span><span class="o">=</span>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate
+</span><span class="line">
+</span><span class="line"><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;${PLATFORM_NAME}&quot;</span> <span class="o">==</span> <span class="s2">&quot;iphoneos&quot;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="s2">&quot;${PLATFORM_NAME}&quot;</span> <span class="o">==</span> <span class="s2">&quot;ipados&quot;</span> <span class="o">]</span>; <span class="k">then</span>
+</span><span class="line">
+</span><span class="line">/Applications/Xcode.app/Contents/Developer/iphoneentitlements/gen_entitlements.py <span class="s2">&quot;my.company.${PROJECT_NAME}&quot;</span> <span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent&quot;</span>;
+</span><span class="line">
+</span><span class="line">codesign -f -s <span class="s2">&quot;iPhone Developer&quot;</span> --entitlements <span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent&quot;</span> <span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/&quot;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">fi</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<p>苹果真心挺好用，要打造自动话听话的，还要学写一些脚本。慢慢来吧。</p>
+
+<p>最近还算是挺充实的，虽然实习的地方很忙，实验室也很忙，还想自己捣鼓写喜欢的技术。不过忙的都暂时还能应付的过来。还有很多想学想做的事情，慢慢来，等有时间，有机会，找点点精力出来一件一件的实现吧。这里还可以记一记： </p>
+
+<ul>
+  <li>学做菜    </li>
+  <li>学溜冰    </li>
+  <li>学单反，做摄影    </li>
+  <li>学设计，美工，做动画，做视频，做音频    </li>
+  <li>学吉他，敲架子鼓，冬、冬冬、冬、冬冬、卡~     </li>
+  <li>做android和iphone上的app：想做一个editor，要类似sublimetext，实现在客户端写markdown，实现很多快捷的snippet写markdown然后在octopress上发布博文。    </li>
+  <li>看一些书，买了两本书《浪潮之巅》、《技术元素》；有时间慢慢看，还想把《圣经》看了。。。    </li>
+  <li>学<code>applescript</code>，方便使用mac    </li>
+  <li>学<code>ruby</code>, <code>perl</code>, <code>php</code>    </li>
+  <li>想去旅游，去西藏，去海边，有钱了去国外的各个名胜美景去旅游    </li>
+  <li>想蹦极，想跳伞   </li>
+  <li>想学烤蛋糕，做面包    </li>
+  <li>想学打网球    </li>
+  <li>想开间茶馆，或是咖啡馆，很温馨的那种，起名<code>弯排帆|vampirefan</code>    </li>
+  <li>想做产品，像苹果这种；想做产业，像星级酒店，品牌集团那种；要做大，家喻户晓    </li>
+  <li>想做游戏，大型的，辐射3、刺客信条、使命召唤、上古卷轴、马克思佩恩、洛城危机、古墓丽影这种，动画逼真，画面可玩性高。特别想把《搜神记》、《诛仙》、《长安乱》做成大型RPG游戏。   </li>
+  <li>想灌篮，找个跳板铺在地上实现了也行   </li>
+  <li>想跳街舞，那种很强节奏跳上蹦下的那种   </li>
+  <li>。。。   </li>
+</ul>
+
+<p>还有好多，不过现在不现实，眼前的事也挺多，不过想法和愿望是应该一直有所期待的。机会总是在不经意间来的。喜欢周星驰的那句“人没有梦想，那和咸鱼有什么分别啊”。咸鱼，瞪着无神的眼睛，一动不动。</p>
+
+<p>留着梦想，记下想法，未来总会有惊喜的。</p>
+
+</div>
+
+
+  <footer>
+<!--     <p class="meta">
+      
+  
+
+<span class="byline author vcard">@<span class="fn">vampirefan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-13T21:47:00+08:00" pubdate data-updated="true">2012-09-13 09:47PM</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/app/'>App</a>, <a class='category' href='/blog/categories/coding/'>Coding</a>, <a class='category' href='/blog/categories/ios/'>IOS</a>, <a class='category' href='/blog/categories/it/'>IT</a>, <a class='category' href='/blog/categories/life/'>Life</a>, <a class='category' href='/blog/categories/octopress/'>Octopress</a>, <a class='category' href='/blog/categories/thinking/'>Thinking</a>, <a class='category' href='/blog/categories/webdev/'>WebDev</a>
+  
+</span>
+
+
+    </p> -->
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/09/12/wo-bu-yao-zuo-she-ji/" title="Previous Post: 我不要做设计!!!">&laquo; 我不要做设计!!!</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/09/15/i-am-always-angry/" title="Next Post: "I am always angry"">"I am always angry" &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><center>
+<p>
+  {vampirefan's Harbor} - Copyright &copy; 2011-2013 - 弯排帆|vampirefan 
+  <!-- <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> -->
+</p>
+</center>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'vampirefan-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vampirefan.github.com/blog/2012/09/13/about-macbook-pro/';
+        var disqus_url = 'http://vampirefan.github.com/blog/2012/09/13/about-macbook-pro/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+(function(){
+  //var mytop = new xttop();        //默认以文字
+
+  //var mytop= new xttop({img:"defaults",bottom:"50px",right:"50px",speed:50,width:"60px",height:"60px"});  //可选参数  以图片显示
+  
+  var mytop=new xttop({img:"/images/totop0.png",width:"68px",height:"32px",speed:50});
+})();
+</script>
+
+</body>
+<script type="text/javascript">
+document.addEventListener("keydown", function ( event ) {
+  if ( ( event.keyCode >= 33 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) || ( event.keyCode >= 74 && event.keyCode <= 75 ) ) {
+      event.preventDefault();
+    }
+}, false);
+  
+document.addEventListener("keyup", function ( event ) {
+  if ( ( event.keyCode >= 33 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) || ( event.keyCode >= 74 && event.keyCode <= 75 ) ) {
+    switch( event.keyCode ) {
+      case 33: // pg up
+      case 37: // left
+      case 38: // up
+      case 74: // j, J
+        
+          url = 'http://vampirefan.github.com/blog/2012/09/12/wo-bu-yao-zuo-she-ji/';
+        
+               break;
+      case 34: // pg down
+      case 39: // right
+      case 40: // down
+      case 75: // k, K
+        
+          url = 'http://vampirefan.github.com/blog/2012/09/15/i-am-always-angry/';
+        
+               break;
+    }
+    if (url) {
+        window.location = url;
+    }
+    event.preventDefault();
+  }
+}, false);
+</script>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Html | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/html/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[用浏览器做Presentation]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/10/20/presentation-with-browser/"/>
+    <updated>2012-10-20T10:21:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/10/20/presentation-with-browser</id>
+    <content type="html"><![CDATA[<p>终于找到<code>markdown</code>写<code>Presentation</code>的<a href="http://slideshow.rubyforge.org/index.html">方法</a>了。很理想，很强大，正是我一直想实现的功能。先前找到的<a href="http://imakewebthings.com/deck.js/">deck.js</a>和<a href="http://bartaz.github.com/impress.js">impress.js</a>被做成模板集成在<code>slideshow</code>这个<code>ruby gem</code>里面了。分别可以在<a href="http://geraldb.github.com/slideshow-deck.js/">slideshow-deck.js</a>和<a href="http://geraldb.github.com/slideshow-impress.js/">slideshow-impress.js</a>找到。</p>
+
+<!--more-->
+
+<p><code>deck.js</code>和<code>impress.js</code>的效果是不用说了。<code>impress.js</code>是借用了<a href="http://prezi.com/">prezi</a>的思想，把<code>presentation</code>做在一张无限延展的画布上，通过画布上一个个局部的<code>slide</code>间的动画转接，完成整个演示过程，比传统的<code>PowerPoint</code>更能抓住观众。</p>
+
+<p><code>gem slideshow</code>的实现效果可以参见<a href="/slides/impress.js.html">slideshow-impress.js demo</a>和<a href="/slides/deck.js.html">slideshow-deck.js demo</a>。</p>
+
+<p>我仍然觉得移动互联网的发展是不可限量的。浏览器能实现的功能远不止替代<code>ppt</code>这么简单。当云概念慢慢清晰在人们的生活中以后，谈了很多年却并没有真正融入生活和生产的物联网必将依靠着云的力量重新进入人们的视线。</p>
+
+<p>最近经常为了很多想实现的功能和应用在网上搜寻各种互联网上的技术，越来越觉得有太多的新技术，新方法，真是学无止境啊。</p>
+
+<p>今天一德国回来的CS的同学告诉我他在那里做的一个网站项目用的是<code>Grails</code>，<a href="http://grails.org/"><code>Groovy &amp; Rails</code></a>，看上去很不错，可以学学！</p>
+
+]]></content>
+  </entry>
+  
+</feed>

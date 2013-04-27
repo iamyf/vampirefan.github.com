@@ -1,0 +1,512 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+\usecolortheme[named=Black]{structure}
+\usetheme[height=7mm]{Singapore}
+\usepackage{amsmath}
+
+\begin{document}
+\setbeamertemplate{background}{\includegraphics[width=\paperwidth]{sjtu1.png}}
+\setbeamertemplate{navigation symbols}{}%取消导航条
+\setbeamertemplate{items}[ball] 
+\setbeamertemplate{caption}[numbered]  
+
+\title{\textsc{Routing and Topology Control in Wireless Sensor Networks}\\[2ex]\begin{large} \textbf{By Group Three}\end{large}}
+\author{
+\begin{tabular}{llll}
+Wang Haosen & Wang Fan & Liu Wuchong & Luo Bing\\
+5070309861 & 5070309862 & 5070309857 & 5070309858
+\end{tabular}}
+\date{\today}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Outline}
+\begin{frame}
+\frametitle{Outline}
+\begin{itemize}
+\item<1-> Introduction to WSN
+\item<2-> Overview of WSN Routing
+\item<3-> OTC in WSNs
+\item<4-> Random Walks on Digraphs
+\end{itemize}
+\end{frame}
+
+
+\section{Introduction to WSN}
+\begin{frame}
+\frametitle{Introduction to the sensor network}
+\begin{itemize}
+\item<1-> A sensor network is composed of a large number of sensor nodes that are densely deployed either inside the phenomenon or very close to it.
+\item<2-> Realization of these and other sensor network applications require wireless ad hoc networking techniques.
+\end{itemize}
+\end{frame}
+
+\subsection{Sensor networks communication architecture}
+\begin{frame}
+\frametitle{Sensor networks communication architecture}
+\begin{itemize}
+\item The sensor nodes are usually scattered in a sensor field as shown in the figure.
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.68\textwidth]{l1}
+\end{center}
+\end{figure}
+\end{itemize}
+\end{frame}
+
+\subsection{Design factors}
+\begin{frame}
+\frametitle{Design factors}
+\begin{itemize}
+\item<1-> Fault tolerance
+\item<2-> Scalability
+\item<3-> Production costs
+\item<4-> Hardware constraints
+\item<5-> Sensor network topology
+\item<6-> Environment
+\item<7-> Transmission media 
+\item<8-> Power consumption
+\end{itemize}
+\end{frame}
+
+\subsection{Fault tolerance}
+\begin{frame}
+\frametitle{Fault tolerance}
+Fault tolerance is the ability to sustain sensor network functionalities without any interruption due to sensor node failures.
+\begin{center}
+$R_{k}(t)=e^{\lambda}k^{t}$
+\end{center}
+\end{frame}
+
+\subsection{Scalability}
+\begin{frame}
+\frametitle{Scalability}
+The density can range from few sensor nodes to few hundred sensor nodes in a region, which can be less than 10m in diameter.
+\begin{center}
+$\mu(R)\approx \frac{(N \cdot \pi R^{2})}{A}$
+\end{center}
+\end{frame}
+
+\subsection{Power consumption}
+\begin{frame}
+\frametitle{Power consumption}
+\begin{itemize}
+\item Power consumption can be divided into three domains:
+\begin{itemize}
+\item Sensing
+\item Communication
+\item Data processing
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsection{Protocol stack}
+\begin{frame}
+\frametitle{Protocol stack}
+The protocol stack used by the sink and sensor networks is given as following.
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.4\textwidth]{l2}
+\end{center}
+\end{figure}
+\end{frame}
+
+
+
+\section{Overview of WSN Routing}
+\subsection{Routing Techniques}
+\begin{frame}
+	\frametitle{Routing Techniques}
+	\begin{itemize}
+	\item<1-> Flat
+	\item<2-> Hierarchical
+	\item<3-> Location-Based Routing
+	\end{itemize}
+\end{frame}
+
+\subsection{Routing protocols}
+\begin{frame}
+	\frametitle{Routing protocols}
+	\begin{itemize}
+	\item Multipath-Based
+	\item Query-Based
+	\item Negotiation-Based
+	\item QoS-Based
+	\item Coherent-Based
+	\end{itemize}
+\end{frame}
+
+\subsection{Routing Challenges and Design Issues in WSNs}
+\begin{frame}
+	\frametitle{Routing Challenges and Design Issues in WSNs}
+	\begin{itemize}
+	\item Node Deployment
+	\item Energy Consumption without Losing Accuracy
+	\item Data Reporting Model
+	\item Fault Tolerance
+	\item Scalability
+	\item Network Dynamics
+	\item Transmission Media
+	\item Coverage
+	\item Quality of Service
+	\end{itemize}
+\end{frame}
+
+\subsubsection{Node deployment}
+\begin{frame}
+\frametitle{Node deployment}
+Node Deployment can be either \textbf{deterministic} or \textbf{randomized}.
+\end{frame}
+
+\subsubsection{Energy Consumption without Losing Accuracy}
+\begin{frame}
+\frametitle{Energy Consumption without Losing Accuracy}
+For sensors, the power supply is limited, energy conserving forms of communication and computation are essential.
+\end{frame}
+
+\subsubsection{Data Reporting Model}
+\begin{frame}
+\frametitle{Data Reporting Model}
+Data reporting can be categorized as either time-driven(continuous), event-driven, query-driven, and hybrid.
+\end{frame}
+
+\subsubsection{Fault Tolerance}
+\begin{frame}
+\frametitle{Fault Tolerance}
+Some sensor nodes may fail or be blocked for many reasons. The failure of sensor nodes should not affect the overall task of the sensor network.
+\end{frame}
+
+\subsubsection{Scalability}
+\begin{frame}
+\frametitle{Scalability}
+\begin{enumerate}
+\item<1-> The number of sensor nodes may be in the order of hundreds or thousands, or more.
+\item<2-> Sensor network routing protocols should be scalable enough to respond to events in the environment.
+\end{enumerate}
+\end{frame}
+
+\subsubsection{Quality of Service}
+\begin{frame}
+\frametitle{Quality of Service}
+In some applications, data should be delivered within a certain period of time from the moment it is sensed, otherwise the data will be useless.
+\end{frame}
+
+\section{OTC in WSNs}
+\begin{frame}
+\frametitle{Opportunity-based Topology Control in WSNs}
+\begin{flushright}
+------an effective method to improve\\
+ the network’s energy efficiency\\
+ \indent \\
+ \textit{originated by Yunhuai Liu, ICDCS 2009,INFOCOM 2010}
+\end{flushright}
+\end{frame}
+
+\subsection{Backgrounds in Topology Control}
+\subsubsection{Traditional methods}
+\begin{frame}
+\frametitle{Backgrounds in Topology Control}
+\begin{itemize}
+\item \textbf{Traditional topology control approaches:}\\
+\indent\\
+based on the assumption that a pair of nodes is either \textit{connected} or \textit{disconnected}
+\indent\\
+\begin{flushright}
+------\textit{Connectivity-based Topology Control}
+\end{flushright}
+\end{itemize}
+\end{frame}
+
+\subsubsection{Practical Situations}
+\begin{frame}
+\frametitle{Backgrounds in Topology Control}
+\begin{itemize}
+\item \textbf{Practical Situations:}\\
+\indent\\
+There is a transitional region that contains intermittently connected links, or \textit{lossy links}.\\
+\indent\\
+Literatures shows that lossy links actually accounts a major part of wireless networks, in some particular cases, more than 90\%.
+\end{itemize}
+\end{frame}
+
+\subsection{Opportunity-based Topology Control}
+\subsubsection{Benefits}
+\begin{frame}
+\frametitle{Opportunity-based Topology Control}
+\begin{itemize}
+\item \textbf{Distinguish from traditional model: application of lossy links}\\
+\indent\\
+\item \textbf{Benefits: Energy-efficient}\\
+Lossy links allow transmitters to reach more nodes when succeed. By taking the successful lossy links, transmission cost can be largely reduced.
+\end{itemize}
+\end{frame}
+
+\subsubsection{Figure Example 3}
+\begin{frame}
+\frametitle{Introduction to Reachability}
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.80\textwidth]{o3}
+\end{center}
+\end{figure}
+\end{frame}
+
+\subsubsection{Shortcuts and Challenges}
+\begin{frame}
+\frametitle{Opportunity-based Topology Control}
+\begin{itemize}
+\item \textbf{Shortcuts: Unreliability of Links}\\
+Since links are not completely ensured of connection, a given transmission may not be able to reach every required nodes.\\
+\end{itemize}
+\end{frame}
+
+\subsubsection{Figure Example 1}
+\begin{frame}
+\frametitle{Opportunity-based Topology Control}
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.80\textwidth]{o1}
+\end{center}
+\end{figure}
+\end{frame}
+
+\subsection{Introduction to Reachability}
+\subsubsection{Node Reachability}
+\begin{frame}
+\frametitle{Introduction to Reachability}
+\begin{itemize}
+\item \textbf{Definition} \textit{Node Reachability} $\lambda_{G}(v)$:\\
+\indent\\
+Given a node $v$ in a network $G$, $\lambda_{G}(v)$ is the probability that the sink can reach $v$ by a broadcast.
+\end{itemize}
+\end{frame}
+
+\subsubsection{Network Reachability}
+\begin{frame}
+\frametitle{Introduction to Reachability}
+\begin{itemize}
+\item \textbf{Definition} \textit{Network Reachability} $\lambda(G)$:\\
+\indent\\
+Given a network $G(V,E)$, $\lambda(G)$ is defined as the ratio between the expected
+number of reached nodes by the sink using a sink initialized
+broadcast, and the total number of nodes in $V$ \\
+\indent\\
+i.e.  $\lambda(G)=\frac{E|V_{r}|}{|V|}=\frac{\Sigma_{v\in V} \lambda_{G}(v)}{|V|}$
+\end{itemize}
+\end{frame}
+
+\subsection{Problem Statement}
+\subsubsection{Problem Statement 1}
+\begin{frame}
+\frametitle{Problem Statement}
+\begin{itemize}
+\item Given a directed graph $G(V,E)$ and a threshold $\lambda_{TH}\in[0,1]$, assuming $\lambda(G)\geq \lambda_{TH}$, the problem is to find a sub-network $G_{R}(V,E_{R}) \subseteq G$ such that:
+\begin{align*}
+\textrm{minmize} &: \varepsilon(G_{R})\\
+\textrm{subject to} &: \lambda(G_{R})\geq \lambda_{TH}
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\subsubsection{Problem Statement 2}
+\begin{frame}
+\frametitle{Problem Statement}
+\begin{itemize}
+\item
+\textbf{Key issue}:\\
+\indent\\
+\indent Compute the node reachability\\
+\indent\\
+\indent Compute the network reachability\\
+\indent\\
+\item
+\begin{flushright}
+------Both NP-hard problem
+\end{flushright}
+\end{itemize}
+\end{frame}
+
+\subsection{Algorithm Design}
+\subsubsection{properties}
+\begin{frame}
+\frametitle{Algorithm Design: CONREAP}
+\begin{itemize}
+\item Only simple combinations of series and parallel topologies can be computed in polynomial time.\\
+\begin{flushright}
+------series-parallel networks
+\end{flushright}
+\indent\\
+\indent\\
+\item Link-disjoint trees belongs to the series-parallel structure.
+\end{itemize}
+\end{frame}
+
+\subsubsection{steps}
+\begin{frame}
+\frametitle{Algorithm Design: CONREAP}
+\begin{enumerate}
+\item<1-> Measure link reliability $\lambda(u,v) $ by sending “hello” message to all neighbor nodes $u$
+\item<2-> Receive tree information $\lambda_{T_{i}}(u)$ from all neighbor nodes $u$
+\item<3-> For every tree $T_{i}$, v chooses $u_{i}$ to maximaze its reachability and update $\lambda_{T_{i}}(v)=\lambda_{T_{i}}(u_{i})\cdot \lambda_{\{u_{i},v\}}$
+\item<4-> Select a tree to maximize $\lambda_{T_{i}}(v)$
+\item<5-> Include the chosen links $\{u_{i},v \}$ in to the topology
+\item<6-> Calculate new node reachability according to $\tilde{\lambda}_{G_{R}}(v)=1-\Pi^{K}_{i=1}(1-\lambda_{T_{i}}(v))$
+\item<7-> Broadcast and exchange updated reachability and topology information with other nodes
+\item<8-> If the quality is still below the threshold, repeat from 2
+\end{enumerate}
+\end{frame}
+
+\subsection{Performance Evaluation}
+\subsubsection{result 1}
+\begin{frame}
+\frametitle{Performance Evaluation}
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.80\textwidth]{o4}
+\end{center}
+\end{figure}
+\end{frame}
+
+\section{Random Walks on Digraphs}
+\subsection{Directed Graphs}
+\begin{frame}
+\frametitle{Directed Graphs}
+\begin{itemize}
+\item<1->
+\begin{center}
+Routing protocol\\
+packet forwarding
+\end{center}
+\indent \\
+
+\item<2->
+\begin{center}
+A wireless network\\ 
+A (weighted) directed graph(A digraph)
+\end{center}
+\begin{flushright}
+\item<3->  Yanhua~Li, Zhi-Li~Zhang INFOCOM~2010
+\end{flushright}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{An Example Wireless Topology}
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.88\textwidth]{r0}
+\end{center}
+\end{figure}
+Matrix $A=[a_{ij}]$ \\
+($a_{ij}$ represents the the link probability from i to j)
+\end{frame}
+
+\subsection{Three Wireless routing paradigms}
+\subsubsection{Best Path Routing}
+\begin{frame}
+\frametitle{Best Path Routing}
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.56\textwidth]{r1}
+\end{center}
+\end{figure}
+\begin{center}
+Selects a optimistic sequence of transmission.
+\end{center}
+The transition probability matrix $P_{R}=[p_{ij}]$:
+\begin{equation}
+p_{ij} = \left\{ \begin{array}{ll}
+a_{i,i+1} & \textrm{if $j=i+1,i=0,...,m$}\\
+1-a_{i,i+1} & \textrm{if $j=i,i=0,...,m$}\\
+1 & \textrm{if $j=i,i=m+1$}\\
+0 & \textrm{otherwise.}
+\end{array} \right.
+\end{equation}
+\end{frame}
+
+\subsubsection{Opportunistic Routing}
+\begin{frame}
+\frametitle{Opportunistic Routing}
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.56\textwidth]{r2}
+\end{center}
+\end{figure}
+\begin{center}
+Considers multiple paths in a subgraph,\\
+which determines the "best" forwarder list.
+\end{center}
+The transition probability matrix $P_{FL}=[p_{ij}]$:
+\begin{equation}
+p_{ij} = \left\{ \begin{array}{ll}
+a_{ij}\prod_{k>j}(1-a_{ik}) & \textrm{if $0\le i<j\le m+1$}\\
+\prod_{k>i}(1-a_{ik}) & \textrm{if $j=i,0\le i \le m$}\\
+1 & \textrm{if $j=i,i=m+1$}\\
+0 & \textrm{otherwise.}
+\end{array} \right.
+\end{equation}
+\end{frame}
+
+\subsubsection{Stateless Routing}
+\begin{frame}
+\frametitle{Stateless Routing}
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.56\textwidth]{r3}
+\end{center}
+\end{figure}
+\begin{center}
+Every node has a probability to taking part in the forwarding.
+\end{center}
+The transition probability matrix $P_{G}=[p_{ij}]$:
+\begin{equation}
+p_{ij} = \left\{ \begin{array}{ll}
+\frac{a_{ij}}{\sum_{k}a_{ik}}(1-\prod_{k}(1-a_{ik})) & \textrm{if $i\not= j$}\\
+\prod_{k}(1-a_{ik}) & \textrm{if $i=j$}
+\end{array} \right.
+\end{equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Three Wireless routing paradigms}
+\begin{itemize}
+\item<1-> Best Path Routing:
+\begin{itemize}
+\item Static wireless environment
+\item Stable and reliable wireless channels
+\end{itemize}
+\item<2-> Opportunistic Routing:
+\begin{itemize}
+\item Less reliable wireless channels
+\item Frequently varying conditions
+\end{itemize}
+\item<3-> Stateless Routing
+\begin{itemize}
+\item Unstable wireless network environment
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsection{Transmission Cost}
+\begin{frame}
+\frametitle{Transmission Cost}
+\begin{itemize}
+\item<1-> Hitting Time $H_{ij}$: the (expected) number of transitions for a random walker that starts from node $i$ to first reach node $j$.
+\begin{equation}
+H_{ij} = \left\{ \begin{array}{ll}
+1+ \sum_{k=1}^{n}p_{ik}H_{kj} & \textrm{if $i\not= j$}\\
+0 & \textrm{if $i=j$}
+\end{array} \right.
+\end{equation}
+\item<2-> Hitting Cost $H_{ij}^{s}$: the (expected) totle cost (or "delay") incurred by a random walk that starts at one node $i$ to first reach node $j$.
+\begin{equation}
+H_{ij}^{s} = \left\{ \begin{array}{ll}
+\sum_{k=1}^{n}p_{ik}(T_{ik}+H_{kj}^{s}) = s_{i}+ \sum_{k=1}^{n} p_{ik} H_{kj}^{s} & \textrm{if $i\not= j$}\\
+0 & \textrm{if $i=j$}
+\end{array} \right.
+\end{equation}
+\end{itemize}
+\end{frame}
+
+\end{document}

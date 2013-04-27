@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress 安装小记 - { vampirefan's   Harbor }</title>
+  <meta name="author" content="vampirefan">
+
+  
+  <meta name="description" content="Octopress的感觉
+用起来还是不是很顺手，很多需要的功能不能实现，代码的插入高亮功能不像wordpress插件的效果那么令我满意。图像，视频，音乐的插入还要摸索。虽然搭建也很费力，但是没有sql，没有php，不用找免费的域名空间，本地和远程像svn一样的更新机制很令我满意。可配置性也很强， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://vampirefan.github.com/blog/2012/07/04/octopress-an-zhuang-xiao-ji/">
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link href="/favicon.ico" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="{ vampirefan's   Harbor }" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<!-- <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"> -->
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Cherry+Cream+Soda' rel='stylesheet' type='text/css'> -->
+<link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="/javascripts/audio-player.js"></script>    
+<script type="text/javascript">  
+    AudioPlayer.setup("http://wpaudioplayer.com/wp-content/plugins/audio-player/assets/player.swf?ver=2.0.4.1", {
+    	transparentpagebg: "yes",  
+    	initialvolume: 100 ,
+        width: 320
+    });  
+</script>  
+<script type="text/javascript" src="/javascripts/clearlink.js"></script>
+<script type="text/javascript" src="/javascripts/xttop_mini.js"></script>
+<script type="text/javascript" src="/javascripts/smoothscroll.js"></script>
+
+<meta name="google-site-verification" content="uaV6_4WIvqoYYcyUwLP5hifyZPjRYFSeGeXaBmt1pNM" />
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33010606-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><hgroup>
+  <h1><a href="/">{ vampirefan's   Harbor }</a></h1>
+  
+    <h2>Life is like a box of chocolates, you never know what you're gonna get. --Forrest Gump</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li> -->
+  
+</ul>
+  
+<form action="http://google.com/search" method="get" id="searchform">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:vampirefan.github.com" />
+    <input class="search" type="text" name="q" id="q" results="0" placeholder="Search ..."/>
+    <!-- <input type="submit" class="submit" name="submit" id="searchsubmit" value="Search"> -->
+  </fieldset>
+</form>
+  
+
+<ul class="main-navigation">
+  <li><a href="/">&hearts;&#65509;Home</a></li>
+  <li><a href="/about-here/">About</a></li>
+  <li><a href="/blog/archives/">All</a></li>
+  <li><a href="/blog/categories/share/">Share</a></li>
+  <li><a href="/blog/categories/it/">IT</a></li>
+  <li><a href="/blog/categories/life/">Life</a></li>
+  <li><a href="/blog/categories/thinking/">Thinking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+
+  <header>
+    
+      <h1 class="entry-title">Octopress 安装小记</h1>
+    
+  </header>
+
+  <footer>
+    
+      <p class="date">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-04T23:46:00+08:00" pubdate data-updated="true">2012-07-04 11:46PM</time>
+      </p>
+    
+  </footer>
+  <footer>
+    
+      <p class="meta">
+        
+  
+
+<span class="byline author vcard">@<span class="fn">vampirefan</span></span>
+
+        
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/coding/'>Coding</a>, <a class='category' href='/blog/categories/octopress/'>Octopress</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/webdev/'>WebDev</a>
+  
+</span>
+
+
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </footer>
+
+<div class="entry-content"><h3 id="octopress">Octopress的感觉</h3>
+<p>用起来还是不是很顺手，很多需要的功能不能实现，代码的插入高亮功能不像wordpress插件的效果那么令我满意。图像，视频，音乐的插入还要摸索。虽然搭建也很费力，但是没有sql，没有php，不用找免费的域名空间，本地和远程像svn一样的更新机制很令我满意。可配置性也很强，代码很容易读改，框架很简洁，很有程序的井井有条的感觉。可惜发博文没有UI，有点复杂，女友肯定不开心在这里发文章了，所以暂不打算把wordpress搬过来。在摸索一段时间，等这边的一切顺畅了，再做决定～</p>
+
+<h3 id="octopress-1">Octopress的搭建</h3>
+<!--more-->
+
+<p>1.安装辅助工具：
+Liquid error: ClassNotFound: no lexer for alias ‘PowerShell’ found 
+2.安装rvm<br />
+<a href="http://octopress.org/docs/setup/rvm/">参见官方文档</a></p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">bash -s stable &lt; &lt;<span class="o">(</span>curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer<span class="o">)</span>
+</span><span class="line"><span class="nb">echo</span> <span class="s1">&#39;[[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] &amp;&amp; . &quot;$HOME/.rvm/scripts/rvm&quot; # Load RVM function&#39;</span> &gt;&gt; ~/.bash_profile
+</span><span class="line"><span class="nb">source</span> ~/.bash_profile
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>3.安装所需的包<br />
+<a href="http://blazing5.heroku.com/markdown/2012/04/04/octopressda-jian-xiang-jie-macosx-and-and-fedora">参考网址</a></p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">rvm pkg install zlib
+</span><span class="line">rvm --skip-autoreconf pkg install readline
+</span><span class="line">rvm pkg install openssl
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>4.安装ruby<br />
+试了好久，最后还是使用1.9.3成功的和<code>heroku</code>搭配在一起使用，如果使用<code>github</code>则可以参看<code>octopress</code>官方安装文档的1.9.2的安装使用就能很好的使用。</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">rvm install 1.9.3 <span class="o">&amp;&amp;</span> rvm use 1.9.3
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p><strong>注意：</strong>出现问题很可能ruby没有配置好，看一下有哪些包没装好，安装好那些包以后，再重新安装使用ruby。</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">rvm reinstall 1.9.3 <span class="o">&amp;&amp;</span> rvm use 1.9.3
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>5.确认gem是最新的,以及确认ruby的版本</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">rvm rubygems latest
+</span><span class="line">ruby --version
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>6.安装octopress或同步已有的octopress</p>
+
+<ul>
+  <li>安装octopress：<br />
+<a href="http://octopress.org/docs/setup/">参见官方安装文档</a></li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">git clone git://github.com/imathis/octopress.git octopress
+</span><span class="line"><span class="nb">cd </span>octopress    <span class="c"># If you use RVM, You&#39;ll be asked if you trust the .rvmrc file (say yes).</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>同步已有的octopress：  </li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">git clone -b <span class="nb">source </span>git@github.com:username/username.github.com.git octopress
+</span><span class="line"><span class="nb">cd </span>octopress
+</span><span class="line">git clone git@github.com:username/username.github.com.git _deploy
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>7.安装一些所需的依赖</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">gem install bundler
+</span><span class="line">bundle install
+</span><span class="line">rake install
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>8.配置远程repository<br />
+<strong>注意：</strong>没有配置过密钥的话先配置密钥：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">ssh-keygen -t rsa -C <span class="s2">&quot;your_email@youremail.com&quot;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>github：<br />
+a.安装密钥：
+在<code>~/.ssh/</code>下面会看见一个叫<code>id_rsa.pub</code>的文件，用VIM或GEdit打开，把里面的东西拷到github网站里：<code>"Add another public key"</code>，都复制到那个框内。
+b.关联远程repository</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">rake setup_github_pages
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>heroku：<br />
+a.安装密钥：</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">heroku keys:add ~/.ssh/id_rsa.pub
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>b.关联远程repository   </p>
+
+<ul>
+  <li>建立新的站点（所谓的app）  </li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">heroku create your_appname
+</span><span class="line">git config branch.master.remote heroku
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>使用已有的站点  </li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">git remote add heroku git@heroku.com:your_appname.git
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p><strong>提示：</strong>可以利用<code>git remote -v</code>查询已有的repository<br />
+c.删除<code>.gitignore</code>中的<code>public</code>文件</p>
+
+<p>9.生成发布页面</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">rake generate
+</span><span class="line">git add .
+</span><span class="line">git commit -m <span class="s1">&#39;site updated&#39;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>github：  </li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">git pull origin master
+</span><span class="line">rake deploy
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>heroku：  </li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nb">cd </span>_deploy
+</span><span class="line">git pull heroku master
+</span><span class="line">git push heroku master
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="octopress-2">Octopress的配置</h3>
+<ol>
+  <li>
+    <p>首先配置文件:<code>./_config.yml</code><br />
+<a href="http://octopress.org/docs/configuring/">参见官方文档</a></p>
+  </li>
+  <li>
+    <p>页面布局文件夹:<code>./source/_includes/</code><br />
+<a href="http://octopress.org/docs/theme/template/">参见官方文档</a></p>
+  </li>
+  <li>
+    <p>页面css文件夹:<code>./sass/custom/</code><br />
+<a href="http://octopress.org/docs/theme/styles/">参见官方文档</a></p>
+  </li>
+  <li>
+    <p>博客文档存放文件夹:<code>./source/_posts</code></p>
+  </li>
+</ol>
+
+<p>:-)，试试<code>markdown</code>语言，挺炫的～</p>
+</div>
+
+
+  <footer>
+<!--     <p class="meta">
+      
+  
+
+<span class="byline author vcard">@<span class="fn">vampirefan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-04T23:46:00+08:00" pubdate data-updated="true">2012-07-04 11:46PM</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/coding/'>Coding</a>, <a class='category' href='/blog/categories/octopress/'>Octopress</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/webdev/'>WebDev</a>
+  
+</span>
+
+
+    </p> -->
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/06/07/sheng-huo-xin-qing/" title="Previous Post: 生活心情">&laquo; 生活心情</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/07/16/guan-yu-sublime-text-2/" title="Next Post: 关于Sublime Text 2">关于Sublime Text 2 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><center>
+<p>
+  {vampirefan's Harbor} - Copyright &copy; 2011-2013 - 弯排帆|vampirefan 
+  <!-- <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> -->
+</p>
+</center>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'vampirefan-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vampirefan.github.com/blog/2012/07/04/octopress-an-zhuang-xiao-ji/';
+        var disqus_url = 'http://vampirefan.github.com/blog/2012/07/04/octopress-an-zhuang-xiao-ji/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+(function(){
+  //var mytop = new xttop();        //默认以文字
+
+  //var mytop= new xttop({img:"defaults",bottom:"50px",right:"50px",speed:50,width:"60px",height:"60px"});  //可选参数  以图片显示
+  
+  var mytop=new xttop({img:"/images/totop0.png",width:"68px",height:"32px",speed:50});
+})();
+</script>
+
+</body>
+<script type="text/javascript">
+document.addEventListener("keydown", function ( event ) {
+  if ( ( event.keyCode >= 33 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) || ( event.keyCode >= 74 && event.keyCode <= 75 ) ) {
+      event.preventDefault();
+    }
+}, false);
+  
+document.addEventListener("keyup", function ( event ) {
+  if ( ( event.keyCode >= 33 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) || ( event.keyCode >= 74 && event.keyCode <= 75 ) ) {
+    switch( event.keyCode ) {
+      case 33: // pg up
+      case 37: // left
+      case 38: // up
+      case 74: // j, J
+        
+          url = 'http://vampirefan.github.com/blog/2012/06/07/sheng-huo-xin-qing/';
+        
+               break;
+      case 34: // pg down
+      case 39: // right
+      case 40: // down
+      case 75: // k, K
+        
+          url = 'http://vampirefan.github.com/blog/2012/07/16/guan-yu-sublime-text-2/';
+        
+               break;
+    }
+    if (url) {
+        window.location = url;
+    }
+    event.preventDefault();
+  }
+}, false);
+</script>
+</html>

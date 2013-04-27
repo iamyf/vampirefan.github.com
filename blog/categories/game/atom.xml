@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Game | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/game/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Borderlands]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/09/21/borderlands/"/>
+    <updated>2012-09-21T21:51:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/09/21/borderlands</id>
+    <content type="html"><![CDATA[<p><strong>2K</strong> 是我很喜欢的一个游戏公司，出的游戏都是精品，可以和暴雪相匹敌。从体育游戏&lt;2K NBA&gt;到沙盘游戏&lt;黑手党&gt;，再是现在的FPS&lt;无主之地&gt;，每部在同类游戏中都是佼佼者。不论从可玩性还是画面，甚至是游戏的优化，都做得可以说是无可挑剔。很喜欢&lt;无主之地&gt;的开场动画。那音乐，画面配合得赏心悦目，特别是字幕的带出，一点不给人觉得反感，相反有惊艳的感觉。刚出的2代的开场CG同样是震撼。幻想自己也能学习做出这样的CG甚至是游戏~
+<!--more--></p>
+
+<p>下面是&lt;无主之地&gt;的开场CG：</p>
+<center><embed src="http://player.youku.com/player.php/sid/XMTkwMTQ0Nzg0/v.swf" allowfullscreen="true" quality="high" width="600" height="480" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash" /></center>
+
+<p>这是&lt;无主之地2&gt;的开场CG:（同样的精彩！）</p>
+
+<center><embed src="http://player.youku.com/player.php/sid/XNDUxMjU1OTI4/v.swf" allowfullscreen="true" quality="high" width="600" height="480" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash" /></center>
+
+<p>真的很棒,看以后自己业余能花点时间捣鼓CG的制作了。最近捣鼓了下python和ruby，确实是很容易学习和使用的很有前途的语言~发现看的东西越多，想知道的也越多。很高兴现在还保持着这样高的求知欲!!不管有不有用，学习的过程和结果都是很有成就感的。我喜欢这样的成就感~  ^_^</p>
+
+<p>python学习推荐这个<a href="http://sebug.net/paper/python/">简明 Python 教程</a>,还是交大的一个博士生翻译的，确实翻译的特别好，原文写的很棒。其实，我觉的我有时间也可以把自己看到的好的文献做一些翻译工作。ruby推荐前天说的那个TDD测试小系统。其实要学会，还是要多学着用，慢慢的把自己的一些想法试着利用编程语言实现吧。</p>
+
+<p>看《浪潮之巅》，确实获益匪浅，一个企业要想长远的发展，势必要有长远眼光的人的领导，AT&amp;T公司和IBM公司不同的命运很能说明问题，机遇对它们来说都不少，问题就出在前者领导层的自私与贪婪，后者的领导者却有着大局有眼光。看到IBM在二战的时候还生产过冲锋枪，令人赞叹。看到微软的盖茨狡猾的拿着DOS到处卖，IBM却没办法，笑了。书写的很生动，极力推荐~</p>
+
+<p>这好些天挺多锻炼的，基本上每天公司学校间要来回跑好多趟，晚上有时还打打乒乓，学学轮滑，吃的也不多，晚上睡觉感觉肚子都很饿着睡的。然而今天称体重却重了1公斤，83公斤了，真是匪夷所思~（希望是体重要下降前的小回升，嘿嘿）</p>
+
+<p>放首很喜欢的歌：</p>
+
+<p><p id="audioplayerHallelujah ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayerHallelujah ", {soundFile: "http://coeficiencenet.typepad.com/contrejour/files/10_hallelujah.mp3",titles:"Hallelujah ",artists:"Rufus Wainwright"});</script></p>
+
+<p><blockquote><p>Hallelujah</p></p><p><p>I‘ve heard there was a secret chord 我的知有一种神秘的乐弦。<br/>that david played and it pleased the lord 由大卫演奏以此来取悦上帝。<br/>but you don’t really care for music, do you 但你并不真的关注音乐，是这样吗？<br/>it goes like this the fourth, the fifth 就像这第四，第五章<br/>the minor fall and the major lift 短音阶降下，大音阶上升<br/>the baffled king composing hallelujah 困惑的国王谱写了哈利路亚<br/>hallelujah… 哈利路亚<br/>your faith was strong but you needed proof 你的信念很坚强，但你需要得到证明<br/>you saw her bathing on the roof 你看见她在房顶上沐浴<br/>her beauty and the moonlight overthrew you 她的美和月光震慑了你<br/>she tied you to her kitchen chair 她把你束缚在了她厨房的椅子上<br/>she broke your throne and she cut your hair 她打破了你的宝座，割断了你的头发<br/>and from your lips she drew the hallelujah 从你的嘴唇上她嗅到了哈利路亚<br/>hallelujah… 哈利路亚<br/>baby I’ve been here before 宝贝我以前来过这里<br/>I know this room and I’ve walked this floor 我熟悉这间房子，我曾入过这里<br/>I used to live alone before I knew you 在我认识你之前我独自生活<br/>I’ve seen your flag on the marble arch 我看到在大理石的拱门上竖立着你的旗帜<br/>love is not a victory march 但爱不是胜利凯旋<br/>it’s a cold and it’s a broken hallelujah 它是冰冷的，破碎的，哈利路亚<br/>hallelujah… 哈利路亚<br/>there was a time when you let me know 有一段日子你让我知道<br/>what’s really going on below 接下来真的会发生些什么事<br/>but now you never show it to me do you 但你从来也不向我展现你自己，你是这样的吗<br/>but remember when i moved in you 但记住当我的心向你靠近<br/>the holy dove was moving too 神圣的鸽子也靠近了<br/>and every breath we drew was hallelujah 我们每次的呼吸都是哈利路亚<br/>hallelujah… 哈利路亚<br/>maybe there’s a god above 可能天上真有上帝<br/>and all I’ve ever learned from love 但我从爱学到的<br/>was how to shoot someone who outdrew you 是如何射向你爱的人 <br/>it’s not a cry you hear at night 你晚上听到的不是哭泣声<br/>it’s not somebody who’ve seen the light 不是看见过光线的某人<br/>it’s a cold and it’s a broken hallelujah 它是冰冷的，破碎的，哈利路亚<br/>hallelujah…哈利路亚<br/>hallelujah… 哈利路亚</p></blockquote></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Blizzard]]></title>
+    <link href="http://vampirefan.github.com/blog/2011/03/09/the-blizzard/"/>
+    <updated>2011-03-09T02:49:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2011/03/09/the-blizzard</id>
+    <content type="html"><![CDATA[<center><embed src="http://player.youku.com/player.php/sid/XMjQ5MTAxNDcy/v.swf" quality="high" width="600" height="400" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" /></center>
+
+<p>真羡慕这些能从事自己喜欢并一直保有激情的工作的人。确实，也对他们的经历有些感动、感慨。</p>
+
+<p>好希望自己将来也可以！支持blizzard！</p>
+]]></content>
+  </entry>
+  
+</feed>

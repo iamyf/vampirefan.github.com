@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Git | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[git使用方法]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/11/20/git-shi-yong-fang-fa/"/>
+    <updated>2012-11-20T13:23:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/11/20/git-shi-yong-fang-fa</id>
+    <content type="html"><![CDATA[<p>经常使用github。基本命令却老是要查找后再使用。这里自己记一记。</p>
+
+<p><a href="http://rogerdudler.github.com/git-guide/index.zh.html">http://rogerdudler.github.com/git-guide/index.zh.html</a>这篇写的特别好！</p>
+
+<h3 id="git">git设置</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config –global user.name [username]
+</span><span class='line'>git config –global user.email [email]</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<!--more-->
+
+<h3 id="git-1">git新仓库</h3>
+
+<ol>
+  <li>
+    <p>github上新建仓库appName</p>
+  </li>
+  <li>
+    <p>本地文件夹下git初始化后推送
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git init
+</span><span class='line'>touch README
+</span><span class='line'>git add .
+</span><span class='line'>git commit -am ‘first commit’
+</span><span class='line'>git remote add origin git@github.com:username/appName.git
+</span><span class='line'>git push -u origin master</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+  </li>
+</ol>
+
+<h3 id="git-2">git推送到远程</h3>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>gitpush.sh </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> “Pushing to remote”
+</span><span class='line'><span class="nb">echo</span> “git add .”
+</span><span class='line'>git add .
+</span><span class='line'><span class="nb">echo</span> “git add -u”
+</span><span class='line'>git add -u
+</span><span class='line'><span class="nv">message</span><span class="o">=</span>”Updated at <span class="k">$(</span>date<span class="k">)</span>”
+</span><span class='line'><span class="nb">echo</span> “git commit -m <span class="k">${</span><span class="nv">message</span><span class="k">}</span>”
+</span><span class='line'>git commit -m “<span class="k">${</span><span class="nv">message</span><span class="k">}</span>”
+</span><span class='line'><span class="nb">echo</span> “git push origin master –force”
+</span><span class='line'>git push origin master –force
+</span><span class='line'><span class="nb">echo</span> “git push <span class="nb">complete</span>”
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3 id="git-3">git获取更新本地</h3>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>gitpull.sh </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># gitpull.sh</span>
+</span><span class='line'><span class="nb">echo</span> “Pulling from remote”
+</span><span class='line'><span class="nb">echo</span> “git add .”
+</span><span class='line'>git add .
+</span><span class='line'><span class="nb">echo</span> “git add -u”
+</span><span class='line'>git add -u
+</span><span class='line'><span class="nv">message</span><span class="o">=</span>”Pulling at <span class="k">$(</span>date<span class="k">)</span>”
+</span><span class='line'><span class="nb">echo</span> “git commit -m <span class="k">${</span><span class="nv">message</span><span class="k">}</span>”
+</span><span class='line'>git commit -m “<span class="k">${</span><span class="nv">message</span><span class="k">}</span>”
+</span><span class='line'><span class="nb">echo</span> “git pull –rebase master”
+</span><span class='line'>git pull –rebase origin master
+</span><span class='line'><span class="nb">echo</span> “git pull <span class="nb">complete</span>”
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3 id="git-4">git获取仓库</h3>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>git clone -b source git@github.com:username/username.github.com.git octopress</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>

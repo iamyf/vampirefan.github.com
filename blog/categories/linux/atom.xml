@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Linux | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Emacs23.4 on Ubuntu]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/05/15/emacs23-dot-4-on-ubuntu/"/>
+    <updated>2012-05-15T22:37:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/05/15/emacs23-dot-4-on-ubuntu</id>
+    <content type="html"><![CDATA[<h2 id="ubuntuemacs234">ubuntu上编译安装emacs23.4.还没学，装好后再捣鼓着学：</h2>
+<ul>
+  <li>安装需要的图形库
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install libgtk2.0-dev
+</span><span class='line'>sudo apt-get install libxpm-dev
+</span><span class='line'>sudo apt-get install libjpeg62-dev
+</span><span class='line'>sudo apt-get install libgif-dev
+</span><span class='line'>sudo apt-get install libtiff4-dev
+</span><span class='line'>sudo apt-get install libncurses5-dev
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<!--more--></li>
+  <li>编译安装
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo ./configure
+</span><span class='line'>sudo make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="c">#终端打开emacs</span>
+</span><span class='line'>emacs -nw
+</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+</ul>
+
+<p>几个好的学习资料：
+<a href="http://emacser.com/emacs-beginner-must-know.htm">致Emacs初学者</a>
+<a href="http://emacser.com/emacs-beginner-must-know.htm">Emacs初学者必知必会</a>
+<a href="http://aifreedom.com/technology/112">Emacs快捷键列表</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu setups]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/05/13/ubuntu-setups/"/>
+    <updated>2012-05-13T12:01:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/05/13/ubuntu-setups</id>
+    <content type="html"><![CDATA[<p>环境搭了好多遍了，每次从新弄的时候都要四处找帮助，虽然都知道，却记不住很多的细节。昨天弄网站就花了不少的时间在这上面，这些细节说起来很简单，却是记不住。中午快吃饭了，顺便先记下来再去。</p>
+
+<p>装完Ubuntu后，<code>/etc/apt/sources.list</code> 的备份和修改肯定先得弄好，这个就不写了，都知道。然后把一些驱动啊什么的整一整。吐槽下<code>ubuntu12.04</code>真心不好用，还是喜欢以前<code>gnome</code>的风格。再就是现在弄的神马双显卡也是坑爹，也不好用。
+<!--more-->
+下一步，下载安装中文语言包，顺便添加ibus中文输入法。可以再改一改键盘快捷键映射。这里记几个常用的：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ctrl+L 切换地址栏
+</span><span class='line'>ctrl+H 显示隐藏文件</span></code></pre></td></tr></table></div></figure></notextile></div>
+再把一些不用的游戏删了，装一些必须的小软件：GIMP，VLC，JDK，GVIM，gpick, filezilla等等，GVIM的安装配置记在后面吧。再配置一下要用的软件
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#安装linux qq（其实webqq其实就挺好用了），下载安装包，首先安张32位库，再强制安装</span>
+</span><span class='line'>sudo apt-get install ia32-libs*
+</span><span class='line'>sudo dpkg -i –force-all linuxqq_v1.0-preview2_i386.deb
+</span><span class='line'><span class="c">#Rythembox MP3播放插件</span>
+</span><span class='line'>sudo apt-get install gstreamer0.10-fluendo-mp3
+</span><span class='line'><span class="c">#解决mp3信息乱码</span>
+</span><span class='line'>sudo apt-get install python-mutagen
+</span><span class='line'>mid3iconv -e gbk *.mp3
+</span><span class='line'><span class="c">#集成右键打开终端</span>
+</span><span class='line'>sudo apt-get install nautilus-open-terminal
+</span><span class='line'><span class="c">#flash插件</span>
+</span><span class='line'>sudo apt-get install flashplugin-installer
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+安装java6
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#现在都不好用了，openjdk或自己编译吧</span>
+</span><span class='line'><span class="c">#wget https://github.com/flexiondotorg/oab-java6/raw/0.2.1/oab-java6.sh -O oab-java6.sh</span>
+</span><span class='line'><span class="c">#chmod +x oab-java6.sh</span>
+</span><span class='line'><span class="c">#sudo ./oab-java6.sh</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+或者安装java7
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#现在也都不好用了，openjdk或自己编译吧</span>
+</span><span class='line'><span class="c">#sudo add-apt-repository ppa:eugenesan/java</span>
+</span><span class='line'><span class="c">#sudo add-apt-repository ppa:webupd8team/java</span>
+</span><span class='line'><span class="c">#sudo apt-get update</span>
+</span><span class='line'><span class="c">#sudo apt-get install oracle-java7-installer&amp;lt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+修改启动项:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>chmod -x /etc/grub.d/20_memtest86+
+</span><span class='line'>sudo update-grub
+</span><span class='line'>sudo gedit /boot/grub/grub.cfg  <span class="c">#里面看着改改</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h4 id="vim">专门说说配置VIM：</h4>
+<p>参考<a href="http://code.google.com/p/vimide/" title="vimide">VIMIDE:http://code.google.com/p/vimide/</a>
+vim/gvim安装：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install vim-gtk
+</span><span class='line'><span class="c">#安装vimide，安装一般的插件</span>
+</span><span class='line'>sudo apt-get install exuberant-ctags wget unzip subversion
+</span><span class='line'>svn checkout http://vimide.googlecode.com/svn/trunk/linux vimide
+</span><span class='line'><span class="nb">cd </span>vimide/
+</span><span class='line'>sh install.sh
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+安装其他插件和配色：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#给终端上配色插件，下载CSApprox插件，并解压</span>
+</span><span class='line'><span class="nb">cd </span>CSApprox/
+</span><span class='line'>sudo cp autoload/csapprox.vim ~/.vim/autoload/
+</span><span class='line'>sudo cp doc/CSApprox.txt ~/.vim/doc/
+</span><span class='line'>sudo cp plugin/CSApprox.vim ~/.vim/plugin/
+</span><span class='line'><span class="c">#下载的配色文件使用，例如下载配色wombat256.vim文件</span>
+</span><span class='line'>sudo cp wombat256.vim /usr/share/vim/vim73/colors/
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+配置vimrc:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'>“MY VIMRC settings
+</span><span class='line'>“——<span class="p">-</span><span class="k">start</span>———<span class="p">-</span>
+</span><span class='line'><span class="k">colorscheme</span> evening
+</span><span class='line'><span class="k">set</span> <span class="nb">guifont</span><span class="p">=</span>Monaco:h13
+</span><span class='line'>“添加GUI色彩
+</span><span class='line'>“<span class="k">set</span> <span class="nb">t_Co</span><span class="p">=</span><span class="m">256</span>
+</span><span class='line'>“——–<span class="k">end</span>———–
+</span><span class='line'>“VIMIDE vimrc basic settings
+</span><span class='line'>“——–<span class="k">start</span>———
+</span><span class='line'><span class="k">set</span> <span class="nb">fileencodings</span><span class="p">=</span>ucs<span class="p">-</span>bom<span class="p">,</span>utf<span class="m">-8</span><span class="p">,</span>cp936
+</span><span class='line'><span class="k">set</span> <span class="nb">helplang</span><span class="p">=</span><span class="k">cn</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="k">set</span> <span class="nb">shiftwidth</span><span class="p">=</span><span class="m">2</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">tabstop</span><span class="p">=</span><span class="m">2</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">expandtab</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">nobackup</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">noswapfile</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">nowb</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">backspace</span><span class="p">=</span><span class="k">start</span><span class="p">,</span>indent<span class="p">,</span><span class="nb">eol</span>
+</span><span class='line'><span class="k">set</span> <span class="k">nu</span><span class="p">!</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">autoindent</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">smartindent</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">wrap</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="k">set</span> <span class="nb">noerrorbells</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">novisualbell</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="k">filetype</span> plugin <span class="k">on</span>
+</span><span class='line'><span class="k">filetype</span> indent <span class="k">on</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="nb">syntax</span> <span class="k">on</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">ruler</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span>map &amp;<span class="k">lt</span>;&amp;gt; :NERDTree<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+</span><span class='line'>map <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">o</span><span class="p">&gt;</span> :TlistToggle<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+</span><span class='line'>vmap <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">c</span><span class="p">&gt;</span> <span class="c">&quot;+y</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">mouse</span><span class="p">=</span><span class="k">a</span>
+</span><span class='line'>autocmd <span class="nb">VimEnter</span> * NERDTree
+</span><span class='line'>autocmd <span class="nb">BufEnter</span> * <span class="k">silent</span><span class="p">!</span> <span class="k">lcd</span> %:<span class="k">p</span>:<span class="k">h</span>
+</span><span class='line'><span class="c">&quot;--------end--------&lt;/c-c&gt;&lt;/cr&gt;&lt;/c-o&gt;&lt;/cr&gt;&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="k">let</span> Tlist_Ctags_Cmd<span class="p">=</span>’<span class="sr">/usr/</span><span class="nb">bin</span>/ctags’
+</span><span class='line'><span class="k">let</span> Tlist_Show_One_File <span class="p">=</span> <span class="m">1</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="k">let</span> <span class="k">g</span>:miniBufExplMapWindowNavVim <span class="p">=</span> <span class="m">1</span>
+</span><span class='line'>  <span class="k">let</span> <span class="k">g</span>:miniBufExplMapWindowNavArrows <span class="p">=</span> <span class="m">1</span>
+</span><span class='line'>  <span class="k">let</span> <span class="k">g</span>:miniBufExplMapCTabSwitchBufs <span class="p">=</span> <span class="m">1</span>
+</span><span class='line'>  <span class="k">let</span> <span class="k">g</span>:miniBufExplModSelTarget <span class="p">=</span> <span class="m">1</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="nb">inoremap</span>  :<span class="k">call</span> PhpDocSingle<span class="p">()</span><span class="k">i</span>
+</span><span class='line'><span class="nb">nnoremap</span>  :<span class="k">call</span> PhpDocSingle<span class="p">()</span>
+</span><span class='line'><span class="nb">vnoremap</span>  :<span class="k">call</span> PhpDocRange<span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+Vim的快捷键: <a href="http://salogs.com/2009/08/vim-%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/">参考网址</a></p>
+]]></content>
+  </entry>
+  
+</feed>

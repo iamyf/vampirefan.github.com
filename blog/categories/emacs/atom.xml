@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Emacs | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/emacs/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Emacs23.4 on Ubuntu]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/05/15/emacs23-dot-4-on-ubuntu/"/>
+    <updated>2012-05-15T22:37:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/05/15/emacs23-dot-4-on-ubuntu</id>
+    <content type="html"><![CDATA[<h2 id="ubuntuemacs234">ubuntu上编译安装emacs23.4.还没学，装好后再捣鼓着学：</h2>
+<ul>
+  <li>安装需要的图形库
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install libgtk2.0-dev
+</span><span class='line'>sudo apt-get install libxpm-dev
+</span><span class='line'>sudo apt-get install libjpeg62-dev
+</span><span class='line'>sudo apt-get install libgif-dev
+</span><span class='line'>sudo apt-get install libtiff4-dev
+</span><span class='line'>sudo apt-get install libncurses5-dev
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<!--more--></li>
+  <li>编译安装
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo ./configure
+</span><span class='line'>sudo make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="c">#终端打开emacs</span>
+</span><span class='line'>emacs -nw
+</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+</ul>
+
+<p>几个好的学习资料：
+<a href="http://emacser.com/emacs-beginner-must-know.htm">致Emacs初学者</a>
+<a href="http://emacser.com/emacs-beginner-must-know.htm">Emacs初学者必知必会</a>
+<a href="http://aifreedom.com/technology/112">Emacs快捷键列表</a></p>
+]]></content>
+  </entry>
+  
+</feed>

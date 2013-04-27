@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Wordpress | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/wordpress/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[不拖沓]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/09/18/bu-tuo-ta/"/>
+    <updated>2012-09-18T18:37:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/09/18/bu-tuo-ta</id>
+    <content type="html"><![CDATA[<p>专利号拿到了，可是晚了一周，否则可以作为奖学金评选条目。可见做事情要快，不能拖，要做的事情就应该尽全力最快的解决掉。以前一直认为自己效率挺高的。上大学以后却不像从前那么提前迅速的处理事情了。凡事喜欢拖到最后的deadline。这是个极其不好的习惯。一定要改！今天开始，把能做的事情都做完，要做的事情安排好；不拖沓每一件事情！要有效率的过好每一天！</p>
+
+<p>发现一个学<code>ruby</code>的好东西：<a href="http://rubykoans.com/">http://rubykoans.com/</a>,在排错中学习，一个一个文件的排错，一点一点的到达终点。想法特别好，做的也特别有创意有系统。觉得像<code>C/C++</code>、<code>prel</code>、<code>php</code>是不是都可以做成像这样的学习方式。很赞很赞~
+<!--more--></p>
+
+<p>啊对了，<code>wordpress</code>上面设置访问权限终于有人告诉我答案了，亲测可行。这里感谢百度上回答我问题的<a href="http://zhidao.baidu.com/question/473338969.html&amp;__bd_tkn__=6ea61e3576378a035253a361a6b329b0800286af8078338d51fed8133ea5c69d362ad36bb4bcda3b39bb3949f6bbe47087ac3af56e60b1f4e7eb60157c5bfe319e6fa0fe570f03de0125270dd244cb0d3f7e9371785dbffed53e447e065e462fb9177f3b49b0aadeef7efdaccbdc8d0cc23326f04fab">朋友</a>~原理是在进入网站的时候执行<code>login.php</code>登陆页面。    </p>
+
+<ul>
+  <li>在当前主题的<code>function.php</code>中添加：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">function liveme_if_login()</span>
+</span><span class='line'><span class="x">{</span>
+</span><span class='line'><span class="x">  if(!is_user_logged_in())</span>
+</span><span class='line'><span class="x">  {</span>
+</span><span class='line'><span class="x">      auth_redirect();</span>
+</span><span class='line'><span class="x">  }</span>
+</span><span class='line'><span class="x">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+  <li>再在<code>header.php</code>中添加：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span> <span class="nx">liveme_if_login</span><span class="p">();</span><span class="cp">?&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+</ul>
+
+<p>可是我已经把博客搬到这里来了，暂时也没时间折腾<code>wordpress</code>,就先放下，感觉博客的搭建方法会一直有新技术出现的。暂时先不折腾这个了。<code>python</code>
+框架也出来很多了。。。 ：）</p>
+
+<p>最近“购岛”闹得沸沸扬扬，其实我对政治一直不是很感兴趣。虽然，在看很多爱国电影，电视剧，小说后会热血沸腾，爱国心澎湃。但平时是不怎么关心的。其实呢，很多事情上，国家对外的表现是它们的表现，有很多因素制约的。很多人说，呀，要打仗了。。。我其实并不希望。打仗终究不是好的解决办法。但是现在的中国，应该表现出自己的强势！我一向是对我国充满信心，充满自豪的。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[LAMP &amp; Wordpress on Ubuntu]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/05/13/lamp-and-wordpress-on-ubuntu/"/>
+    <updated>2012-05-13T21:06:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/05/13/lamp-and-wordpress-on-ubuntu</id>
+    <content type="html"><![CDATA[<p><strong>LAMP (Linux, Apache, MySQL and PHP) on Ubuntu to learn Web Development.</strong></p>
+
+<ul>
+  <li>
+    <p>先装该装得LAMP：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install lamp-server^ php5 php-pear
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+  </li>
+  <li>
+    <p>测试apache和php
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo vim /var/www/testing.php
+</span><span class='line'><span class="c">#插入 &lt;?php phpinfo(); ?&gt;</span>
+</span><span class='line'>sudo /etc/init.d/apache2 restart
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+在浏览器中看看 <br />
+<a href="http://localhost/">http://localhost/</a> <br />
+<a href="http://localhost/testing.php">http://localhost/testing.php</a><br />
+<!--more--></p>
+  </li>
+  <li>
+    <p>配置一下虚拟主机 <br />
+<code>File:/etc/apache2/sites-available/example.com</code>
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>&amp;lt;virtualHost *:80&amp;gt;
+</span><span class='line'>   ServerAdmin webmaster@example.com
+</span><span class='line'>   ServerName example.com
+</span><span class='line'>   ServerAlias www.example.com
+</span><span class='line'>   DocumentRoot /srv/www/example.com/public_html/
+</span><span class='line'>   ErrorLog /srv/www/example.com/logs/error.log
+</span><span class='line'>   CustomLog /srv/www/example.com/logs/access.log combined&lt;/p&gt;
+</span><span class='line'>  &lt;/li&gt;
+</span><span class='line'>&lt;/ul&gt;
+</span><span class='line'>&lt;p&gt;&amp;lt;/virtualHost&amp;gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+  <li>
+    <p>给网站建立文件夹
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo mkdir -p /srv/www/example.com/public_html
+</span><span class='line'>sudo mkdir /srv/www/example.com/logs
+</span><span class='line'><span class="c">#enable网站</span>
+</span><span class='line'>sudo a2ensite example.com
+</span><span class='line'>sudo service apache2 reload
+</span><span class='line'><span class="c">#编辑hosts</span>
+</span><span class='line'>sudo vim /etc/hosts
+</span><span class='line'><span class="c">#开权限</span>
+</span><span class='line'>chmod -R 777 /srv/www/example.com/public_html
+</span><span class='line'><span class="c">#写测试脚本</span>
+</span><span class='line'>vim /srv/www/example.com/public_html/test.php
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+在浏览器中看看  <br />
+<a href="http://example.com/test.php">http://example.com/test.php</a></p>
+  </li>
+  <li>
+    <p>再安装phpmyadmin
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install libapache2-mod-auth-mysql phpmyadmin
+</span><span class='line'><span class="c">#有点问题，需要手动链接phpmyadmin文件夹</span>
+</span><span class='line'>sudo ln -sf /usr/share/phpmyadmin /var/www/phpmyadmin
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+在浏览器中看看 <br />
+<a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a></p>
+  </li>
+</ul>
+
+<h3 id="wordpress">后面再就是配置Wordpress了：</h3>
+<p>先在phpmyadmin中给wordpress建立数据库和用户。安装wordpress就OK了。设置本地ftp更新
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#本地设置ftp更新，查看apach服务的owner</span>
+</span><span class='line'>ps -aux
+</span><span class='line'><span class="c">#不出意外是www-data</span>
+</span><span class='line'>chown www-data:www-data /srv/www/example.com/public_html/wordpress/ -R
+</span><span class='line'><span class="c">#上一步已经足够，下面是想把自己加入owner</span>
+</span><span class='line'>usermod -a -G www-data &lt;yourname&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></yourname></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一些配置]]></title>
+    <link href="http://vampirefan.github.com/blog/2011/03/24/yi-xie-pei-zhi/"/>
+    <updated>2011-03-24T04:50:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2011/03/24/yi-xie-pei-zhi</id>
+    <content type="html"><![CDATA[<h3 id="notepad-for-latex">Notepad++ for Latex</h3>
+<p>每次重新为Latex配置Notepad++都要去查原来自己在bbs上问的那个贴，还是自己记一记吧:
+安装插件NppExec，加入command：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> <span class="k">$(</span>CURRENT_DIRECTORY<span class="k">)</span>
+</span><span class='line'>xelatex <span class="k">$(</span>FILE_NAME<span class="k">)</span>
+</span><span class='line'>xelatex <span class="k">$(</span>FILE_NAME<span class="k">)</span>
+</span><span class='line'>“C:<span class="se">\P</span>rogram Files<span class="se">\A</span>dobe<span class="se">\R</span>eader 10.0<span class="se">\R</span>eader<span class="se">\A</span>croRd32.exe”/n <span class="k">$(</span>NAME_PART<span class="k">)</span>.pdf
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<!--more--></p>
+
+<h3 id="wp-syntax">使用wp-syntax插件</h3>
+<ul>
+  <li>Wordpress插件wp-syntax的使用
+    <ul>
+      <li>环境:<code>&lt;pre lang="" line=""&gt; &lt; /pre&gt; </code></li>
+      <li>支持语言:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>abap, actionscript, actionscript3, ada, apache, applescript, aptsources, asm, asp, autoit, avisynth, bash, bf, bibtex, blitzbasic, bnf, boo, c, cmac, caddcl, cadlisp, cil, cfdg, cfm, cmake, cobol, cpp-qt, cpp, csharp, css, d, dcs, delphi, diff, div, dos, dot, eiffel, email, erlang, fo, fortran, freebasic, genero, gettext, glsl, gml, bnuplot, groovy, haskell, hq9plus, html4strict, idl, ini, inno, intercal, io, java, java5, javascript, kixtart, klonec, klonecpp, latex, lisp, locobasic, lolcode lotusformulas, lotusscript, lscript, lsl2, lua, m68k, make, matlab, mirc, modula3, mpasm, mxml, mysql, nsis, oberon2, objc, ocaml-brief, ocaml, oobas, oracle11, oracle8, pascal, per, pic16, pixelbender, perl, php-brief, php, plsql, povray, powershell, progress, prolog, properties, providex, python, qbasic, rails, rebol, reg, robots, ruby, sas, scala, scheme, scilab, sdlbasic, smalltalk, smarty, sql, tcl, teraterm, text, thinbasic, tsql, typoscript, vb, vbnet, verilog, vhdl, vim, visualfoxpro, visualprolog, whitespace, whois, winbatch, xml, xorg_conf, xpp, z80
+</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="audio-player">使用audio-player插件</h3>
+<ul>
+  <li>Woredpress插件audio-player的使用
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[audio: http://hello-world.mp3| titles=XX| artists=XX| width=XX| ]</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+</ul>
+
+<h3 id="ubuntuip">Ubuntu下有线网（固定IP）的设置</h3>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># File: /etc/network/interfaces </span>
+</span><span class='line'>auto lo
+</span><span class='line'>iface lo inet loopback
+</span><span class='line'>auto eth0
+</span><span class='line'>iface eth0 inet static&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;pre-up ifconfig eth0 hw ether 00:16:D3:2A:3B:B7
+</span><span class='line'>address 59.78.11.30
+</span><span class='line'>netmask 255.255.255.0
+</span><span class='line'>gateway 59.78.11.254
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#File: /etc/resolv.conf</span>
+</span><span class='line'>nameserver 202.120.2.101
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>暂时就记这么些吧，免得每次配的时候都到处找。上首歌：Happy Day(高中中午饭后听广播经常听到的一首歌)</p>
+
+<p><p id="audioplayerHappy Day ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayerHappy Day ", {soundFile: "http://www.lszst.gov.cn/webreport/preview.mp3",titles:"Happy Day ",artists:"番茄女孩"});</script></p>
+
+<p><blockquote><p>Happy Day</p></p><p><p>os:咦?现在几点了<br/>sorry我忘了带表<br/>我正在等人呢!<br/>等一个神秘的人….<br/>喜欢你就是起点<br/>make a wish 梦会实现<br/>晴天阴天今天明天<br/>黑夜白天全都是 happy day<br/>sunday,monday,tuesday,wednesday<br/>thursday,friday,saturday<br/>对你有一点想念放心里面<br/>sunday,monday,tuesday,wednesday<br/>thursday,friday,saturday<br/>开心的笑开心的飞<br/>最想飞过你身边<br/>oh 看你的笑脸<br/>os:咦?他怎么还没来?<br/>我猜在路上了吧<br/>他啊是梦的使者要把希望带来就快了<br/>sunday,monday,tuesday,wednesday<br/>thursday,friday,saturday<br/>精灵跑到梦里面快快去冒险<br/>sunday,monday,tuesday,wednesday<br/>thursday,friday,saturday<br/>星星照在青青草原<br/>一想到你都变美<br/>oh happy happy day<br/>where ever u go<br/>我要在你身边<br/>陪你高兴难过变丑变美梦想实现<br/>sunday,monday,tuesday,wednesday<br/>thursday,friday,saturday<br/>开心的笑开心的飞<br/>最想飞到你身边<br/>happy day happy day<br/>os:啊,我看见他了…哈哈哈哈<br/>happy day happy day wo…….</p></blockquote></p>
+]]></content>
+  </entry>
+  
+</feed>

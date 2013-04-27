@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage[bf,small,center,pagestyles]{titlesec}
+\usepackage{amsmath}
+\usepackage[dvips]{graphicx}
+\usepackage{float}
+\pagestyle{plain}
+\usepackage{listings}
+\lstset{
+	language=Matlab, tabsize=2, keepspaces=true,
+    xleftmargin=2em, xrightmargin=2em, aboveskip=1em,
+    frame=none,   
+    basicstyle=\scriptsize,
+    showspaces=false,
+    flexiblecolumns=true,
+    breaklines=true, breakautoindent=true,breakindent=4em,
+}
+\def\pgfsysdriver{pgfsys-dvipdfmx.def}
+\usepackage{tikz}
+\pgfsetxvec{\pgfpoint{10pt}{0}}
+\pgfsetyvec{\pgfpoint{0}{10pt}}
+\tikzset{box/.style={rectangle, rounded corners=6pt,minimum width=50pt, minimum height=20pt, inner sep=6pt,draw=black,thick, fill=white}}
+\pagestyle{plain}
+
+\begin{document}
+
+\title{\textbf{Homework 4}}
+\author{\textbf{Wang Fan, 5070309862, F0703034}}
+\date{\today}
+\maketitle
+
+\section*{7 problems in courselocker}
+\begin{enumerate}
+\item Consider 802.11 Medium Access Control(MAC) protocol. Draw the flowcharts of MAC logic as a sender.
+	\begin{enumerate}
+	\item Method 1--DFWMAC-CSMA: consider DIFS and backoff time if there is a collision.
+	\item Method 2--DFWMAC-RTS/CTS: consider DIFS/SIFS, RTS/CTS/ACK, and backoff time.
+	\end{enumerate}
+\textbf{Sol:}
+	\begin{enumerate}
+	\item Method 1--DFWMAC-CSMA:\\
+	\includegraphics[width=\textwidth]{412}\\
+	\item Method 2--DFWMAC-RTS/CTS:\\
+	\includegraphics[width=\textwidth]{413}\\
+	\end{enumerate}
+
+\item A given ad hoc network consists of 100 nodes and the mobility of the nodes is such that every one second, two existing connections are broken, while two new radio links are established.
+	\begin{enumerate}
+	\item Assuming that each node is connected to exactly four adjacent nodes, find the total number of communication links in the networks.
+	\item If the updated message is sent every 5 seconds, what is the upper limit on the number of messages initiated periodically if a table-driven routing protocol is used? Explain.
+	\item If the destination node located at 5 hops apart from a given source node, what is the possible value of number of alternate paths? alternate disjoint paths?
+	\end{enumerate}
+\textbf{Sol:} 
+	\begin{enumerate}
+	\item Number of link connections$=100\times 4=400$. As each link is connected to two nodes, the number of links$=\frac{400}{2}=200$.
+	\item Because every one second, two existing connection are broken, two new radio links are established, so, every one second, there are four updating message, if the updated message is sent every 5 seconds, the upper limit on the number of messages initiated is $4\times 5=20$.
+	\item Alternate paths means a source node S can take A-B-C to destination D, it also can take M-L-N to destination D if the formal link fails. If the destination node is located at 5 hops apart from a given source node, every node is connected to exactly 4 adjacent node, therefore, source can connect with four adjacent node, among these four adjacent nodes, every node mostly can connect with another 3 nodes, then from 4 nodes arrive to destination. Therefore, there would be $4\times 3\times 3\times 1\times 1= 36$ alternatepaths(maximum).\\
+	For disjointness, no intermediate node should be common among the paths. One simple way is to have a unique path between 12 nodes after 2 links from either source or destination, giving $4\times 3\times 1\times 4=48$ disjoint paths(maximum).
+	\end{enumerate}
+
+\item A snapshot of an adhoc network is shown in Figure 1.
+\begin{figure}
+\begin{center}
+\includegraphics{hw41}\\
+\caption{Ad Hoc Networks}
+\end{center}
+\end{figure}
+	\begin{enumerate}
+	\item How can you create a route from the source node 6 to the destination node 23 using the DSR algorithm?
+	\item What changes would you do if AODV protocol is used?
+	\end{enumerate}
+\textbf{Sol:}
+	\begin{enumerate}
+	\item By using DSR algorithm to create a route from 6 to 23, node 6 at first checks its route cache to determine whether it already has a route to the destination 23, if it has, it will use this route. If it does not have such a route, it initiates route discovery by broadcasting a route request packet. This route request contains the address of node 23. Areply is generated when the route request reaches either node 23, or an intermediate node whose route cache contains an unexpired route to the destination.
+	\item For AODV, node 6 broadcasts a route request packet(RREQ) to its neighbors, which then forwards the request to their neighbors, and so on, until either node 23 or a node with "fresh enough" route to node 23 is located. The main difference between the DSR and AODV is that DSR uses source routing and AODV uses forwarding tables at each node. During the process of forwarding the RREQ, nodes record in their route tables the address of the neighbor from which the first copy of the broadcast packet is received, thereby establishing a reverse path.
+	\end{enumerate}
+	
+\item In the previous question, assuming that the location of the destination node 23 is known to be located in the northeast direction, what changes do you need to do in determining a route? Explain.\\
+\textbf{Sol:} If node 23 is known to be located in the north-east direction, route request flood's scope would be limited, for example, when node 6 flood its packet, it would send packet to nodes 4 and 8, need not send packet to nodes 5 and 7 as node 23 is in the north-east direction.
+
+\item By examining the frame format of 802.11, determine the min and max size of a data frame. ACK, RTS, and CTS.\\% For 802.11b, find the range of throughput of MAC for Method 2 (refer to the first question). Assume
+%	\begin{enumerate}
+%	\item DIFS = $50\mu s$ and SIFS = $10\mu s$.
+%	\item Assume 0.5 possibility whenever a channel is sensed.
+%	\end{enumerate}
+\textbf{Sol:}
+%\begin{enumerate}
+%\item 
+The min and max size of a data frame: $0-2312$bytes. \\
+For ACK, $2+2+6+4=14$bytes;\\
+For RTS, $2+2+6+6+4=20$bytes;\\
+For CTS, $2+2+6+4=14$bytes.
+%\item
+%\end{enumerate}
+
+\item List the entities of mobile IP and describe data transfer from a mobile node to a fixed node and vice versa. Why and where encapsulation needed?\\
+\textbf{Sol:} For a mobile IP example: we have 4 node need entities: HA(Home Agent), CN(Correspondent Node), FA(Foreign Agent), MN(MObile Node). As data transfered from a mobile node to a fixed node: 
+\begin{enumerate}
+\item Sender sends to the IP address of MN, HA intercepts packet(proxy ARP)
+\item HA tunnels packet to COA, here FA, by encapsulation
+\item FA forwards the packet to the MN
+\item If FA has no Packet filtering , MN can transfer packet to the CN
+\end{enumerate}
+From discussion above, for the reason to set up a tunnel, it needs Encapsulation when transfer at second time, Encapsulate the origin data and header to a new packet, and ten transfer it from HA to FA.
+
+\item Name the inefficiencies of mobile IP regarding data forwarding from a correspondent node to a mobile node. What are optimizations and what additional problems do they cause?\\
+\textbf{Sol:} For a triangular routing: CN to HA, HA to MN, MN back to CN. As the following:\\
+\begin{tikzpicture}
+\node[box] (MN) at(0,0) {MN}; 
+\node[box] (CN) at(20,0) {CN};
+\node[box] (HA) at(10,-10) {HA};
+\draw[->] (MN)--(CN); 
+\draw[->] (CN)--(HA);
+\draw[->] (HA)--(MN);
+\node at (10,3) {Packets from MN};
+\node at (10,2) {routed directly to CN};
+\node at (18,-4) {Packets to MN};
+\node at (18,-5) {routed through HA};
+\end{tikzpicture}\\
+One way to optimize the route is to inform the CN of the current location of the MN. The CN can learn the location by caching it in a binging cache which is a part of the local routing table for the CN. Unfortunately, this optimization of mobile IP to avoid triangular routing causes several security problems.
+\end{enumerate}
+\end{document}

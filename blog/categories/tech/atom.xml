@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Tech | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/tech/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[用浏览器做Presentation]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/10/20/presentation-with-browser/"/>
+    <updated>2012-10-20T10:21:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/10/20/presentation-with-browser</id>
+    <content type="html"><![CDATA[<p>终于找到<code>markdown</code>写<code>Presentation</code>的<a href="http://slideshow.rubyforge.org/index.html">方法</a>了。很理想，很强大，正是我一直想实现的功能。先前找到的<a href="http://imakewebthings.com/deck.js/">deck.js</a>和<a href="http://bartaz.github.com/impress.js">impress.js</a>被做成模板集成在<code>slideshow</code>这个<code>ruby gem</code>里面了。分别可以在<a href="http://geraldb.github.com/slideshow-deck.js/">slideshow-deck.js</a>和<a href="http://geraldb.github.com/slideshow-impress.js/">slideshow-impress.js</a>找到。</p>
+
+<!--more-->
+
+<p><code>deck.js</code>和<code>impress.js</code>的效果是不用说了。<code>impress.js</code>是借用了<a href="http://prezi.com/">prezi</a>的思想，把<code>presentation</code>做在一张无限延展的画布上，通过画布上一个个局部的<code>slide</code>间的动画转接，完成整个演示过程，比传统的<code>PowerPoint</code>更能抓住观众。</p>
+
+<p><code>gem slideshow</code>的实现效果可以参见<a href="/slides/impress.js.html">slideshow-impress.js demo</a>和<a href="/slides/deck.js.html">slideshow-deck.js demo</a>。</p>
+
+<p>我仍然觉得移动互联网的发展是不可限量的。浏览器能实现的功能远不止替代<code>ppt</code>这么简单。当云概念慢慢清晰在人们的生活中以后，谈了很多年却并没有真正融入生活和生产的物联网必将依靠着云的力量重新进入人们的视线。</p>
+
+<p>最近经常为了很多想实现的功能和应用在网上搜寻各种互联网上的技术，越来越觉得有太多的新技术，新方法，真是学无止境啊。</p>
+
+<p>今天一德国回来的CS的同学告诉我他在那里做的一个网站项目用的是<code>Grails</code>，<a href="http://grails.org/"><code>Groovy &amp; Rails</code></a>，看上去很不错，可以学学！</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Borderlands]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/09/21/borderlands/"/>
+    <updated>2012-09-21T21:51:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/09/21/borderlands</id>
+    <content type="html"><![CDATA[<p><strong>2K</strong> 是我很喜欢的一个游戏公司，出的游戏都是精品，可以和暴雪相匹敌。从体育游戏&lt;2K NBA&gt;到沙盘游戏&lt;黑手党&gt;，再是现在的FPS&lt;无主之地&gt;，每部在同类游戏中都是佼佼者。不论从可玩性还是画面，甚至是游戏的优化，都做得可以说是无可挑剔。很喜欢&lt;无主之地&gt;的开场动画。那音乐，画面配合得赏心悦目，特别是字幕的带出，一点不给人觉得反感，相反有惊艳的感觉。刚出的2代的开场CG同样是震撼。幻想自己也能学习做出这样的CG甚至是游戏~
+<!--more--></p>
+
+<p>下面是&lt;无主之地&gt;的开场CG：</p>
+<center><embed src="http://player.youku.com/player.php/sid/XMTkwMTQ0Nzg0/v.swf" allowfullscreen="true" quality="high" width="600" height="480" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash" /></center>
+
+<p>这是&lt;无主之地2&gt;的开场CG:（同样的精彩！）</p>
+
+<center><embed src="http://player.youku.com/player.php/sid/XNDUxMjU1OTI4/v.swf" allowfullscreen="true" quality="high" width="600" height="480" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash" /></center>
+
+<p>真的很棒,看以后自己业余能花点时间捣鼓CG的制作了。最近捣鼓了下python和ruby，确实是很容易学习和使用的很有前途的语言~发现看的东西越多，想知道的也越多。很高兴现在还保持着这样高的求知欲!!不管有不有用，学习的过程和结果都是很有成就感的。我喜欢这样的成就感~  ^_^</p>
+
+<p>python学习推荐这个<a href="http://sebug.net/paper/python/">简明 Python 教程</a>,还是交大的一个博士生翻译的，确实翻译的特别好，原文写的很棒。其实，我觉的我有时间也可以把自己看到的好的文献做一些翻译工作。ruby推荐前天说的那个TDD测试小系统。其实要学会，还是要多学着用，慢慢的把自己的一些想法试着利用编程语言实现吧。</p>
+
+<p>看《浪潮之巅》，确实获益匪浅，一个企业要想长远的发展，势必要有长远眼光的人的领导，AT&amp;T公司和IBM公司不同的命运很能说明问题，机遇对它们来说都不少，问题就出在前者领导层的自私与贪婪，后者的领导者却有着大局有眼光。看到IBM在二战的时候还生产过冲锋枪，令人赞叹。看到微软的盖茨狡猾的拿着DOS到处卖，IBM却没办法，笑了。书写的很生动，极力推荐~</p>
+
+<p>这好些天挺多锻炼的，基本上每天公司学校间要来回跑好多趟，晚上有时还打打乒乓，学学轮滑，吃的也不多，晚上睡觉感觉肚子都很饿着睡的。然而今天称体重却重了1公斤，83公斤了，真是匪夷所思~（希望是体重要下降前的小回升，嘿嘿）</p>
+
+<p>放首很喜欢的歌：</p>
+
+<p><p id="audioplayerHallelujah ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayerHallelujah ", {soundFile: "http://coeficiencenet.typepad.com/contrejour/files/10_hallelujah.mp3",titles:"Hallelujah ",artists:"Rufus Wainwright"});</script></p>
+
+<p><blockquote><p>Hallelujah</p></p><p><p>I‘ve heard there was a secret chord 我的知有一种神秘的乐弦。<br/>that david played and it pleased the lord 由大卫演奏以此来取悦上帝。<br/>but you don’t really care for music, do you 但你并不真的关注音乐，是这样吗？<br/>it goes like this the fourth, the fifth 就像这第四，第五章<br/>the minor fall and the major lift 短音阶降下，大音阶上升<br/>the baffled king composing hallelujah 困惑的国王谱写了哈利路亚<br/>hallelujah… 哈利路亚<br/>your faith was strong but you needed proof 你的信念很坚强，但你需要得到证明<br/>you saw her bathing on the roof 你看见她在房顶上沐浴<br/>her beauty and the moonlight overthrew you 她的美和月光震慑了你<br/>she tied you to her kitchen chair 她把你束缚在了她厨房的椅子上<br/>she broke your throne and she cut your hair 她打破了你的宝座，割断了你的头发<br/>and from your lips she drew the hallelujah 从你的嘴唇上她嗅到了哈利路亚<br/>hallelujah… 哈利路亚<br/>baby I’ve been here before 宝贝我以前来过这里<br/>I know this room and I’ve walked this floor 我熟悉这间房子，我曾入过这里<br/>I used to live alone before I knew you 在我认识你之前我独自生活<br/>I’ve seen your flag on the marble arch 我看到在大理石的拱门上竖立着你的旗帜<br/>love is not a victory march 但爱不是胜利凯旋<br/>it’s a cold and it’s a broken hallelujah 它是冰冷的，破碎的，哈利路亚<br/>hallelujah… 哈利路亚<br/>there was a time when you let me know 有一段日子你让我知道<br/>what’s really going on below 接下来真的会发生些什么事<br/>but now you never show it to me do you 但你从来也不向我展现你自己，你是这样的吗<br/>but remember when i moved in you 但记住当我的心向你靠近<br/>the holy dove was moving too 神圣的鸽子也靠近了<br/>and every breath we drew was hallelujah 我们每次的呼吸都是哈利路亚<br/>hallelujah… 哈利路亚<br/>maybe there’s a god above 可能天上真有上帝<br/>and all I’ve ever learned from love 但我从爱学到的<br/>was how to shoot someone who outdrew you 是如何射向你爱的人 <br/>it’s not a cry you hear at night 你晚上听到的不是哭泣声<br/>it’s not somebody who’ve seen the light 不是看见过光线的某人<br/>it’s a cold and it’s a broken hallelujah 它是冰冷的，破碎的，哈利路亚<br/>hallelujah…哈利路亚<br/>hallelujah… 哈利路亚</p></blockquote></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[生活心情]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/06/07/sheng-huo-xin-qing/"/>
+    <updated>2012-06-07T20:33:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/06/07/sheng-huo-xin-qing</id>
+    <content type="html"><![CDATA[<p>微软未来科技宣传片：   </p>
+
+<center><object width="600" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://player.youku.com/player.php/sid/XMzE3NDg2Mjcy/v.swf" /><param name="allowfullscreen" value="true" /><param name="quality" value="high" /><param name="allowscriptaccess" value="always" /><embed width="600" height="400" type="application/x-shockwave-flash" src="http://player.youku.com/player.php/sid/XMzE3NDg2Mjcy/v.swf" allowfullscreen="true" quality="high" allowscriptaccess="always" /></object></center>
+
+<p>生活真的就像画面上描述的那么好吗？
+<!--more-->
+真心不觉得，表面上充满科技感的生活，充满各方面便捷全面的服务。背后隐藏的是人类生活的悲哀。越来越快的生活节奏，越来越高的劳动力要求，同时也是越来越高的社会压力。人们对生活质量的追求，同时要付出劳动力和压力的代价。错综复杂的社会关系，并不是手机上各种软件就能理清的。从越来越快的背景音乐节奏就能听出时代带给每个人的危机感和压迫感。</p>
+
+<p>有很多故事讲得是一些知足者长乐的道理：什么富翁嘲笑打鱼人不工作晒太阳，殊不知自己辛苦工作却为的是能有一天闲下来晒太阳。这种傻逼道理谁都懂，可又有谁真心能像打鱼人一样放下对各种高质量生活物质上的追求，无视周围人的攀比和炫耀，不理会时代的鞭挞。不甘心啊。很委屈啊。沮丧啊。各种纠结的心情造就了这样一个烦躁、浮夸、快节奏的时代。</p>
+
+<p>每一代都有每一代的苦，每一代也都有每一代的甜。父母一代确实很难体会到我们这一代的感受与艰难。虽然有一些共同点，他们很多经验值得我们借鉴，很多道理值得和我们分享，可是毕竟压力和抉择、困难的感受都在我们自己身上。可能是我成熟的太晚了，确一直没感觉到艰辛和抉择的纠结。一直将未来描画的很美好，却没想背后怎么去实现它。正如画面中那科技感的世界，它真的看上去很美好，怎么去实现它呢？这样庞大的物联网工程，云存储，还是高吞吐量的无线传输。3G、4G、B4G还是5G？要多少科技工作者去工作、加班。如果是无线，我们生活在这其中要承受多少的无线高频辐射。好像《real steel》里面的一句台词：you work too much with a robot that you become a robot.呵呵，我们确实有时候，太像robot一样了，无法享受生活，而是被生活享受了。</p>
+
+<p>父母到现在确实很不容易，他们可以说他们是看着我长大的，我也可以说我是看着他们奋斗的。他们一代的打拼也有很多艰辛，也有很多机遇。为了我能够无忧无虑的生活给我安排了很多，为了我能少很多烦恼帮我做了很多选择。可是，忧虑和烦恼终究是会找上我们。他们的安排和选择不再适应我们这一个时代了。很多时候，我也觉得有些annoying了。他们大多时候太自以为是了。《LOST》里的Jhon Lock有句很经典的话：Don’t tell me what I can’t do. 该怎么做，不该怎么做。What do we suppose to do? 《LOST》的结局也是LOST的。生活一直都在继续，社会也是一直有着变化。他们怎么挣扎，怎么奋斗，怎么选择，怎么斗争。到后来都不重要了。重要的是，他们存在过，生活过，交涉过。世界就是这样。过去，未来，甚至现在都不重要，重要的是我们存在过，这样一切都发生过，现在的一切正发生着。</p>
+
+<p>额。意识流好像扯得有点太意识流了。</p>
+
+<p>我只是在想 ，有时候，我们把很多事情看的太在意了，这样就会很累，很难受，很委屈。虽然这些事情不能不在意，也不能不考虑；但是它只是生活的一部分，甚至是很小很小的一部分。正因为它正在眼前，所以我们把它放的很大很大，觉得它好纠结好纠结，有时候，它使我们好难受好难受。它好坏，是它把自己吹大了吓唬我们的而已。</p>
+
+<p>周围人老是看我每天乐呵呵的，其实，快乐也只是生活的一部分，甚至比压力，比痛苦，比纠结，比难受，比孤独，比沮丧，比苦闷，比旁人的炫耀，比爸妈的督嚼，比老板的催促，比工作的辛苦，比社会的挤压，比周围人的嘲讽都小，小到一根毛发一样，我们照样把它一吹，变成千万个。果果~所以要做一颗开心果。不开心的时候，就让我来调剂吧，我来给你加点“开心”。暂时就这么一年，我还不在你身边；我在你身边的以后的每天，我都会让你开心~</p>
+
+<p>还看到一篇帖子<a href="http://news.cfan.com.cn/cfan/2012-06-06/1338974259d70247.shtml">《每天工作4小时的程序员》</a>，讲得是如何有安排的高效的生活。</p>
+
+<p>生活，不用安排的太长远，只要把每一天安排好，高效的干好自己要干的活，就可以生活的很自在。  </p>
+
+<center><a target="_blank" href="http://minus.com/l53qdkDIkC3k4"><img src="http://i.minus.com/j53qdkDIkC3k4.jpg" border="0" /></a></center>
+
+<p><p id="audioplayer美丽人生 ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayer美丽人生 ", {soundFile: "http://www.300.la/filestores/2012/09/09/89a5144646d2c5f52b5dcd5d17ea9960.mp3",titles:"美丽人生 ",artists:"梁静茹"});</script>
+<blockquote><p>美丽人生</p></p><p><p>走进满山遍野的向日葵田 地中海蓝色透明的天 亮晶晶你脸上的汗水<br/>直到现在 风一吹一都闻到普罗旺斯的花草香<br/>火车颠颠跛跛的爬上了山 斑驳的光影装满车厢<br/>你晃啊晃啊睡在我的肩膀 时钟慢慢 停下来<br/>像掉进了一个魔法的时空 爱情的流动<br/>终于有一个理由 午后暖暖的风<br/>吹着发呆的我 白色纱帘在记忆中翻动<br/>西班牙的广场 快下山的太阳<br/>两个人的影子 在陌生地上像一双翅膀<br/>自由自在飞翔 像毕卡索的画像<br/>幸福是说不出 酸酸甜甜的糖<br/>你会一种魔法 让夜晚都发光<br/>123睁开眼 美丽人生在月光下跳舞<br/>都忘了有地图 只有手心的温度<br/>我们慢慢走过 花草香的小路<br/>走进满山遍野的向日葵田 地中海蓝色透明的天 亮晶晶你脸上的汗水<br/>直到现在 风一吹一都闻到普罗旺斯的花草香<br/>火车颠颠跛跛的爬上了山 斑驳的光影装满车厢<br/>你晃啊晃啊睡在我的肩膀 时钟慢慢 停下来<br/>像掉进了一个魔法的时空 爱情的流动<br/>终于有一个理由 午后暖暖的风<br/>吹着发呆的我 白色纱帘在记忆中翻动<br/>西班牙的广场 快下山的太阳<br/>两个人的影子 在陌生地上像一双翅膀<br/>自由自在飞翔 像毕卡索的画像<br/>幸福是说不出 酸酸甜甜的糖<br/>你会一种魔法 让夜晚都发光<br/>123睁开眼 美丽人生在月光下跳舞<br/>都忘了有地图 只有手心的温度<br/>我们慢慢走过 花草香的小路<br/>像掉进了一个魔法的时空 爱情的流动<br/>终于有一个理由 午后暖暖的风<br/>吹着发呆的我 白色纱帘在记忆中翻动</p></blockquote></p>
+
+<p><em>——爱果果的瓜瓜，杂记一则。</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What Is Being Creative]]></title>
+    <link href="http://vampirefan.github.com/blog/2011/03/09/what-is-being-creative/"/>
+    <updated>2011-03-09T10:03:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2011/03/09/what-is-being-creative</id>
+    <content type="html"><![CDATA[<embed src="http://player.youku.com/player.php/sid/XMjQwNjc5Mzky/v.swf" quality="high" width="600" height="400" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" />
+
+<p>真是很有想法。未来是有想法的人的天下啊。很赞。</p>
+]]></content>
+  </entry>
+  
+</feed>

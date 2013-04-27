@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：App | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/app/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[octopress上audio插件, IOS真机调试]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/09/13/about-macbook-pro/"/>
+    <updated>2012-09-13T21:47:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/09/13/about-macbook-pro</id>
+    <content type="html"><![CDATA[<p>入手Macbook Pro一段时间了,虽然一直很忙，只有晚上回寝室后摆弄一会会。不过也整顿的差不多了，也有一些体会了。可配置性和快捷性确实是windows不能比的。有些东西趁今天比较空，赶紧的记一记。</p>
+
+<p>对于一般软件的破解还是比较容易找的，一般在<a href="http://mac.pcbeta.com/">Macidea</a>,加上baidu，google，想要的软件基本上都能找到破解。难找的就是一些比较冷门的软件了，比如novamind我还是没找到。其实如果我以后有钱了，我会考虑买正版的。</p>
+
+<p>对于现在很火的云空间，云同步，我只能说，太多了，基本上都差不多。先觉得dropbox好，又觉得cloudapp好，还有baidu网盘，googleDrive，其实都差不多。想要做图床还是mp3外链，都还是要费好些功夫找。我现在觉得图床用<a href="http://minus.com/">minus</a>还行，挺快的。mp3用<a href="300.la">酷牛网盘</a>是支持外链的，可惜太慢了，后来发现一般的网盘像baidu网盘先共享然后下载，再右键看下载链接也能找到链接地址，但是不知道链接地址稳不稳定，过一段时间再说吧。
+<!--more--></p>
+
+<p>iphone5今天出来了，晚上到处都是负面评价，这个其实也不好说，现在大多数人都是表面上说这不好那不好，自己还是买了暗地里玩的乐呵呵的。看到一个新闻说苹果出口为美国挣了好些的GDP：
+<blockquote><p></p><footer><strong>@Michael Feroli</strong> <cite>iPhone5的销售将拉动美国GDP增速0.25~0.5个百分点。</cite></footer></blockquote>
+然后就有人评价“可见美国经济之疲软”。。。。</p>
+
+<p>Mac上搭建Octopress真的很不错。于是还是把wordpress的博客搬到octopress上来了，我想要的功能基本上octopress上面都能实现了，花时间写了一个小插件把原来wordpress上的audio-player移植过来了，正则表达式很难学，于是仿照加套用<code>video_tag.rb</code>和<code>code_block.rb</code>写了自己的<code>audio_tag.rb</code>，实现了需要的插入mp3的功能。</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>audio_tag (audio_tag.rb)</span> <a href='/downloads/code/audio_tag.rb'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="c1"># Title:</span>
+</span><span class='line'><span class="c1">#		Octopress audio-player Audio Tag</span>
+</span><span class='line'><span class="c1"># Author:</span>
+</span><span class='line'><span class="c1">#		vampirefan</span>
+</span><span class='line'><span class="c1"># Syntax:</span>
+</span><span class='line'><span class="c1">#		{% audio artists url/to/mp3 titles %}</span>
+</span><span class='line'><span class="c1">#		{% audio artists url/to/mp3  %}</span>
+</span><span class='line'><span class="c1">#		{% audio url/to/mp3 titles %}</span>
+</span><span class='line'><span class="c1">#		{% audio url/to/mp3 %}</span>
+</span><span class='line'><span class="c1"># Example:</span>
+</span><span class='line'><span class="c1">#		{% audio artists http://example.org/music.mp3 the song %}</span>
+</span><span class='line'><span class="c1"># Output:</span>
+</span><span class='line'><span class="c1">#		&lt;p id=&quot;audioplayertitles&quot;&gt;Alternative content&lt;/p&gt;&lt;script type=&quot;text/javascript&quot;&gt;AudioPlayer.embed(&quot;audioplayertitles&quot;, {soundFile: &quot;http://example.org/music.mp3&quot;,titles:&quot;the song&quot;});&lt;/script&gt;</span>
+</span><span class='line'><span class="c1">#########################################################################################</span>
+</span><span class='line'><span class="c1"># Important!</span>
+</span><span class='line'><span class="c1"># Please Add the following into the {root_url}/source/_includes/custom/head.html</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># &lt;script type=&quot;text/javascript&quot; src=&quot;http://wpaudioplayer.com/wp-content/plugins/audio-player/assets/audio-player.js?ver=2.0.4.1&quot;&gt;&lt;/script&gt;   </span>
+</span><span class='line'><span class="c1"># &lt;script type=&quot;text/javascript&quot;&gt;  </span>
+</span><span class='line'><span class="c1">#     AudioPlayer.setup(&quot;http://wpaudioplayer.com/wp-content/plugins/audio-player/assets/player.swf?ver=2.0.4.1&quot;, {</span>
+</span><span class='line'><span class="c1">#     	transparentpagebg: &quot;yes&quot;,  </span>
+</span><span class='line'><span class="c1">#         width: 290</span>
+</span><span class='line'><span class="c1">#     });  </span>
+</span><span class='line'><span class="c1"># &lt;/script&gt;  </span>
+</span><span class='line'><span class="c1">#########################################################################################</span>
+</span><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class='line'>	<span class="k">class</span> <span class="nc">AudioTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class='line'>		<span class="vi">@audio</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class='line'>		<span class="c1"># def initialize(tag_name, markup, tokens)</span>
+</span><span class='line'>		<span class="c1"># 	if markup =~ /((https?:\/\/|\/)(\S+))(\s+(\d+)\s(\d+))?(\s+(https?:\/\/|\/)(\S+))?/i</span>
+</span><span class='line'>		<span class="c1"># 		@file =$1</span>
+</span><span class='line'>		<span class="c1"># 		@titles = $4</span>
+</span><span class='line'>		<span class="c1"># 		@num = $5</span>
+</span><span class='line'>		<span class="c1"># 		super</span>
+</span><span class='line'>		<span class="c1"># 	end</span>
+</span><span class='line'>		<span class="c1"># end</span>
+</span><span class='line'>		<span class="no">ArtistsUrlTitle</span> <span class="o">=</span> <span class="sr">/(\S[\S\s]*)\s+(https?:\/\/)(\S+)\s+(.+)/i</span>
+</span><span class='line'>	    <span class="no">ArtistsUrl</span> <span class="o">=</span> <span class="sr">/(\S[\S\s]*)\s+(https?:\/\/)(\S+)/i</span>
+</span><span class='line'>	   	<span class="no">UrlTitle</span> <span class="o">=</span> <span class="sr">/((https?:\/\/)(\S+))\s+(.+)/i</span>
+</span><span class='line'>	    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">tag_name</span><span class="p">,</span> <span class="n">markup</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span>
+</span><span class='line'>			<span class="vi">@file</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class='line'>			<span class="vi">@titles</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class='line'>			<span class="vi">@artists</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class='line'>			<span class="k">if</span> <span class="n">markup</span> <span class="o">=~</span> <span class="no">ArtistsUrlTitle</span>
+</span><span class='line'>				<span class="vi">@file</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$2</span> <span class="o">+</span> <span class="vg">$3</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>				<span class="vi">@titles</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$4</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>				<span class="vi">@artists</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$1</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>			<span class="k">elsif</span> <span class="n">markup</span> <span class="o">=~</span> <span class="no">ArtistsUrl</span>
+</span><span class='line'>				<span class="vi">@file</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$2</span> <span class="o">+</span> <span class="vg">$3</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>				<span class="vi">@artists</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$1</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>			<span class="k">elsif</span> <span class="n">markup</span> <span class="o">=~</span> <span class="no">UrlTitle</span>
+</span><span class='line'>				<span class="vi">@file</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$1</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>				<span class="vi">@titles</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$4</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>			<span class="k">else</span>
+</span><span class='line'>				<span class="vi">@file</span> <span class="o">=</span> <span class="n">markup</span>
+</span><span class='line'>				<span class="vi">@titles</span> <span class="o">=</span> <span class="s2">&quot;A nice Song&quot;</span>
+</span><span class='line'>			<span class="k">end</span>	
+</span><span class='line'>			<span class="k">super</span>
+</span><span class='line'>	    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>		<span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class='line'>			<span class="n">output</span> <span class="o">=</span> <span class="k">super</span>
+</span><span class='line'>			<span class="n">audio</span> <span class="o">=</span> <span class="sx">%Q{&lt;p id=&quot;audioplayer</span><span class="si">#{</span><span class="vi">@titles</span><span class="si">}</span><span class="sx">&quot;&gt;Alternative content&lt;/p&gt;}</span>
+</span><span class='line'>			<span class="n">audio</span><span class="o">+=</span> <span class="sx">%Q{&lt;script type=&quot;text/javascript&quot;&gt;}</span>
+</span><span class='line'>			<span class="n">audio</span><span class="o">+=</span> <span class="sx">%Q{AudioPlayer.embed(&quot;audioplayer</span><span class="si">#{</span><span class="vi">@titles</span><span class="si">}</span><span class="sx">&quot;, }</span>
+</span><span class='line'>			<span class="n">audio</span><span class="o">+=</span> <span class="sx">%Q{{soundFile: &quot;</span><span class="si">#{</span><span class="vi">@file</span><span class="si">}</span><span class="sx">&quot;,titles:&quot;</span><span class="si">#{</span><span class="vi">@titles</span><span class="si">}</span><span class="sx">&quot;,artists:&quot;</span><span class="si">#{</span><span class="vi">@artists</span><span class="si">}</span><span class="sx">&quot;});&lt;/script&gt;}</span>
+</span><span class='line'>		<span class="k">end</span>
+</span><span class='line'>	<span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;audio&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">AudioTag</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>小小的在这里开心一下。哦，对了，旁边的这个日历是第三方的，挺赞，可惜不能把当天圈出来，主要是自己不会<code>javascript</code>,找时间学一学，把这个功能实现了。整个主题配色和纹理花了我不少精力，不过总体上挺满意的。~找老婆要奖励~。哦对了，还修了个网站的logo，实在不大会美工，能修成这样，已经很不错了。Mac上浏览器的两端对齐对得非常之整齐。如图：</p>
+
+<p><img src="http://i.minus.com/ibgCxvyFvrJIxJ.png" width="400" height="211" title="mac下的两端对齐" ></p>
+
+<p>可惜windows上对齐效果太差了，花了不少功夫，还是不对，<code>justify</code>一点用都没有。</p>
+
+<p>对了，试了一下写iphone上的程序。还在真机上调试了，这里有个很好的教程<a href="http://blog.csdn.net/vrix/article/details/7851377">图文并茂 在ML OS X 10.8 + XCode4.4/4.4.1下实现无证书真机调试IOS5.1.1(亲测，附调试截图)</a>。这里是在工程中需要加入的脚本：</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>真机调试ios_app (ios_dev_hack.sh)</span> <a href='/downloads/code/ios_dev_hack.sh'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#shell  /bin/sh</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">export </span><span class="nv">CODESIGN_ALLOCATE</span><span class="o">=</span>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;${PLATFORM_NAME}&quot;</span> <span class="o">==</span> <span class="s2">&quot;iphoneos&quot;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="s2">&quot;${PLATFORM_NAME}&quot;</span> <span class="o">==</span> <span class="s2">&quot;ipados&quot;</span> <span class="o">]</span>; <span class="k">then</span>
+</span><span class='line'>
+</span><span class='line'>/Applications/Xcode.app/Contents/Developer/iphoneentitlements/gen_entitlements.py <span class="s2">&quot;my.company.${PROJECT_NAME}&quot;</span> <span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent&quot;</span>;
+</span><span class='line'>
+</span><span class='line'>codesign -f -s <span class="s2">&quot;iPhone Developer&quot;</span> --entitlements <span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent&quot;</span> <span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">fi</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+苹果真心挺好用，要打造自动话听话的，还要学写一些脚本。慢慢来吧。</p>
+
+<p>最近还算是挺充实的，虽然实习的地方很忙，实验室也很忙，还想自己捣鼓写喜欢的技术。不过忙的都暂时还能应付的过来。还有很多想学想做的事情，慢慢来，等有时间，有机会，找点点精力出来一件一件的实现吧。这里还可以记一记： </p>
+
+<ul>
+  <li>学做菜    </li>
+  <li>学溜冰    </li>
+  <li>学单反，做摄影    </li>
+  <li>学设计，美工，做动画，做视频，做音频    </li>
+  <li>学吉他，敲架子鼓，冬、冬冬、冬、冬冬、卡~     </li>
+  <li>做android和iphone上的app：想做一个editor，要类似sublimetext，实现在客户端写markdown，实现很多快捷的snippet写markdown然后在octopress上发布博文。    </li>
+  <li>看一些书，买了两本书《浪潮之巅》、《技术元素》；有时间慢慢看，还想把《圣经》看了。。。    </li>
+  <li>学<code>applescript</code>，方便使用mac    </li>
+  <li>学<code>ruby</code>, <code>perl</code>, <code>php</code>    </li>
+  <li>想去旅游，去西藏，去海边，有钱了去国外的各个名胜美景去旅游    </li>
+  <li>想蹦极，想跳伞   </li>
+  <li>想学烤蛋糕，做面包    </li>
+  <li>想学打网球    </li>
+  <li>想开间茶馆，或是咖啡馆，很温馨的那种，起名<code>弯排帆|vampirefan</code>    </li>
+  <li>想做产品，像苹果这种；想做产业，像星级酒店，品牌集团那种；要做大，家喻户晓    </li>
+  <li>想做游戏，大型的，辐射3、刺客信条、使命召唤、上古卷轴、马克思佩恩、洛城危机、古墓丽影这种，动画逼真，画面可玩性高。特别想把《搜神记》、《诛仙》、《长安乱》做成大型RPG游戏。   </li>
+  <li>想灌篮，找个跳板铺在地上实现了也行   </li>
+  <li>想跳街舞，那种很强节奏跳上蹦下的那种   </li>
+  <li>。。。   </li>
+</ul>
+
+<p>还有好多，不过现在不现实，眼前的事也挺多，不过想法和愿望是应该一直有所期待的。机会总是在不经意间来的。喜欢周星驰的那句“人没有梦想，那和咸鱼有什么分别啊”。咸鱼，瞪着无神的眼睛，一动不动。</p>
+
+<p>留着梦想，记下想法，未来总会有惊喜的。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[关于Sublime Text 2]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/07/16/guan-yu-sublime-text-2/"/>
+    <updated>2012-07-16T18:32:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/07/16/guan-yu-sublime-text-2</id>
+    <content type="html"><![CDATA[<p>我又在折腾了，晚上说emacs和vim两大高手用的编辑器，我就花了些时间琢磨，要配顺手不容易，emacs快捷键不好按也不好记的说，虽然有时候两连招的快捷键按得很爽，而且在vs中有自带的支持，还是挺不错的，vim已经还算是挺熟悉了，基本的光标和编辑已经挺顺手了。一直用的notepad++很是喜欢，主要是nppexec这个插件挺好，F6一下就可以编译tex文件生成pdf再自动打开，很是不错。再是各种高亮和配置起来很傻瓜很方便，而且utf-8转各种编码格式也很好。</p>
+
+<!--more-->
+<p>突然用了一下网上很火的sublime text，真是不错，怪不得卖这么贵，很酷，很人性化，很快，也很多插件可配置。虽然不花钱用破解的有些不好意思，但是当使用破解已成为一种习惯时，也就不以为然了。这里简要记一记破解办法.</p>
+
+<h3 id="section"><strong>关于破解</strong></h3>
+<p>试过64位的windows，ubuntu都可以的。备份可执行文件sublime_text。用备份的可执行文件打开原有的可执行文件。修改所有3342为3242。（OS X下是搜索所有3342 3032
+都替换成3242 3032），打开修改过的可执行文件，输入注册码：</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>—–BEGIN LICENSE—–
+</span><span class='line'>hiwanz
+</span><span class='line'>Unlimited User License
+</span><span class='line'>EA7E-26838
+</span><span class='line'>5B320641E6E11F5C6E16553C438A6839
+</span><span class='line'>72BA70FE439203367920D70E7DEB0E92
+</span><span class='line'>436D756177BBE49EFC9FBBB3420DB9D3
+</span><span class='line'>6AA8307E845B6AB8AF99D81734EEA961
+</span><span class='line'>02402C853F1FFF9854D94799D1317F37
+</span><span class='line'>1DAB52730F6CADDE701BF3BE03C34EF2
+</span><span class='line'>85E053D2B5E16502F4B009DE413591DE
+</span><span class='line'>0840D6E2CBF0A3049E2FAD940A53FF67
+</span><span class='line'>—–END LICENSE—–</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3 id="section-1"><strong>关于使用</strong></h3>
+<p>搜了下往上的一些教程，配合用了用，确实挺不错。很方便。</p>
+
+<p>1.编译latex文件:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//tools-&gt;Build System-&gt;New Build System
+</span><span class='line'>{
+</span><span class='line'>	“selector”: “text.tex.latex”,
+</span><span class='line'>	“working_dir”: “$file_path”,
+</span><span class='line'>	“shell”: true,
+</span><span class='line'>	“cmd”: [“xelatex”, “$file_base_name.tex”, “&amp;”, “xelatex”, “$file_base_name.tex”, “&amp;”, “C:\Program Files (x86)\Adobe\Acrobat 10.0\Acrobat\Acrobat.exe”, “/n”, “$file_base_name.pdf”]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div>
+此外，还可以编译<code>perl</code>:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//perl
+</span><span class='line'>{
+</span><span class='line'>	“selector”: “source.perl”,
+</span><span class='line'>	“working_dir”: “$file_path”,
+</span><span class='line'>	“shell”: true,
+</span><span class='line'>	“cmd”: [“perl”, “$file_base_name.pl”]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div>
+编译<code>cpp、c</code>;<code>windows</code>下安装<code>mingw</code>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//C++_My
+</span><span class='line'>{
+</span><span class='line'>	//”file_regex”: “^(..[^:]&lt;em>):([0-9]+):?([0-9]+)?:? (.&lt;/em>)$”,
+</span><span class='line'>	“working_dir”: “${file_path}”,
+</span><span class='line'>	“selector”: “source.c, source.c++”,
+</span><span class='line'>	“shell”: true,
+</span><span class='line'>	“cmd”: [ “g++”, “${file}”, “-o”, “${file_path}/${file_base_name}”, “&amp;”,”start”, “${file_path}/${file_base_name}.exe”]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div>
+这里有个小trick，利用<code>start</code>在<code>windows</code>里面可以打开一个新的shell</p>
+
+<p>2.使用vim模式等配置
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//Preferences-&gt;Settings-User
+</span><span class='line'>// Settings in here override those in “Default/Preferences.sublime-settings”, and
+</span><span class='line'>// are overridden in turn by file type specific settings.
+</span><span class='line'>{
+</span><span class='line'>	“color_scheme”: “Packages/Color Scheme - Default/Monokai.tmTheme”,
+</span><span class='line'>	“font_face”: “Monaco”,//这个字体好看，网上下一个
+</span><span class='line'>	“font_size”: 10,
+</span><span class='line'>	“ignored_packages”: [],//使用vim
+</span><span class='line'>	“vintage_start_in_command_mode”: true,
+</span><span class='line'>	“highlight_line”: true
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div>
+3.安装插件管理器
+<a href="http://wbond.net/sublime_packages/package_control/installation">直接看官网</a></p>
+
+<p>4.几个特别好的功能 <br />
++ Zen Coding插件<br />
++ Bracket Highlighter插件<br />
++ GBK to UTF8插件<br />
++ ctrl + 鼠标左键选择多光标修改（很帅）  </p>
+
+<p>5.几个很好的快捷键  <br />
++ ctrl P/ ctrl shift P<br />
++ ctrl F / ctrl shift F<br />
++ ctrl H  </p>
+
+<p>确实很不错！赞一个！最近忙起来~忙起来~加油加油~老婆也要加油~少想难过的事~静下心~稍安勿躁~世界美好~     </p>
+
+<p><p id="audioplayer我的歌声里 ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayer我的歌声里 ", {soundFile: "http://upupyoyoyo.net/COFFdD0xMzUwMjEyNzc1Jmk9NTguMTk2LjE2Ni42MiZ1PVNvbmdzL3YxL2ZhaW50UUMvNTgvZTYxM2I3NzAwZTVjMDljYzY3ZTU3NDU2YTVlMTE5NTgubXAzJm09YWQ5NDdkMmQ4NmZhYWQzNjdjMGMyNzVkNWZjNmNhNTUmdj1saXN0ZW4mbj3O0rXEuOjJ+cDvX0RlbW8mcz3H+s3x5sMmcD1l.mp3",titles:"我的歌声里 ",artists:"曲婉婷"});</script>
+<blockquote><p>我的歌声里</p></p><p><p>没有一点点防备<br/>也没有一丝顾虑<br/>你就这样出现在我的世界里<br/>带给我惊喜情不自已<br/>可是你偏又这样<br/>在我不知不觉中悄悄的消失<br/>从我的世界里没有音讯<br/>剩下的只是回忆<br/>你存在我深深的脑海里<br/>我的梦里我的心里我的歌声里<br/>你存在我深深的脑海里<br/>我的梦里我的心里我的歌声里<br/>还记得我们曾经<br/>肩并肩一起走过那段繁华巷口<br/>尽管你我是陌生人是过路人<br/>但彼此还是感觉到了对方的<br/>一个眼神一个心跳<br/>一种意想不到的快乐<br/>好像是一场梦境命中注定<br/>你存在我深深的脑海里<br/>我的梦里我的心里我的歌声里<br/>你存在我深深的脑海里<br/>我的梦里我的心里我的歌声里<br/>世界之大为何我们相遇<br/>难道是缘分难道是天意<br/>你存在我深深的脑海里<br/>我的梦里我的心里我的歌声里<br/>你存在我深深的脑海里<br/>我的梦里我的心里我的歌声里<br/>你存在我深深的脑海里<br/>我的梦里我的心里我的歌声里</p></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Emacs23.4 on Ubuntu]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/05/15/emacs23-dot-4-on-ubuntu/"/>
+    <updated>2012-05-15T22:37:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/05/15/emacs23-dot-4-on-ubuntu</id>
+    <content type="html"><![CDATA[<h2 id="ubuntuemacs234">ubuntu上编译安装emacs23.4.还没学，装好后再捣鼓着学：</h2>
+<ul>
+  <li>安装需要的图形库
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install libgtk2.0-dev
+</span><span class='line'>sudo apt-get install libxpm-dev
+</span><span class='line'>sudo apt-get install libjpeg62-dev
+</span><span class='line'>sudo apt-get install libgif-dev
+</span><span class='line'>sudo apt-get install libtiff4-dev
+</span><span class='line'>sudo apt-get install libncurses5-dev
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<!--more--></li>
+  <li>编译安装
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo ./configure
+</span><span class='line'>sudo make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="c">#终端打开emacs</span>
+</span><span class='line'>emacs -nw
+</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+</ul>
+
+<p>几个好的学习资料：
+<a href="http://emacser.com/emacs-beginner-must-know.htm">致Emacs初学者</a>
+<a href="http://emacser.com/emacs-beginner-must-know.htm">Emacs初学者必知必会</a>
+<a href="http://aifreedom.com/technology/112">Emacs快捷键列表</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu setups]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/05/13/ubuntu-setups/"/>
+    <updated>2012-05-13T12:01:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/05/13/ubuntu-setups</id>
+    <content type="html"><![CDATA[<p>环境搭了好多遍了，每次从新弄的时候都要四处找帮助，虽然都知道，却记不住很多的细节。昨天弄网站就花了不少的时间在这上面，这些细节说起来很简单，却是记不住。中午快吃饭了，顺便先记下来再去。</p>
+
+<p>装完Ubuntu后，<code>/etc/apt/sources.list</code> 的备份和修改肯定先得弄好，这个就不写了，都知道。然后把一些驱动啊什么的整一整。吐槽下<code>ubuntu12.04</code>真心不好用，还是喜欢以前<code>gnome</code>的风格。再就是现在弄的神马双显卡也是坑爹，也不好用。
+<!--more-->
+下一步，下载安装中文语言包，顺便添加ibus中文输入法。可以再改一改键盘快捷键映射。这里记几个常用的：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ctrl+L 切换地址栏
+</span><span class='line'>ctrl+H 显示隐藏文件</span></code></pre></td></tr></table></div></figure></notextile></div>
+再把一些不用的游戏删了，装一些必须的小软件：GIMP，VLC，JDK，GVIM，gpick, filezilla等等，GVIM的安装配置记在后面吧。再配置一下要用的软件
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#安装linux qq（其实webqq其实就挺好用了），下载安装包，首先安张32位库，再强制安装</span>
+</span><span class='line'>sudo apt-get install ia32-libs*
+</span><span class='line'>sudo dpkg -i –force-all linuxqq_v1.0-preview2_i386.deb
+</span><span class='line'><span class="c">#Rythembox MP3播放插件</span>
+</span><span class='line'>sudo apt-get install gstreamer0.10-fluendo-mp3
+</span><span class='line'><span class="c">#解决mp3信息乱码</span>
+</span><span class='line'>sudo apt-get install python-mutagen
+</span><span class='line'>mid3iconv -e gbk *.mp3
+</span><span class='line'><span class="c">#集成右键打开终端</span>
+</span><span class='line'>sudo apt-get install nautilus-open-terminal
+</span><span class='line'><span class="c">#flash插件</span>
+</span><span class='line'>sudo apt-get install flashplugin-installer
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+安装java6
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#现在都不好用了，openjdk或自己编译吧</span>
+</span><span class='line'><span class="c">#wget https://github.com/flexiondotorg/oab-java6/raw/0.2.1/oab-java6.sh -O oab-java6.sh</span>
+</span><span class='line'><span class="c">#chmod +x oab-java6.sh</span>
+</span><span class='line'><span class="c">#sudo ./oab-java6.sh</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+或者安装java7
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#现在也都不好用了，openjdk或自己编译吧</span>
+</span><span class='line'><span class="c">#sudo add-apt-repository ppa:eugenesan/java</span>
+</span><span class='line'><span class="c">#sudo add-apt-repository ppa:webupd8team/java</span>
+</span><span class='line'><span class="c">#sudo apt-get update</span>
+</span><span class='line'><span class="c">#sudo apt-get install oracle-java7-installer&amp;lt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+修改启动项:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>chmod -x /etc/grub.d/20_memtest86+
+</span><span class='line'>sudo update-grub
+</span><span class='line'>sudo gedit /boot/grub/grub.cfg  <span class="c">#里面看着改改</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h4 id="vim">专门说说配置VIM：</h4>
+<p>参考<a href="http://code.google.com/p/vimide/" title="vimide">VIMIDE:http://code.google.com/p/vimide/</a>
+vim/gvim安装：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install vim-gtk
+</span><span class='line'><span class="c">#安装vimide，安装一般的插件</span>
+</span><span class='line'>sudo apt-get install exuberant-ctags wget unzip subversion
+</span><span class='line'>svn checkout http://vimide.googlecode.com/svn/trunk/linux vimide
+</span><span class='line'><span class="nb">cd </span>vimide/
+</span><span class='line'>sh install.sh
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+安装其他插件和配色：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#给终端上配色插件，下载CSApprox插件，并解压</span>
+</span><span class='line'><span class="nb">cd </span>CSApprox/
+</span><span class='line'>sudo cp autoload/csapprox.vim ~/.vim/autoload/
+</span><span class='line'>sudo cp doc/CSApprox.txt ~/.vim/doc/
+</span><span class='line'>sudo cp plugin/CSApprox.vim ~/.vim/plugin/
+</span><span class='line'><span class="c">#下载的配色文件使用，例如下载配色wombat256.vim文件</span>
+</span><span class='line'>sudo cp wombat256.vim /usr/share/vim/vim73/colors/
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+配置vimrc:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'>“MY VIMRC settings
+</span><span class='line'>“——<span class="p">-</span><span class="k">start</span>———<span class="p">-</span>
+</span><span class='line'><span class="k">colorscheme</span> evening
+</span><span class='line'><span class="k">set</span> <span class="nb">guifont</span><span class="p">=</span>Monaco:h13
+</span><span class='line'>“添加GUI色彩
+</span><span class='line'>“<span class="k">set</span> <span class="nb">t_Co</span><span class="p">=</span><span class="m">256</span>
+</span><span class='line'>“——–<span class="k">end</span>———–
+</span><span class='line'>“VIMIDE vimrc basic settings
+</span><span class='line'>“——–<span class="k">start</span>———
+</span><span class='line'><span class="k">set</span> <span class="nb">fileencodings</span><span class="p">=</span>ucs<span class="p">-</span>bom<span class="p">,</span>utf<span class="m">-8</span><span class="p">,</span>cp936
+</span><span class='line'><span class="k">set</span> <span class="nb">helplang</span><span class="p">=</span><span class="k">cn</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="k">set</span> <span class="nb">shiftwidth</span><span class="p">=</span><span class="m">2</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">tabstop</span><span class="p">=</span><span class="m">2</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">expandtab</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">nobackup</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">noswapfile</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">nowb</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">backspace</span><span class="p">=</span><span class="k">start</span><span class="p">,</span>indent<span class="p">,</span><span class="nb">eol</span>
+</span><span class='line'><span class="k">set</span> <span class="k">nu</span><span class="p">!</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">autoindent</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">smartindent</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">wrap</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="k">set</span> <span class="nb">noerrorbells</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">novisualbell</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="k">filetype</span> plugin <span class="k">on</span>
+</span><span class='line'><span class="k">filetype</span> indent <span class="k">on</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="nb">syntax</span> <span class="k">on</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">ruler</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span>map &amp;<span class="k">lt</span>;&amp;gt; :NERDTree<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+</span><span class='line'>map <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">o</span><span class="p">&gt;</span> :TlistToggle<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+</span><span class='line'>vmap <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">c</span><span class="p">&gt;</span> <span class="c">&quot;+y</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">mouse</span><span class="p">=</span><span class="k">a</span>
+</span><span class='line'>autocmd <span class="nb">VimEnter</span> * NERDTree
+</span><span class='line'>autocmd <span class="nb">BufEnter</span> * <span class="k">silent</span><span class="p">!</span> <span class="k">lcd</span> %:<span class="k">p</span>:<span class="k">h</span>
+</span><span class='line'><span class="c">&quot;--------end--------&lt;/c-c&gt;&lt;/cr&gt;&lt;/c-o&gt;&lt;/cr&gt;&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="k">let</span> Tlist_Ctags_Cmd<span class="p">=</span>’<span class="sr">/usr/</span><span class="nb">bin</span>/ctags’
+</span><span class='line'><span class="k">let</span> Tlist_Show_One_File <span class="p">=</span> <span class="m">1</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="k">let</span> <span class="k">g</span>:miniBufExplMapWindowNavVim <span class="p">=</span> <span class="m">1</span>
+</span><span class='line'>  <span class="k">let</span> <span class="k">g</span>:miniBufExplMapWindowNavArrows <span class="p">=</span> <span class="m">1</span>
+</span><span class='line'>  <span class="k">let</span> <span class="k">g</span>:miniBufExplMapCTabSwitchBufs <span class="p">=</span> <span class="m">1</span>
+</span><span class='line'>  <span class="k">let</span> <span class="k">g</span>:miniBufExplModSelTarget <span class="p">=</span> <span class="m">1</span><span class="p">&lt;</span>/<span class="k">p</span><span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">&lt;</span><span class="k">p</span><span class="p">&gt;</span><span class="nb">inoremap</span>  :<span class="k">call</span> PhpDocSingle<span class="p">()</span><span class="k">i</span>
+</span><span class='line'><span class="nb">nnoremap</span>  :<span class="k">call</span> PhpDocSingle<span class="p">()</span>
+</span><span class='line'><span class="nb">vnoremap</span>  :<span class="k">call</span> PhpDocRange<span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+Vim的快捷键: <a href="http://salogs.com/2009/08/vim-%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/">参考网址</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[VPN远程、翻墙、nod32防火墙配置]]></title>
+    <link href="http://vampirefan.github.com/blog/2011/11/03/vpnyuan-cheng-fan-qiang-nod32fang-huo-qiang-pei-zhi/"/>
+    <updated>2011-11-03T11:28:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2011/11/03/vpnyuan-cheng-fan-qiang-nod32fang-huo-qiang-pei-zhi</id>
+    <content type="html"><![CDATA[<p>利用ipv6的校内VPN和windows自带的远程桌面，校内会快很多，比teamviewer和Gbrige好用。</p>
+
+<ul>
+  <li>配置VPN SJTU:      </li>
+</ul>
+
+<p>网络和共享中心=&gt;设置新的连接或网络=&gt;连接到工作区=&gt;使用我的internet连接(VPN)=&gt;<code>
+vpn6.net.sjtu.edu.cn</code>; <code>SJTU VPN</code>  <br />
+属性=&gt;安全=&gt;可选数据加密 <br />
+属性=&gt;选项=&gt;取消<code>包括Windows登陆域</code>
+<!--more--></p>
+
+<ul>
+  <li>配置远程登录：</li>
+</ul>
+
+<p>计算机=&gt;属性=&gt;远程设置=&gt;勾选允许  <br />
+计算机=&gt;管理=&gt;服务=&gt;勾选启动数个远程桌面的服务</p>
+
+<ul>
+  <li>配置nod32防火墙：</li>
+</ul>
+
+<p>设置=&gt;个人防火墙=&gt;交互过滤模式=&gt;配置规则和区域=&gt;规则=&gt;新建=&gt;本地添加端口3389，允许双向</p>
+
+<ul>
+  <li>BBS上看到一个懒人翻墙法，用了很是不错。</li>
+</ul>
+
+<p>详见<a href="http://www.qishansun.info/?page_id=141" title="原文连接">http://www.qishansun.info/?page_id=141</a> <br />
+还是利用了ssh，申请了一个号和ip，利用putty，添加动态端口3128，在利用google的switchy插件，端口3128，online rule list：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>

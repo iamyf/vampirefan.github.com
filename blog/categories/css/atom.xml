@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：CSS | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[关注内容]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/10/15/guan-zhu-nei-rong/"/>
+    <updated>2012-10-15T23:40:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/10/15/guan-zhu-nei-rong</id>
+    <content type="html"><![CDATA[<p>又把网站的外观整了下，决定一段时间内在也不理会这个了。一个网站的外表再怎么说也只能是外表，最终决定质量的还是内容。但不能说外表不重要，一眼看上去给人舒适才能让人静下心来读内容。网页还是要简洁点的好。再多的修饰就是浮夸，就像生活中女人给人的印象终究是简单和素颜的好，浓妆总会给人生厌。
+<!--more--></p>
+
+<p>整网站外观是件很痛苦的事情，产生的效果总是和预想的不同，一个地方达到要求了有时候造成另外的地方的不协调。时间没有完美，只能尽可能的去均衡美好和不协调。加了一个功能，方向键和<code>J</code>,<code>K</code>可以用来跳转到上一篇或下一篇博文。但是边栏因为<code>jQuary</code>不能在<code>footer</code>里面正确的以三栏的形式显示了，索性就不显示了。最后还是决定不用<code>jQuary</code>了。<code>js</code>实现的方向键跳转功能如下：</p>
+
+<p><div><script src='https://gist.github.com/3906144.js'></script>
+<noscript><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+function jumppages(){
+    if (event.target.nodeName.toUpperCase() != 'BODY') return;
+    var url = false;
+    if (event.which == 37 || event.which == 74) {  // Left arrow and J
+        {% if page.previous %}
+    url = '{{ site.url }}{{ page.previous.url }}';
+    {% endif %}
+    }
+    else if (event.which == 39 || event.which == 75) {  // Right arrow and K
+        {% if page.next %}
+    url = '{{ site.url }}{{ page.next.url }}';
+    {% endif %}
+    }
+    if (url) {
+        window.location = url;
+    }
+}
+document.onkeydown=jumppages;
+&lt;/script&gt;</code></pre></noscript></div>
+</p>
+
+<p>有点晚了，早点睡了。挤一挤，时间总会有的。重要的是要提高效率！！</p>
+
+]]></content>
+  </entry>
+  
+</feed>

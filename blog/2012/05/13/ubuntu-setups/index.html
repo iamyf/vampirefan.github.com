@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ubuntu setups - { vampirefan's   Harbor }</title>
+  <meta name="author" content="vampirefan">
+
+  
+  <meta name="description" content="环境搭了好多遍了，每次从新弄的时候都要四处找帮助，虽然都知道，却记不住很多的细节。昨天弄网站就花了不少的时间在这上面，这些细节说起来很简单，却是记不住。中午快吃饭了，顺便先记下来再去。 装完Ubuntu后，/etc/apt/sources.list 的备份和修改肯定先得弄好，这个就不写了，都知道。 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://vampirefan.github.com/blog/2012/05/13/ubuntu-setups/">
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link href="/favicon.ico" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="{ vampirefan's   Harbor }" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<!-- <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"> -->
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Cherry+Cream+Soda' rel='stylesheet' type='text/css'> -->
+<link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="/javascripts/audio-player.js"></script>    
+<script type="text/javascript">  
+    AudioPlayer.setup("http://wpaudioplayer.com/wp-content/plugins/audio-player/assets/player.swf?ver=2.0.4.1", {
+    	transparentpagebg: "yes",  
+    	initialvolume: 100 ,
+        width: 320
+    });  
+</script>  
+<script type="text/javascript" src="/javascripts/clearlink.js"></script>
+<script type="text/javascript" src="/javascripts/xttop_mini.js"></script>
+<script type="text/javascript" src="/javascripts/smoothscroll.js"></script>
+
+<meta name="google-site-verification" content="uaV6_4WIvqoYYcyUwLP5hifyZPjRYFSeGeXaBmt1pNM" />
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33010606-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><hgroup>
+  <h1><a href="/">{ vampirefan's   Harbor }</a></h1>
+  
+    <h2>Life is like a box of chocolates, you never know what you're gonna get. --Forrest Gump</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li> -->
+  
+</ul>
+  
+<form action="http://google.com/search" method="get" id="searchform">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:vampirefan.github.com" />
+    <input class="search" type="text" name="q" id="q" results="0" placeholder="Search ..."/>
+    <!-- <input type="submit" class="submit" name="submit" id="searchsubmit" value="Search"> -->
+  </fieldset>
+</form>
+  
+
+<ul class="main-navigation">
+  <li><a href="/">&hearts;&#65509;Home</a></li>
+  <li><a href="/about-here/">About</a></li>
+  <li><a href="/blog/archives/">All</a></li>
+  <li><a href="/blog/categories/share/">Share</a></li>
+  <li><a href="/blog/categories/it/">IT</a></li>
+  <li><a href="/blog/categories/life/">Life</a></li>
+  <li><a href="/blog/categories/thinking/">Thinking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+
+  <header>
+    
+      <h1 class="entry-title">Ubuntu Setups</h1>
+    
+  </header>
+
+  <footer>
+    
+      <p class="date">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-13T12:01:00+08:00" pubdate data-updated="true">2012-05-13 12:01PM</time>
+      </p>
+    
+  </footer>
+  <footer>
+    
+      <p class="meta">
+        
+  
+
+<span class="byline author vcard">@<span class="fn">vampirefan</span></span>
+
+        
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/app/'>App</a>, <a class='category' href='/blog/categories/coding/'>Coding</a>, <a class='category' href='/blog/categories/it/'>IT</a>, <a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/ubuntu/'>Ubuntu</a>, <a class='category' href='/blog/categories/vim/'>Vim</a>
+  
+</span>
+
+
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </footer>
+
+<div class="entry-content"><p>环境搭了好多遍了，每次从新弄的时候都要四处找帮助，虽然都知道，却记不住很多的细节。昨天弄网站就花了不少的时间在这上面，这些细节说起来很简单，却是记不住。中午快吃饭了，顺便先记下来再去。</p>
+
+<p>装完Ubuntu后，<code>/etc/apt/sources.list</code> 的备份和修改肯定先得弄好，这个就不写了，都知道。然后把一些驱动啊什么的整一整。吐槽下<code>ubuntu12.04</code>真心不好用，还是喜欢以前<code>gnome</code>的风格。再就是现在弄的神马双显卡也是坑爹，也不好用。
+<!--more-->
+下一步，下载安装中文语言包，顺便添加ibus中文输入法。可以再改一改键盘快捷键映射。这里记几个常用的：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">ctrl+L 切换地址栏
+</span><span class="line">ctrl+H 显示隐藏文件</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>再把一些不用的游戏删了，装一些必须的小软件：GIMP，VLC，JDK，GVIM，gpick, filezilla等等，GVIM的安装配置记在后面吧。再配置一下要用的软件</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#安装linux qq（其实webqq其实就挺好用了），下载安装包，首先安张32位库，再强制安装</span>
+</span><span class="line">sudo apt-get install ia32-libs*
+</span><span class="line">sudo dpkg -i --force-all linuxqq_v1.0-preview2_i386.deb
+</span><span class="line"><span class="c">#Rythembox MP3播放插件</span>
+</span><span class="line">sudo apt-get install gstreamer0.10-fluendo-mp3
+</span><span class="line"><span class="c">#解决mp3信息乱码</span>
+</span><span class="line">sudo apt-get install python-mutagen
+</span><span class="line">mid3iconv -e gbk *.mp3
+</span><span class="line"><span class="c">#集成右键打开终端</span>
+</span><span class="line">sudo apt-get install nautilus-open-terminal
+</span><span class="line"><span class="c">#flash插件</span>
+</span><span class="line">sudo apt-get install flashplugin-installer
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>安装java6</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#现在都不好用了，openjdk或自己编译吧</span>
+</span><span class="line"><span class="c">#wget https://github.com/flexiondotorg/oab-java6/raw/0.2.1/oab-java6.sh -O oab-java6.sh</span>
+</span><span class="line"><span class="c">#chmod +x oab-java6.sh</span>
+</span><span class="line"><span class="c">#sudo ./oab-java6.sh</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>或者安装java7</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#现在也都不好用了，openjdk或自己编译吧</span>
+</span><span class="line"><span class="c">#sudo add-apt-repository ppa:eugenesan/java</span>
+</span><span class="line"><span class="c">#sudo add-apt-repository ppa:webupd8team/java</span>
+</span><span class="line"><span class="c">#sudo apt-get update</span>
+</span><span class="line"><span class="c">#sudo apt-get install oracle-java7-installer&lt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>修改启动项:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">chmod -x /etc/grub.d/20_memtest86+
+</span><span class="line">sudo update-grub
+</span><span class="line">sudo gedit /boot/grub/grub.cfg  <span class="c">#里面看着改改</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h4 id="vim">专门说说配置VIM：</h4>
+<p>参考<a href="http://code.google.com/p/vimide/" title="vimide">VIMIDE:http://code.google.com/p/vimide/</a>
+vim/gvim安装：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">sudo apt-get install vim-gtk
+</span><span class="line"><span class="c">#安装vimide，安装一般的插件</span>
+</span><span class="line">sudo apt-get install exuberant-ctags wget unzip subversion
+</span><span class="line">svn checkout http://vimide.googlecode.com/svn/trunk/linux vimide
+</span><span class="line"><span class="nb">cd </span>vimide/
+</span><span class="line">sh install.sh
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>安装其他插件和配色：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#给终端上配色插件，下载CSApprox插件，并解压</span>
+</span><span class="line"><span class="nb">cd </span>CSApprox/
+</span><span class="line">sudo cp autoload/csapprox.vim ~/.vim/autoload/
+</span><span class="line">sudo cp doc/CSApprox.txt ~/.vim/doc/
+</span><span class="line">sudo cp plugin/CSApprox.vim ~/.vim/plugin/
+</span><span class="line"><span class="c">#下载的配色文件使用，例如下载配色wombat256.vim文件</span>
+</span><span class="line">sudo cp wombat256.vim /usr/share/vim/vim73/colors/
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>配置vimrc:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+<span class="line-number">47</span>
+<span class="line-number">48</span>
+<span class="line-number">49</span>
+<span class="line-number">50</span>
+<span class="line-number">51</span>
+<span class="line-number">52</span>
+</pre></td><td class="code"><pre><code class="vim"><span class="line"><span class="c">&quot;MY VIMRC settings</span>
+</span><span class="line"><span class="c">&quot;-------start----------</span>
+</span><span class="line"><span class="k">colorscheme</span> evening
+</span><span class="line"><span class="k">set</span> <span class="nb">guifont</span><span class="p">=</span>Monaco:h13
+</span><span class="line"><span class="c">&quot;添加GUI色彩</span>
+</span><span class="line"><span class="c">&quot;set t_Co=256</span>
+</span><span class="line"><span class="c">&quot;--------end-----------</span>
+</span><span class="line"><span class="c">&quot;VIMIDE vimrc basic settings</span>
+</span><span class="line"><span class="c">&quot;--------start---------</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">fileencodings</span><span class="p">=</span>ucs<span class="p">-</span>bom<span class="p">,</span>utf<span class="m">-8</span><span class="p">,</span>cp936
+</span><span class="line"><span class="k">set</span> <span class="nb">helplang</span><span class="p">=</span><span class="k">cn</span>
+</span><span class="line">
+</span><span class="line"><span class="k">set</span> <span class="nb">shiftwidth</span><span class="p">=</span><span class="m">2</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">tabstop</span><span class="p">=</span><span class="m">2</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">expandtab</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">nobackup</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">noswapfile</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">nowb</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">backspace</span><span class="p">=</span><span class="k">start</span><span class="p">,</span>indent<span class="p">,</span><span class="nb">eol</span>
+</span><span class="line"><span class="k">set</span> <span class="k">nu</span><span class="p">!</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">autoindent</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">smartindent</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">wrap</span>
+</span><span class="line">
+</span><span class="line"><span class="k">set</span> <span class="nb">noerrorbells</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">novisualbell</span>
+</span><span class="line">
+</span><span class="line"><span class="k">filetype</span> plugin <span class="k">on</span>
+</span><span class="line"><span class="k">filetype</span> indent <span class="k">on</span>
+</span><span class="line">
+</span><span class="line"><span class="nb">syntax</span> <span class="k">on</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">ruler</span>
+</span><span class="line">
+</span><span class="line">map <span class="p">&lt;&gt;</span> :NERDTree<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+</span><span class="line">map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">o</span><span class="p">&gt;</span> :TlistToggle<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+</span><span class="line">vmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">c</span><span class="p">&gt;</span> <span class="c">&quot;+y</span>
+</span><span class="line"><span class="k">set</span> <span class="nb">mouse</span><span class="p">=</span><span class="k">a</span>
+</span><span class="line">autocmd <span class="nb">VimEnter</span> * NERDTree
+</span><span class="line">autocmd <span class="nb">BufEnter</span> * <span class="k">silent</span><span class="p">!</span> <span class="k">lcd</span> %:<span class="k">p</span>:<span class="k">h</span>
+</span><span class="line"><span class="c">&quot;--------end--------</span>
+</span><span class="line">
+</span><span class="line"><span class="k">let</span> Tlist_Ctags_Cmd<span class="p">=</span><span class="s1">&#39;/usr/bin/ctags&#39;</span>
+</span><span class="line"><span class="k">let</span> Tlist_Show_One_File <span class="p">=</span> <span class="m">1</span>
+</span><span class="line">
+</span><span class="line">  <span class="k">let</span> <span class="k">g</span>:miniBufExplMapWindowNavVim <span class="p">=</span> <span class="m">1</span>
+</span><span class="line">  <span class="k">let</span> <span class="k">g</span>:miniBufExplMapWindowNavArrows <span class="p">=</span> <span class="m">1</span>
+</span><span class="line">  <span class="k">let</span> <span class="k">g</span>:miniBufExplMapCTabSwitchBufs <span class="p">=</span> <span class="m">1</span>
+</span><span class="line">  <span class="k">let</span> <span class="k">g</span>:miniBufExplModSelTarget <span class="p">=</span> <span class="m">1</span>
+</span><span class="line">
+</span><span class="line"><span class="nb">inoremap</span>  :<span class="k">call</span> PhpDocSingle<span class="p">()</span><span class="k">i</span>
+</span><span class="line"><span class="nb">nnoremap</span>  :<span class="k">call</span> PhpDocSingle<span class="p">()</span>
+</span><span class="line"><span class="nb">vnoremap</span>  :<span class="k">call</span> PhpDocRange<span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Vim的快捷键: <a href="http://salogs.com/2009/08/vim-%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/">参考网址</a></p>
+</div>
+
+
+  <footer>
+<!--     <p class="meta">
+      
+  
+
+<span class="byline author vcard">@<span class="fn">vampirefan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-13T12:01:00+08:00" pubdate data-updated="true">2012-05-13 12:01PM</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/app/'>App</a>, <a class='category' href='/blog/categories/coding/'>Coding</a>, <a class='category' href='/blog/categories/it/'>IT</a>, <a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/ubuntu/'>Ubuntu</a>, <a class='category' href='/blog/categories/vim/'>Vim</a>
+  
+</span>
+
+
+    </p> -->
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/05/12/life-always-to-be-continued/" title="Previous Post: Life, always to be continued~">&laquo; Life, always to be continued~</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/05/13/lamp-and-wordpress-on-ubuntu/" title="Next Post: LAMP &amp; Wordpress on Ubuntu">LAMP &amp; Wordpress on Ubuntu &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><center>
+<p>
+  {vampirefan's Harbor} - Copyright &copy; 2011-2013 - 弯排帆|vampirefan 
+  <!-- <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> -->
+</p>
+</center>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'vampirefan-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vampirefan.github.com/blog/2012/05/13/ubuntu-setups/';
+        var disqus_url = 'http://vampirefan.github.com/blog/2012/05/13/ubuntu-setups/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+(function(){
+  //var mytop = new xttop();        //默认以文字
+
+  //var mytop= new xttop({img:"defaults",bottom:"50px",right:"50px",speed:50,width:"60px",height:"60px"});  //可选参数  以图片显示
+  
+  var mytop=new xttop({img:"/images/totop0.png",width:"68px",height:"32px",speed:50});
+})();
+</script>
+
+</body>
+<script type="text/javascript">
+document.addEventListener("keydown", function ( event ) {
+  if ( ( event.keyCode >= 33 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) || ( event.keyCode >= 74 && event.keyCode <= 75 ) ) {
+      event.preventDefault();
+    }
+}, false);
+  
+document.addEventListener("keyup", function ( event ) {
+  if ( ( event.keyCode >= 33 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) || ( event.keyCode >= 74 && event.keyCode <= 75 ) ) {
+    switch( event.keyCode ) {
+      case 33: // pg up
+      case 37: // left
+      case 38: // up
+      case 74: // j, J
+        
+          url = 'http://vampirefan.github.com/blog/2012/05/12/life-always-to-be-continued/';
+        
+               break;
+      case 34: // pg down
+      case 39: // right
+      case 40: // down
+      case 75: // k, K
+        
+          url = 'http://vampirefan.github.com/blog/2012/05/13/lamp-and-wordpress-on-ubuntu/';
+        
+               break;
+    }
+    if (url) {
+        window.location = url;
+    }
+    event.preventDefault();
+  }
+}, false);
+</script>
+</html>

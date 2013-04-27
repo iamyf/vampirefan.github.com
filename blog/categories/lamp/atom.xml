@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：LAMP | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/lamp/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-27T10:19:32+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[LAMP &amp; Wordpress on Ubuntu]]></title>
+    <link href="http://vampirefan.github.com/blog/2012/05/13/lamp-and-wordpress-on-ubuntu/"/>
+    <updated>2012-05-13T21:06:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2012/05/13/lamp-and-wordpress-on-ubuntu</id>
+    <content type="html"><![CDATA[<p><strong>LAMP (Linux, Apache, MySQL and PHP) on Ubuntu to learn Web Development.</strong></p>
+
+<ul>
+  <li>
+    <p>先装该装得LAMP：
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install lamp-server^ php5 php-pear
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+  </li>
+  <li>
+    <p>测试apache和php
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo vim /var/www/testing.php
+</span><span class='line'><span class="c">#插入 &lt;?php phpinfo(); ?&gt;</span>
+</span><span class='line'>sudo /etc/init.d/apache2 restart
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+在浏览器中看看 <br />
+<a href="http://localhost/">http://localhost/</a> <br />
+<a href="http://localhost/testing.php">http://localhost/testing.php</a><br />
+<!--more--></p>
+  </li>
+  <li>
+    <p>配置一下虚拟主机 <br />
+<code>File:/etc/apache2/sites-available/example.com</code>
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>&amp;lt;virtualHost *:80&amp;gt;
+</span><span class='line'>   ServerAdmin webmaster@example.com
+</span><span class='line'>   ServerName example.com
+</span><span class='line'>   ServerAlias www.example.com
+</span><span class='line'>   DocumentRoot /srv/www/example.com/public_html/
+</span><span class='line'>   ErrorLog /srv/www/example.com/logs/error.log
+</span><span class='line'>   CustomLog /srv/www/example.com/logs/access.log combined&lt;/p&gt;
+</span><span class='line'>  &lt;/li&gt;
+</span><span class='line'>&lt;/ul&gt;
+</span><span class='line'>&lt;p&gt;&amp;lt;/virtualHost&amp;gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+  <li>
+    <p>给网站建立文件夹
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo mkdir -p /srv/www/example.com/public_html
+</span><span class='line'>sudo mkdir /srv/www/example.com/logs
+</span><span class='line'><span class="c">#enable网站</span>
+</span><span class='line'>sudo a2ensite example.com
+</span><span class='line'>sudo service apache2 reload
+</span><span class='line'><span class="c">#编辑hosts</span>
+</span><span class='line'>sudo vim /etc/hosts
+</span><span class='line'><span class="c">#开权限</span>
+</span><span class='line'>chmod -R 777 /srv/www/example.com/public_html
+</span><span class='line'><span class="c">#写测试脚本</span>
+</span><span class='line'>vim /srv/www/example.com/public_html/test.php
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+在浏览器中看看  <br />
+<a href="http://example.com/test.php">http://example.com/test.php</a></p>
+  </li>
+  <li>
+    <p>再安装phpmyadmin
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install libapache2-mod-auth-mysql phpmyadmin
+</span><span class='line'><span class="c">#有点问题，需要手动链接phpmyadmin文件夹</span>
+</span><span class='line'>sudo ln -sf /usr/share/phpmyadmin /var/www/phpmyadmin
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+在浏览器中看看 <br />
+<a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a></p>
+  </li>
+</ul>
+
+<h3 id="wordpress">后面再就是配置Wordpress了：</h3>
+<p>先在phpmyadmin中给wordpress建立数据库和用户。安装wordpress就OK了。设置本地ftp更新
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#本地设置ftp更新，查看apach服务的owner</span>
+</span><span class='line'>ps -aux
+</span><span class='line'><span class="c">#不出意外是www-data</span>
+</span><span class='line'>chown www-data:www-data /srv/www/example.com/public_html/wordpress/ -R
+</span><span class='line'><span class="c">#上一步已经足够，下面是想把自己加入owner</span>
+</span><span class='line'>usermod -a -G www-data &lt;yourname&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></yourname></p>
+]]></content>
+  </entry>
+  
+</feed>
