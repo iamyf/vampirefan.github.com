@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：Dropbox | { vampirefan's   Harbor }]]></title>
+  <link href="http://vampirefan.github.com/blog/categories/dropbox/atom.xml" rel="self"/>
+  <link href="http://vampirefan.github.com/"/>
+  <updated>2013-04-29T14:01:42+08:00</updated>
+  <id>http://vampirefan.github.com/</id>
+  <author>
+    <name><![CDATA[vampirefan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[利用dropbox做为私有git仓库]]></title>
+    <link href="http://vampirefan.github.com/blog/2013/04/28/li-yong-dropboxzuo-wei-si-you-gitcang-ku/"/>
+    <updated>2013-04-28T17:45:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2013/04/28/li-yong-dropboxzuo-wei-si-you-gitcang-ku</id>
+    <content type="html"><![CDATA[<p>最近又开始更新自己使用的软件了，evernote重新用起来，dropbox重新用起来，发现一个很有前途的网盘-快盘。支持macOS，百度网盘很好，可惜不支持macOS，所以把百度网盘作为远程软件仓库了。下面记录一下使用dropbox作为私有的git仓库的办法。Github我很喜欢了，可惜自己总是用不好，多台电脑上的同步效果不好。
+<!--more--></p>
+
+<p>安装dropbox，在dropbox文件夹下建立Git文件夹：</p>
+
+<p><code>
+mkdir ~/Dropbox/Git
+cd ~/Dropbox/Git
+</code></p>
+
+<p>为自己的项目建立远程Repo</p>
+
+<p><code>
+git init --bare projectName.git
+</code></p>
+
+<p>进入自己的项目目录并将代码push到Dropbox</p>
+
+<p><code>
+cd ~/projectName
+git init
+git add .
+git add -u
+git commit -am 'first commit'
+git add origin ~/Dropbox/Git/projectName.git
+git push -u origin master
+</code></p>
+
+<p>就这么简单。
+在另一台电脑上使用的时候clone就好，注意查看远程仓库名称：</p>
+
+<p><code>
+git clone ~/Dropbox/Git/projectName.git
+git remote -v
+</code></p>
+
+<p>挺简单，挺强大。最近很有些忙了，没时间捣鼓了，找实习，笔试，面试，编程算法，编程语言都要复习，老师这边还这么多事情。虽然很紧，很累，五一节还是赶回家看看吧。火车上才有点时间写篇博客。人生苦短，转眼奔三了，年轻的机会不多了，人生终究是会有遗憾的。加油吧，少年~ ^_^</p>
+]]></content>
+  </entry>
+  
+</feed>

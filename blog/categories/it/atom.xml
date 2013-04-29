@@ -4,7 +4,7 @@
   <title><![CDATA[分类：IT | { vampirefan's   Harbor }]]></title>
   <link href="http://vampirefan.github.com/blog/categories/it/atom.xml" rel="self"/>
   <link href="http://vampirefan.github.com/"/>
-  <updated>2013-04-27T10:19:32+08:00</updated>
+  <updated>2013-04-29T14:01:42+08:00</updated>
   <id>http://vampirefan.github.com/</id>
   <author>
     <name><![CDATA[vampirefan]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[利用dropbox做为私有git仓库]]></title>
+    <link href="http://vampirefan.github.com/blog/2013/04/28/li-yong-dropboxzuo-wei-si-you-gitcang-ku/"/>
+    <updated>2013-04-28T17:45:00+08:00</updated>
+    <id>http://vampirefan.github.com/blog/2013/04/28/li-yong-dropboxzuo-wei-si-you-gitcang-ku</id>
+    <content type="html"><![CDATA[<p>最近又开始更新自己使用的软件了，evernote重新用起来，dropbox重新用起来，发现一个很有前途的网盘-快盘。支持macOS，百度网盘很好，可惜不支持macOS，所以把百度网盘作为远程软件仓库了。下面记录一下使用dropbox作为私有的git仓库的办法。Github我很喜欢了，可惜自己总是用不好，多台电脑上的同步效果不好。
+<!--more--></p>
+
+<p>安装dropbox，在dropbox文件夹下建立Git文件夹：</p>
+
+<p><code>
+mkdir ~/Dropbox/Git
+cd ~/Dropbox/Git
+</code></p>
+
+<p>为自己的项目建立远程Repo</p>
+
+<p><code>
+git init --bare projectName.git
+</code></p>
+
+<p>进入自己的项目目录并将代码push到Dropbox</p>
+
+<p><code>
+cd ~/projectName
+git init
+git add .
+git add -u
+git commit -am 'first commit'
+git add origin ~/Dropbox/Git/projectName.git
+git push -u origin master
+</code></p>
+
+<p>就这么简单。
+在另一台电脑上使用的时候clone就好，注意查看远程仓库名称：</p>
+
+<p><code>
+git clone ~/Dropbox/Git/projectName.git
+git remote -v
+</code></p>
+
+<p>挺简单，挺强大。最近很有些忙了，没时间捣鼓了，找实习，笔试，面试，编程算法，编程语言都要复习，老师这边还这么多事情。虽然很紧，很累，五一节还是赶回家看看吧。火车上才有点时间写篇博客。人生苦短，转眼奔三了，年轻的机会不多了，人生终究是会有遗憾的。加油吧，少年~ ^_^</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[git使用方法]]></title>
@@ -253,28 +298,6 @@ document.onkeydown=jumppages;
 
 <p>有点晚了，早点睡了。挤一挤，时间总会有的。重要的是要提高效率！！</p>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[hacker~howto]]></title>
-    <link href="http://vampirefan.github.com/blog/2012/09/19/hacker%7Ehowto/"/>
-    <updated>2012-09-19T19:11:00+08:00</updated>
-    <id>http://vampirefan.github.com/blog/2012/09/19/hacker~howto</id>
-    <content type="html"><![CDATA[<p>下午想查一查文献，无意中看到这样一篇转载的文章：<a href="http://my.oschina.net/qichang/blog?disp=2">黑客是怎样炼成的</a>，写的很好，也很令我热血沸腾。里面说的处世态度，处事方法觉得特别有共鸣~</p>
-
-<p><blockquote><p>1. 这个世界充满了令人着迷的问题等着我们解决;<br/>2. 一个问题不应该被解决两次;<br/>3. 无聊和乏味的工作是罪恶。<br/>4. 崇尚自由;<br/>5. 态度不能替代能力。</p></blockquote>
-<!--more--></p>
-
-<p>然后看了看文章中提到的Google 公司的顶尖黑客之一Peter Novig写的那篇<a href="http://wenku.baidu.com/view/72ca14d4360cba1aa811dab8.html">&lt;Teach Yourself Programming in Ten Years&gt;</a>,确实获益匪浅。确实，要想在一门技术上有所造诣，是肯定要花费很多的精力和时间的。但是一旦是自己喜欢的事情，是一定会费心思费精力去努力专研的~</p>
-
-<p>还发现了昨天看到的学习ruby的koans竟然是一种软件测试方法<a href="http://baike.baidu.com/view/184088.htm">(TDD,Test-Driven Development)</a>。测试驱动开发(TDD)是敏捷开发中的一项核心实践和技术，也是一种设计方法论。TDD的原理是在开发功能代码之前，先编写单元测试用例代码，测试代码确定需要编写什么产品代码。确实，要学的东西还有好多。</p>
-
-<p>送老婆一首歌，争取学会~</p>
-
-<p><p id="audioplayer小情歌 ">Alternative content</p><script type="text/javascript">AudioPlayer.embed("audioplayer小情歌 ", {soundFile: "http://people.chu.edu.tw/~b9217004/03-lovesong.mp3",titles:"小情歌 ",artists:"苏打绿"});</script></p>
-
-<p><blockquote><p>小情歌</p></p><p><p>这是一首简单的小情歌<br/>唱着人们心肠的曲折<br/>我想我很快乐<br/>当有你的温热<br/>脚边的空气转了<br/>这是一首简单的小情歌<br/>唱着我们心头的白鸽<br/>我想我很适合<br/>当一个歌颂者<br/>青春在风中飘着<br/>你知道<br/>就算大雨让这座城市颠倒<br/>我会给你怀抱<br/>受不了看见你背影来到<br/>写下我度秒如年难捱的离骚<br/>就算整个世界被寂寞绑票<br/>我也不会奔跑<br/>逃不了最后谁也都苍老<br/>写下我时间和琴声交错的城堡<br/>这是一首简单的小情歌<br/>唱着我们心头的白鸽<br/>我想我很适合<br/>当一个歌颂者<br/>青春在风中飘着<br/>你知道<br/>就算大雨让这座城市颠倒<br/>我会给你怀抱<br/>受不了看见你背影来到<br/>写下我度秒如年难捱的离骚<br/>就算整个世界被寂寞绑票<br/>我也不会奔跑<br/>逃不了最后谁也都苍老<br/>写下我时间和琴声交错的城堡<br/>你知道<br/>就算大雨让这座城市颠倒<br/>我会给你怀抱<br/>受不了看见你背影来到<br/>写下我度秒如年难捱的离骚<br/>就算整个世界被寂寞绑票<br/>我也不会奔跑<br/>最后谁也都苍老<br/>写下我时间和琴声交错的城堡</p></blockquote></p>
 ]]></content>
   </entry>
   

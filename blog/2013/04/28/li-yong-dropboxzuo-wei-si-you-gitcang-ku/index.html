@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>又是雨天 - { vampirefan's   Harbor }</title>
+  <title>利用dropbox做为私有git仓库 - { vampirefan's   Harbor }</title>
   <meta name="author" content="vampirefan">
 
   
-  <meta name="description" content="原本以为回家了就会开心起来，心情也会放松下来。然而，却是越发有些难受和迷茫。 看《忠犬八公的故事》，女朋友问我，你为什么不感动的流泪呢。故事确实很感人，我却没有被触动的感觉。可爱的小狗被收养开始，被教授爱着，呵护着，他很通人性的守护着教授，每天在教授下班的路上等待着，教授的出现变成了他生命的全部， &hellip;">
+  <meta name="description" content="最近又开始更新自己使用的软件了，evernote重新用起来，dropbox重新用起来，发现一个很有前途的网盘-快盘。支持macOS，百度网盘很好，可惜不支持macOS，所以把百度网盘作为远程软件仓库了。下面记录一下使用dropbox作为私有的git仓库的办法。Github我很喜欢了， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vampirefan.github.com/blog/2013/01/31/you-shi-yu-tian/">
+  <link rel="canonical" href="http://vampirefan.github.com/blog/2013/04/28/li-yong-dropboxzuo-wei-si-you-gitcang-ku/">
   <!-- <link href="/favicon.png" rel="icon"> -->
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -104,7 +104,7 @@
 
   <header>
     
-      <h1 class="entry-title">又是雨天</h1>
+      <h1 class="entry-title">利用dropbox做为私有git仓库</h1>
     
   </header>
 
@@ -123,7 +123,7 @@
   
 
 
-<time datetime="2013-01-31T22:03:00+08:00" pubdate data-updated="true">2013-01-31 10:03PM</time>
+<time datetime="2013-04-28T17:45:00+08:00" pubdate data-updated="true">2013-04-28 05:45PM</time>
       </p>
     
   </footer>
@@ -139,7 +139,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/life/'>Life</a>, <a class='category' href='/blog/categories/thinking/'>Thinking</a>
+    <a class='category' href='/blog/categories/coding/'>Coding</a>, <a class='category' href='/blog/categories/dropbox/'>Dropbox</a>, <a class='category' href='/blog/categories/git/'>Git</a>, <a class='category' href='/blog/categories/it/'>IT</a>
   
 </span>
 
@@ -151,25 +151,47 @@
     
   </footer>
 
-<div class="entry-content"><p>原本以为回家了就会开心起来，心情也会放松下来。然而，却是越发有些难受和迷茫。</p>
+<div class="entry-content"><p>最近又开始更新自己使用的软件了，evernote重新用起来，dropbox重新用起来，发现一个很有前途的网盘-快盘。支持macOS，百度网盘很好，可惜不支持macOS，所以把百度网盘作为远程软件仓库了。下面记录一下使用dropbox作为私有的git仓库的办法。Github我很喜欢了，可惜自己总是用不好，多台电脑上的同步效果不好。
+<!--more--></p>
 
-<!--more-->
+<p>安装dropbox，在dropbox文件夹下建立Git文件夹：</p>
 
-<p>看《忠犬八公的故事》，女朋友问我，你为什么不感动的流泪呢。故事确实很感人，我却没有被触动的感觉。可爱的小狗被收养开始，被教授爱着，呵护着，他很通人性的守护着教授，每天在教授下班的路上等待着，教授的出现变成了他生命的全部，直到教授的离去，他依旧是等待着教授的出现。小狗给予了教授活力和欢乐，教授给予了小狗温暖和温馨。一幅幅的画面，很美，很纯净的美，影片的结局也是凄美。命运玩弄着万物。</p>
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">mkdir ~/Dropbox/Git
+</span><span class="line">cd ~/Dropbox/Git</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>一段时间了，都很共鸣五月天的《你不是真正的快乐》这首歌，有时候路上听着会被触动，流泪。不知道为什么，就觉得这样的难受和迷茫会使自己有着一种夹杂着无助和无奈的失败感。就觉得自己好没用，怎么也不能带给周围的人快乐。很多事情都不会处理得让人称心如意，很多事情也不能顺顺利利的手到擒拿。很多时候我觉得我缺的是时间和阅历，又有些时候，我觉得我太多顾虑和太过小心，应该都有！生活工作周围有能力，优秀，有钱有势的人真多，只有安慰自己一步一步来吧；有努力终归有希望，但愿到自己成为周围人眼中的“成功”的时候想做的一些事，想弥补的一些事都不会迟了。</p>
+<p>为自己的项目建立远程Repo</p>
 
-<p>最后一年学习了，学习和工作差别确实很大，核心的目标，比拼的荣耀，生活的乐点都不同了。有些觉得自己一无是处了。哎，熬过这一年吧，毫无幸福可言。</p>
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">git init --bare projectName.git</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<embed src="http://player.youku.com/player.php/sid/XOTkzMzI4NTI=/v.swf" allowfullscreen="true" quality="high" width="600" height="480" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash" />
+<p>进入自己的项目目录并将代码push到Dropbox</p>
 
-<p>想重新用nodejs搭博客框架的，突然没什么兴趣了，这个放进TODO-list吧。博客的代码扔开一段时间不折腾了。github被封了就被封了吧，正好就当是日记记载着自己的feeling吧。</p>
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">cd ~/projectName
+</span><span class="line">git init
+</span><span class="line">git add .
+</span><span class="line">git add -u
+</span><span class="line">git commit -am 'first commit'
+</span><span class="line">git add origin ~/Dropbox/Git/projectName.git
+</span><span class="line">git push -u origin master</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>PS：特别特别特别不喜欢雨天。回来后就一直在下雨。很少看到这样消极的自己。也就只有这雨天了。Cheer Up! Man!</p>
+<p>就这么简单。
+在另一台电脑上使用的时候clone就好，注意查看远程仓库名称：</p>
 
-<p id="audioplayerRhythm Of The Rain ">Alternative content</p>
-<script type="text/javascript">AudioPlayer.embed("audioplayerRhythm Of The Rain ", {soundFile: "http://www.rhythmoftherain.com/mp3s/jd01.mp3",titles:"Rhythm Of The Rain ",artists:"Jason Donovan"});</script>
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">git clone ~/Dropbox/Git/projectName.git
+</span><span class="line">git remote -v</span></code></pre></td></tr></table></div></figure></notextile></div>
 
+<p>挺简单，挺强大。最近很有些忙了，没时间捣鼓了，找实习，笔试，面试，编程算法，编程语言都要复习，老师这边还这么多事情。虽然很紧，很累，五一节还是赶回家看看吧。火车上才有点时间写篇博客。人生苦短，转眼奔三了，年轻的机会不多了，人生终究是会有遗憾的。加油吧，少年~ ^_^</p>
 </div>
 
 
@@ -192,12 +214,12 @@
   
 
 
-<time datetime="2013-01-31T22:03:00+08:00" pubdate data-updated="true">2013-01-31 10:03PM</time>
+<time datetime="2013-04-28T17:45:00+08:00" pubdate data-updated="true">2013-04-28 05:45PM</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/life/'>Life</a>, <a class='category' href='/blog/categories/thinking/'>Thinking</a>
+    <a class='category' href='/blog/categories/coding/'>Coding</a>, <a class='category' href='/blog/categories/dropbox/'>Dropbox</a>, <a class='category' href='/blog/categories/git/'>Git</a>, <a class='category' href='/blog/categories/it/'>IT</a>
   
 </span>
 
@@ -206,10 +228,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/01/13/shi-yao-shi-kuai-le/" title="Previous Post: 什么是快乐">&laquo; 什么是快乐</a>
+        <a class="basic-alignment left" href="/blog/2013/01/31/you-shi-yu-tian/" title="Previous Post: 又是雨天">&laquo; 又是雨天</a>
       
       
-        <a class="basic-alignment right" href="/blog/2013/04/28/li-yong-dropboxzuo-wei-si-you-gitcang-ku/" title="Next Post: 利用dropbox做为私有git仓库">利用dropbox做为私有git仓库 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2013/04/28/lu-tu/" title="Next Post: 旅途">旅途 &raquo;</a>
       
     </p>
   </footer>
@@ -241,8 +263,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://vampirefan.github.com/blog/2013/01/31/you-shi-yu-tian/';
-        var disqus_url = 'http://vampirefan.github.com/blog/2013/01/31/you-shi-yu-tian/';
+        var disqus_identifier = 'http://vampirefan.github.com/blog/2013/04/28/li-yong-dropboxzuo-wei-si-you-gitcang-ku/';
+        var disqus_url = 'http://vampirefan.github.com/blog/2013/04/28/li-yong-dropboxzuo-wei-si-you-gitcang-ku/';
         var disqus_script = 'embed.js';
       
     (function () {
@@ -288,7 +310,7 @@ document.addEventListener("keyup", function ( event ) {
       case 38: // up
       case 74: // j, J
         
-          url = 'http://vampirefan.github.com/blog/2013/01/13/shi-yao-shi-kuai-le/';
+          url = 'http://vampirefan.github.com/blog/2013/01/31/you-shi-yu-tian/';
         
                break;
       case 34: // pg down
@@ -296,7 +318,7 @@ document.addEventListener("keyup", function ( event ) {
       case 40: // down
       case 75: // k, K
         
-          url = 'http://vampirefan.github.com/blog/2013/04/28/li-yong-dropboxzuo-wei-si-you-gitcang-ku/';
+          url = 'http://vampirefan.github.com/blog/2013/04/28/lu-tu/';
         
                break;
     }
